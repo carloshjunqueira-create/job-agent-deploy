@@ -1,20 +1,20 @@
 {
-  "run_id": "run_1788391400317",
-  "finished_at": "2026-09-02T23:23:20.317Z",
-  "duration_ms": 60614,
+  "run_id": "run_1788392765946",
+  "finished_at": "2026-09-02T23:46:05.946Z",
+  "duration_ms": 217032,
   "search_profile": "consultoria-gestao",
   "extra_queries": [],
   "counts": {
     "raw": 2171,
-    "unique": 1554,
-    "passed_filters": 775,
-    "eligible": 98,
+    "unique": 1563,
+    "passed_filters": 784,
+    "eligible": 62,
     "published": 34
   },
   "blocked_reasons": {
-    "SALARIO_ABAIXO_DO_PISO": 75,
+    "SALARIO_ABAIXO_DO_PISO": 74,
     "SENIORIDADE_EXCLUIDA": 133,
-    "LOCALIZACAO_FORA_DOS_CRITERIOS": 476,
+    "LOCALIZACAO_FORA_DOS_CRITERIOS": 477,
     "FOCO_COMERCIAL_NO_TITULO": 38,
     "VAGA_ANTIGA": 57
   },
@@ -24,56 +24,56 @@
       "label": "Jooble Brasil",
       "status": "OK",
       "jobs": 924,
-      "ms": 8892
+      "ms": 7009
     },
     {
       "id": "adzuna_br",
       "label": "Adzuna Brasil",
       "status": "OK",
       "jobs": 637,
-      "ms": 12571
+      "ms": 9608
     },
     {
       "id": "gupy",
       "label": "Gupy (portal publico, best-effort)",
       "status": "OK",
       "jobs": 581,
-      "ms": 49304
+      "ms": 3466
     },
     {
       "id": "remotive",
       "label": "Remotive (remoto internacional)",
       "status": "OK",
       "jobs": 18,
-      "ms": 451
+      "ms": 687
     },
     {
       "id": "adzuna_intl",
       "label": "Adzuna internacional (US/GB/CA)",
       "status": "OK",
       "jobs": 9,
-      "ms": 15309
+      "ms": 13126
     },
     {
       "id": "arbeitnow",
       "label": "Arbeitnow (remoto Europa)",
       "status": "OK",
       "jobs": 1,
-      "ms": 276
+      "ms": 459
     },
     {
       "id": "himalayas",
       "label": "Himalayas (remoto internacional)",
       "status": "OK",
       "jobs": 1,
-      "ms": 69
+      "ms": 163
     },
     {
       "id": "remoteok",
       "label": "RemoteOK (remoto internacional)",
       "status": "OK",
       "jobs": 0,
-      "ms": 465
+      "ms": 556
     },
     {
       "id": "ats_boards",
@@ -93,17 +93,14 @@
   "ai": {
     "enabled": true,
     "model": "claude-sonnet-5",
-    "input_tokens": 0,
-    "output_tokens": 0,
-    "calls": 0,
+    "input_tokens": 83296,
+    "output_tokens": 26049,
+    "calls": 4,
     "errors": [
-      "HTTP 400 em https://api.anthropic.com/v1/messages | resposta: {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"anthropic-workspace-id is required when authenticating with an identity-linked API key; send the id of the workspace this request acts in.\"},\"request_id\":null}",
-      "HTTP 400 em https://api.anthropic.com/v1/messages | resposta: {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"anthropic-workspace-id is required when authenticating with an identity-linked API key; send the id of the workspace this request acts in.\"},\"request_id\":null}",
-      "HTTP 400 em https://api.anthropic.com/v1/messages | resposta: {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"anthropic-workspace-id is required when authenticating with an identity-linked API key; send the id of the workspace this request acts in.\"},\"request_id\":null}",
-      "HTTP 400 em https://api.anthropic.com/v1/messages | resposta: {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"anthropic-workspace-id is required when authenticating with an identity-linked API key; send the id of the workspace this request acts in.\"},\"request_id\":null}",
-      "HTTP 400 em https://api.anthropic.com/v1/messages | resposta: {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"anthropic-workspace-id is required when authenticating with an identity-linked API key; send the id of the workspace this request acts in.\"},\"request_id\":null}"
+      "resposta da IA nao veio como array JSON"
     ],
-    "estimated_cost_usd": 0
+    "first_error": "resposta da IA nao veio como array JSON",
+    "estimated_cost_usd": 0.4271
   },
   "mix": {
     "sao_paulo": 8,
