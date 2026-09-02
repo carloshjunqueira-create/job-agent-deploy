@@ -43,3 +43,32 @@ for (const source of sourcesConfig.sources || []) {
   }
 }
 console.log(`\nResumo: ${ok} fonte(s) respondendo, ${failed} com erro.`);
+
+// ---------- Teste de conexao com a API da Anthropic ----------
+// Uma chamada minima (poucos tokens, custo desprezivel) so para provar que a
+// chave e o workspace estao corretos, sem precisar rodar uma busca inteira.
+console.log("\nConexao com a IA");
+console.log("================");
+const { aiAvailable, callClaude } = await import("./lib/ai.mjs");
+if (!aiAvailable()) {
+  console.log("- ANTHROPIC_API_KEY nao configurada: o feed sai sem avaliacao da IA.");
+} else {
+  const model = searchProfile.ai_ranking?.model || "claude-sonnet-5";
+  const temWorkspace = Boolean(process.env.ANTHROPIC_WORKSPACE_ID);
+  console.log(`- modelo: ${model}`);
+  console.log(`- ANTHROPIC_WORKSPACE_ID: ${temWorkspace ? "configurado" : "NAO configurado"}`);
+  try {
+    const r = await callClaude({ model, system: "Responda apenas: ok", prompt: "ok", maxTokens: 8 });
+    console.log(`- RESULTADO: OK. A API respondeu "${(r.text || "").trim().slice(0, 20)}" (${r.usage?.input_tokens || 0} tokens de entrada).`);
+    console.log("- A proxima busca vai sair com veredito, gaps e palavras-chave de ATS.");
+  } catch (error) {
+    console.log(`- RESULTADO: FALHOU -> ${error.message}`);
+    if (/workspace/i.test(error.message)) {
+      console.log("- Causa: a chave e do tipo Pessoal com escopo 'Todos os espacos de trabalho'.");
+      console.log("  Crie o secret ANTHROPIC_WORKSPACE_ID com o id (wrkspc_...) do seu workspace,");
+      console.log("  ou gere uma chave presa a um workspace especifico.");
+    } else if (/credit|balance|quota/i.test(error.message)) {
+      console.log("- Causa provavel: credito de API insuficiente. Verifique em Faturamento no console.");
+    }
+  }
+}

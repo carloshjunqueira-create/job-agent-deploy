@@ -160,7 +160,15 @@ async function main() {
         };
       }
     }
-    if (aiUsage.errors.length) log(`  ! IA: ${aiUsage.errors.length} lote(s) falharam; essas vagas ficam so com o score de regras`);
+    if (aiUsage.errors.length) {
+      log(`  ! IA: ${aiUsage.errors.length} lote(s) falharam; essas vagas ficam so com o score de regras`);
+      log(`  ! primeiro erro: ${aiUsage.errors[0]}`);
+      // Guardado separado para a interface conseguir mostrar sem abrir os logs.
+      aiUsage.first_error = aiUsage.errors[0];
+    }
+    if (aiUsage.calls === 0 && aiUsage.errors.length) {
+      log("  ! NENHUMA chamada de IA teve sucesso. O feed saiu apenas com o score de regras.");
+    }
     const cost = estimateCost({
       model: aiCfg.model,
       inputTokens: aiUsage.input_tokens,

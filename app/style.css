@@ -185,3 +185,17 @@ th { color: var(--muted); font-weight: 600; font-size: 12px; text-transform: upp
   padding: 11px 16px; box-shadow: var(--shadow); font-size: 14px; max-width: 92vw;
 }
 .toast[hidden] { display: none; }
+
+/* aviso quando a IA nao rodou */
+.banner-erro {
+  background: color-mix(in srgb, var(--bad) 12%, var(--surface));
+  border: 1px solid color-mix(in srgb, var(--bad) 45%, transparent);
+  border-radius: var(--radius); padding: 12px 14px; margin-bottom: 14px; font-size: 14px;
+}
+.banner-erro[hidden] { display: none; }
+.banner-erro details { margin-top: 8px; }
+.banner-erro summary { cursor: pointer; color: var(--muted); font-size: 13px; }
+.banner-erro pre {
+  white-space: pre-wrap; word-break: break-word; font-size: 12.5px;
+  background: var(--surface-2); border-radius: 8px; padding: 10px; margin: 8px 0 0; font-family: inherit;
+}

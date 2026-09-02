@@ -185,6 +185,10 @@ const wfTailor = await fs.readFile(path.join(ROOT, ".github/workflows/tailor.yml
 check("workflow do CV expoe o modo e o workspace id", wfTailor.includes("TAILOR_MODE") && wfTailor.includes("ANTHROPIC_WORKSPACE_ID"));
 const wfCollect = await fs.readFile(path.join(ROOT, ".github/workflows/collect.yml"), "utf8");
 check("workflow da busca passa o workspace id", wfCollect.includes("ANTHROPIC_WORKSPACE_ID"));
+const wfDiag = await fs.readFile(path.join(ROOT, ".github/workflows/diagnose.yml"), "utf8");
+check("diagnostico testa a conexao com a IA", wfDiag.includes("ANTHROPIC_API_KEY") && wfDiag.includes("ANTHROPIC_WORKSPACE_ID"));
+const diagSrc = await fs.readFile(path.join(ROOT, "pipeline/diagnose.mjs"), "utf8");
+check("diagnostico explica o erro de workspace", diagSrc.includes("callClaude") && diagSrc.includes("ANTHROPIC_WORKSPACE_ID"));
 
 console.log("\n4. Score e hierarquia geografica");
 const sSjrp = scoreJob(make({}), profile, { fx });

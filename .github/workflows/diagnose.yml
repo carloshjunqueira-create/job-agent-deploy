@@ -1,4 +1,4 @@
-name: Diagnostico das fontes
+name: Diagnostico das fontes e da IA
 
 # Tambem sem agendamento: rode quando quiser conferir se as fontes continuam de pe.
 # Este workflow nao usa a API da Anthropic, entao nao custa nada.
@@ -18,6 +18,8 @@ jobs:
         run: node pipeline/check.mjs
       - name: Testar cada fonte
         env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_WORKSPACE_ID: ${{ secrets.ANTHROPIC_WORKSPACE_ID }}
           ADZUNA_APP_ID: ${{ secrets.ADZUNA_APP_ID }}
           ADZUNA_APP_KEY: ${{ secrets.ADZUNA_APP_KEY }}
           JOOBLE_API_KEY: ${{ secrets.JOOBLE_API_KEY }}

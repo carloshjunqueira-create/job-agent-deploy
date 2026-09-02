@@ -300,7 +300,22 @@ function jobCard(job) {
   </article>`;
 }
 
+function renderAiBanner() {
+  const alvo = $("#ai-banner");
+  if (!alvo) return;
+  const last = state.runs.runs?.[0];
+  const erro = last?.ai?.first_error || (last?.ai?.errors || [])[0];
+  const falhou = last?.ai?.enabled && (last.ai.calls || 0) === 0 && erro;
+  if (!falhou) { alvo.hidden = true; return; }
+  alvo.hidden = false;
+  alvo.innerHTML = `
+    <b>A avaliação por IA não rodou nesta busca.</b> O feed abaixo está ordenado só pelo score de regras —
+    sem veredito, sem gaps e sem palavras-chave de ATS.
+    <details><summary>Ver o erro que a API devolveu</summary><pre>${esc(erro)}</pre></details>`;
+}
+
 function renderFeed() {
+  renderAiBanner();
   const jobs = visibleJobs();
   $("#count-feed").textContent = jobs.length;
   $("#feed").innerHTML = jobs.map(jobCard).join("");
@@ -380,6 +395,7 @@ function renderRodadas() {
         </tr>`).join("")}
       </table></div>
       ${Object.keys(r.blocked_reasons || {}).length ? `<p class="ats"><b>Descartes:</b> ${Object.entries(r.blocked_reasons).map(([k, v]) => `${esc(k)} (${v})`).join(" · ")}</p>` : ""}
+      ${(r.ai?.errors || []).length ? `<details class="details"><summary>${r.ai.errors.length} erro(s) na chamada da IA</summary><pre>${esc(r.ai.first_error || r.ai.errors[0])}</pre></details>` : ""}
     </div>`).join("") : '<div class="empty">Nenhuma rodada registrada ainda.</div>';
 }
 
@@ -392,7 +408,9 @@ function renderStatus() {
   const parts = [];
   parts.push(generated ? `Feed de <b>${generated.toLocaleString("pt-BR")}</b>` : "Nenhuma rodada ainda");
   parts.push(`<b>${state.feed.jobs.length}</b> vagas`);
+  const aiFalhou = last?.ai?.enabled && (last.ai.calls || 0) === 0 && (last.ai.errors || []).length > 0;
   if (last && last.ai?.enabled === false) parts.push("IA desligada na última rodada");
+  if (aiFalhou) parts.push('<b style="color:var(--bad)">a IA falhou na última rodada</b>');
   if (failedSources) parts.push(`<b>${failedSources}</b> fonte(s) com erro`);
   parts.push(gh.connected ? "conectado ao GitHub" : "não conectado");
   setStatus(parts.join(" · "));
