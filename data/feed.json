@@ -1,11 +1,11 @@
 {
   "schema_version": "3.0.0",
-  "generated_at": "2026-09-02T23:15:18.112Z",
+  "generated_at": "2026-09-02T23:23:20.317Z",
   "search_profile": {
     "id": "consultoria-gestao",
     "label": "Consultoria e gestao"
   },
-  "run_id": "run_1788390918112",
+  "run_id": "run_1788391400317",
   "mix": {
     "sao_paulo": 8,
     "sjrp": 26
@@ -326,7 +326,7 @@
       "salary_raw": null,
       "posted_at": "2026-08-25T03:04:01.1870000",
       "age_days": 9,
-      "url": "https://www.adzuna.com.br/land/ad/5854575150?se=LrLIBiSn8RG9hZZomVLVEQ&utm_medium=api&utm_source=f4cf42d6&v=3A839B9CBF75AEB9B89C802BBFE2FC3D83F83975",
+      "url": "https://www.adzuna.com.br/land/ad/5854575150?se=PtX-KCWn8RG2HomFYOMXfQ&utm_medium=api&utm_source=f4cf42d6&v=3A839B9CBF75AEB9B89C802BBFE2FC3D83F83975",
       "source": "adzuna_br",
       "also_seen_in": [
         "adzuna_br",
@@ -521,7 +521,7 @@
       "salary_raw": null,
       "posted_at": "2026-08-31T00:00:00.0000000",
       "age_days": 3,
-      "url": "https://br.jooble.org/away/-8814807976467614459?p=1&pos=5&rgn=5880&cid=668&ckey=coordenador+de+operacoes&jobAge=69&relb=138&brelb=115&scr=3424.67496&bscr=2853.8958&aq=-870058150014514616&elckey=7372539563820094401",
+      "url": "https://br.jooble.org/away/-8814807976467614459?p=1&pos=5&rgn=5880&cid=668&ckey=coordenador+de+operacoes&jobAge=69&relb=138&brelb=115&scr=3449.6862&bscr=2874.7385&aq=-1435920331291941200&elckey=-705591548676314354",
       "source": "jooble",
       "also_seen_in": [
         "jooble"
@@ -569,7 +569,7 @@
       "salary_raw": null,
       "posted_at": "2026-08-22T03:07:12.7570000",
       "age_days": 12,
-      "url": "https://br.jooble.org/away/5352454248262857734?p=1&pos=1&rgn=5880&cid=668&ckey=gerente+de+operacoes&jobAge=282&relb=139&brelb=100&scr=3529.8435620000005&bscr=2539.4558&aq=732081182251062974&elckey=-5689574813856843920",
+      "url": "https://br.jooble.org/away/5352454248262857734?p=1&pos=1&rgn=5880&cid=668&ckey=gerente+de+operacoes&jobAge=282&relb=160&brelb=100&scr=4063.0488&bscr=2539.4055&aq=-6100829143878005046&elckey=4679038147356298941",
       "source": "jooble",
       "also_seen_in": [
         "jooble"
@@ -662,7 +662,7 @@
       "salary_raw": null,
       "posted_at": "2026-08-29T19:08:34.0900000",
       "age_days": 4,
-      "url": "https://br.jooble.org/away/-3014289069078908158?p=1&pos=19&rgn=5880&cid=668&ckey=consultor+de+negocios&jobAge=98&relb=141&brelb=100&scr=2820.692733&bscr=2000.4913&aq=5274353376758538885&elckey=2522380467988040071",
+      "url": "https://br.jooble.org/away/-3014289069078908158?p=1&pos=19&rgn=5880&cid=668&ckey=consultor+de+negocios&jobAge=98&relb=141&brelb=100&scr=2820.6603029999997&bscr=2000.4683&aq=-3373858167397102221&elckey=-5555750644508368684",
       "source": "jooble",
       "also_seen_in": [
         "jooble"
@@ -759,7 +759,7 @@
       "salary_raw": null,
       "posted_at": "2026-08-31T00:00:00.0000000",
       "age_days": 3,
-      "url": "https://br.jooble.org/away/-1293231379890524229?p=2&pos=27&rgn=5880&cid=668&ckey=gerente+de+operacoes&jobAge=69&relb=130&brelb=115&scr=2365.423139130435&bscr=2092.4897&aq=-4365286334679817372&elckey=-5689574813856843920",
+      "url": "https://br.jooble.org/away/-1293231379890524229?p=2&pos=22&rgn=5880&cid=668&ckey=gerente+de+operacoes&jobAge=69&relb=138&brelb=115&scr=2513.4636&bscr=2094.553&aq=-1680003181804025089&elckey=4679038147356298941",
       "source": "jooble",
       "also_seen_in": [
         "jooble"
@@ -806,7 +806,7 @@
       "salary_raw": null,
       "posted_at": "2026-08-31T00:00:00.0000000",
       "age_days": 3,
-      "url": "https://br.jooble.org/desc/6107450105421961665?ckey=coordenador+de+operacoes&rgn=5880&pos=7&elckey=7372539563820094401&p=1&aq=-870058150014514616&cid=668&jobAge=69&relb=110&brelb=110&bscr=3062.7346&scr=3062.7346",
+      "url": "https://br.jooble.org/desc/6107450105421961665?ckey=coordenador+de+operacoes&rgn=5880&pos=7&elckey=-705591548676314354&p=1&aq=-1435920331291941200&cid=668&jobAge=69&relb=110&brelb=110&bscr=3101.1357&scr=3101.1357",
       "source": "jooble",
       "also_seen_in": [
         "jooble"
@@ -854,7 +854,7 @@
       "salary_raw": null,
       "posted_at": "2026-08-28T22:49:34.7978166+00:00",
       "age_days": 5,
-      "url": "https://br.jooble.org/desc/-646510641962983110?ckey=coordenador+de+projetos&rgn=5880&pos=30&elckey=2893219442617880071&p=2&aq=-857727549981290913&cid=668&jobAge=141&relb=100&brelb=100&bscr=670.8847&scr=670.8847000000001",
+      "url": "https://br.jooble.org/desc/-646510641962983110?ckey=coordenador+de+projetos&rgn=5880&pos=30&elckey=-5184911669878528684&p=2&aq=-5449320675631033617&cid=668&jobAge=141&relb=100&brelb=100&bscr=670.8754&scr=670.8754000000001",
       "source": "jooble",
       "also_seen_in": [
         "jooble"
@@ -902,7 +902,7 @@
       "salary_raw": null,
       "posted_at": "2026-09-01T00:00:00.0000000",
       "age_days": 2,
-      "url": "https://br.jooble.org/desc/-2475571590766232935?ckey=coordenador+de+processos&rgn=5880&pos=27&elckey=-8653627998327174218&p=2&aq=5862039485294801277&cid=668&jobAge=45&relb=110&brelb=110&bscr=635.29266&scr=635.29266",
+      "url": "https://br.jooble.org/desc/-2475571590766232935?ckey=coordenador+de+processos&rgn=5880&pos=27&elckey=1714984962885968643&p=2&aq=7891701835712747844&cid=668&jobAge=45&relb=110&brelb=110&bscr=635.2865&scr=635.2865",
       "source": "jooble",
       "also_seen_in": [
         "jooble"
@@ -950,7 +950,7 @@
       "salary_raw": null,
       "posted_at": "2026-08-13T19:05:17.7170000",
       "age_days": 20,
-      "url": "https://br.jooble.org/away/-9220912265101126000?p=1&pos=10&rgn=5880&cid=668&ckey=gerente+de+operacoes&jobAge=482&relb=132&brelb=100&scr=2705.6187840000002&bscr=2049.7112&aq=732081182251062974&elckey=-5689574813856843920",
+      "url": "https://br.jooble.org/away/-9220912265101126000?p=1&pos=9&rgn=5880&cid=668&ckey=gerente+de+operacoes&jobAge=482&relb=149&brelb=100&scr=3084.0467&bscr=2069.83&aq=-6100829143878005046&elckey=4679038147356298941",
       "source": "jooble",
       "also_seen_in": [
         "jooble"
@@ -1043,7 +1043,7 @@
       "salary_raw": null,
       "posted_at": "2026-08-28T00:00:00.0000000",
       "age_days": 6,
-      "url": "https://br.jooble.org/desc/-8299376303427022675?ckey=gerente+de+operacoes&rgn=5880&pos=17&elckey=-5689574813856843920&p=1&aq=732081182251062974&cid=668&jobAge=141&relb=100&brelb=100&bscr=2429.4888&scr=2429.4888",
+      "url": "https://br.jooble.org/desc/-8299376303427022675?ckey=gerente+de+operacoes&rgn=5880&pos=29&elckey=4679038147356298941&p=2&aq=-1680003181804025089&cid=668&jobAge=141&relb=100&brelb=100&bscr=2453.3672&scr=2453.3672",
       "source": "jooble",
       "also_seen_in": [
         "jooble"
@@ -1090,7 +1090,7 @@
       "salary_raw": null,
       "posted_at": "2026-08-27T03:11:24.5270000",
       "age_days": 7,
-      "url": "https://br.jooble.org/away/6140830525533921207?p=2&pos=29&rgn=5880&cid=668&ckey=gerente+de+operacoes&jobAge=162&relb=132&brelb=100&scr=2278.4966160000004&bscr=1726.1338&aq=-4365286334679817372&elckey=-5689574813856843920",
+      "url": "https://br.jooble.org/away/6140830525533921207?p=1&pos=16&rgn=5880&cid=668&ckey=gerente+de+operacoes&jobAge=162&relb=149&brelb=100&scr=2554.124475&bscr=1714.1775&aq=-6100829143878005046&elckey=4679038147356298941",
       "source": "jooble",
       "also_seen_in": [
         "jooble"
@@ -1136,7 +1136,7 @@
       "salary_raw": null,
       "posted_at": "2026-08-16T03:18:01.5200000",
       "age_days": 18,
-      "url": "https://br.jooble.org/away/2896617323667688234?p=2&pos=40&rgn=5880&cid=668&ckey=consultor+de+negocios&jobAge=425&relb=141&brelb=100&scr=2109.971517&bscr=1496.4337&aq=5174211487467435813&elckey=2522380467988040071",
+      "url": "https://br.jooble.org/away/2896617323667688234?p=2&pos=40&rgn=5880&cid=668&ckey=consultor+de+negocios&jobAge=426&relb=141&brelb=100&scr=2109.918924&bscr=1496.3964&aq=8632356442824707800&elckey=-5555750644508368684",
       "source": "jooble",
       "also_seen_in": [
         "jooble"
@@ -1228,9 +1228,9 @@
       "employment_type": "Efetivo",
       "salary_brl_monthly": null,
       "salary_raw": null,
-      "posted_at": "2026-08-24T03:04:13.8830000",
+      "posted_at": "2026-08-24T03:04:14.4030000",
       "age_days": 10,
-      "url": "https://br.jooble.org/away/2697195198366405789?p=1&pos=1&rgn=5880&cid=668&ckey=pmo&jobAge=234&relb=100&brelb=100&scr=3076.3958&bscr=3076.3958&aq=-7780072796865686269&elckey=-3946745556550438343",
+      "url": "https://br.jooble.org/away/2697195198366405789?p=1&pos=1&rgn=5880&cid=668&ckey=pmo&jobAge=234&relb=100&brelb=100&scr=3078.4663&bscr=3078.4663&aq=865741069164527255&elckey=-4668108528130645602",
       "source": "jooble",
       "also_seen_in": [
         "jooble"
@@ -1276,7 +1276,7 @@
       "salary_raw": null,
       "posted_at": "2026-08-23T19:05:22.1100000",
       "age_days": 10,
-      "url": "https://br.jooble.org/away/-6063093727308565606?p=1&pos=9&rgn=5880&cid=668&ckey=coordenador+de+processos&jobAge=242&relb=123&brelb=100&scr=2718.1846259999998&bscr=2209.9062&aq=8298189730948075517&elckey=-8653627998327174218",
+      "url": "https://br.jooble.org/away/-6063093727308565606?p=1&pos=9&rgn=5880&cid=668&ckey=coordenador+de+processos&jobAge=242&relb=123&brelb=100&scr=2738.291436&bscr=2226.2532&aq=1850545095093312866&elckey=1714984962885968643",
       "source": "jooble",
       "also_seen_in": [
         "jooble"
@@ -1322,7 +1322,7 @@
       "salary_raw": null,
       "posted_at": "2026-09-01T06:45:25.5570000",
       "age_days": 2,
-      "url": "https://br.jooble.org/away/-2550787631962633485?p=1&pos=5&rgn=5880&cid=668&ckey=gerente+de+operacoes&jobAge=38&relb=130&brelb=115&scr=3073.5031826086956&bscr=2718.8682&aq=732081182251062974&elckey=-5689574813856843920",
+      "url": "https://br.jooble.org/away/-2550787631962633485?p=1&pos=6&rgn=5880&cid=668&ckey=gerente+de+operacoes&jobAge=38&relb=138&brelb=115&scr=3305.2160400000002&bscr=2754.3467&aq=-6100829143878005046&elckey=4679038147356298941",
       "source": "jooble",
       "also_seen_in": [
         "jooble"
@@ -1369,7 +1369,7 @@
       "salary_raw": null,
       "posted_at": "2026-09-02T13:25:30.5270000",
       "age_days": 0,
-      "url": "https://br.jooble.org/away/6810882591491783984?p=2&pos=28&rgn=5880&cid=668&ckey=coordenador+de+projetos&jobAge=7&relb=41&brelb=10&scr=785.796693&bscr=191.65773&aq=-857727549981290913&elckey=2893219442617880071",
+      "url": "https://br.jooble.org/away/6810882591491783984?p=2&pos=29&rgn=5880&cid=668&ckey=coordenador+de+projetos&jobAge=7&relb=41&brelb=10&scr=781.9598720000001&bscr=190.72192&aq=-5449320675631033617&elckey=-5184911669878528684",
       "source": "jooble",
       "also_seen_in": [
         "jooble"
@@ -1416,7 +1416,7 @@
       "salary_raw": null,
       "posted_at": "2026-08-13T19:01:51.5300000",
       "age_days": 20,
-      "url": "https://br.jooble.org/away/6589097852391922706?p=2&pos=39&rgn=5880&cid=668&ckey=coordenador+de+projetos&jobAge=482&relb=111&brelb=100&scr=408.2081277&bscr=367.75507&aq=-857727549981290913&elckey=2893219442617880071",
+      "url": "https://br.jooble.org/away/6589097852391922706?p=2&pos=39&rgn=5880&cid=668&ckey=coordenador+de+projetos&jobAge=482&relb=111&brelb=100&scr=408.19717199999997&bscr=367.7452&aq=-5449320675631033617&elckey=-5184911669878528684",
       "source": "jooble",
       "also_seen_in": [
         "jooble"
@@ -1462,7 +1462,7 @@
       "salary_raw": null,
       "posted_at": "2026-08-29T19:08:52.1130000",
       "age_days": 4,
-      "url": "https://br.jooble.org/away/-8762719892945547330?p=1&pos=1&rgn=5880&cid=668&ckey=controller&jobAge=98&relb=141&brelb=100&scr=4114.12761&bscr=2917.821&aq=-4228457084099889933&elckey=9212569222795888530",
+      "url": "https://br.jooble.org/away/-8762719892945547330?p=1&pos=1&rgn=5880&cid=668&ckey=controller&jobAge=98&relb=141&brelb=100&scr=4115.439614999999&bscr=2918.7515&aq=1523676856844719753&elckey=1134438110299479775",
       "source": "jooble",
       "also_seen_in": [
         "jooble"
@@ -1507,7 +1507,7 @@
       "salary_raw": null,
       "posted_at": "2026-09-01T00:00:00.0000000",
       "age_days": 2,
-      "url": "https://br.jooble.org/desc/-5759716306214187222?ckey=consultor+de+negocios&rgn=5880&pos=5&elckey=2522380467988040071&p=1&aq=5274353376758538885&cid=668&jobAge=45&relb=100&brelb=100&bscr=4820.7603&scr=4820.7603",
+      "url": "https://br.jooble.org/desc/-5759716306214187222?ckey=consultor+de+negocios&rgn=5880&pos=5&elckey=-5555750644508368684&p=1&aq=-3373858167397102221&cid=668&jobAge=45&relb=100&brelb=100&bscr=4820.722&scr=4820.722",
       "source": "jooble",
       "also_seen_in": [
         "jooble"
@@ -1553,7 +1553,7 @@
       "salary_raw": null,
       "posted_at": "2026-08-31T00:00:00.0000000",
       "age_days": 3,
-      "url": "https://br.jooble.org/away/-5702616063743606452?p=1&pos=15&rgn=5880&cid=668&ckey=consultor+de+negocios&jobAge=69&relb=135&brelb=115&scr=3025.065560869565&bscr=2576.9077&aq=5274353376758538885&elckey=2522380467988040071",
+      "url": "https://br.jooble.org/away/-5702616063743606452?p=1&pos=16&rgn=5880&cid=668&ckey=consultor+de+negocios&jobAge=69&relb=135&brelb=115&scr=3047.255804347826&bscr=2595.8105&aq=-3373858167397102221&elckey=-5555750644508368684",
       "source": "jooble",
       "also_seen_in": [
         "jooble"
@@ -1600,7 +1600,7 @@
       "salary_raw": null,
       "posted_at": "2026-08-31T00:00:00.0000000",
       "age_days": 3,
-      "url": "https://br.jooble.org/away/-4887094505332161050?p=1&pos=6&rgn=5880&cid=668&ckey=coordenador+de+operacoes&jobAge=69&relb=138&brelb=115&scr=3370.8149999999996&bscr=2809.0125&aq=-870058150014514616&elckey=7372539563820094401",
+      "url": "https://br.jooble.org/away/-4887094505332161050?p=1&pos=6&rgn=5880&cid=668&ckey=coordenador+de+operacoes&jobAge=69&relb=138&brelb=115&scr=3348.34368&bscr=2790.2864&aq=-1435920331291941200&elckey=-705591548676314354",
       "source": "jooble",
       "also_seen_in": [
         "jooble"

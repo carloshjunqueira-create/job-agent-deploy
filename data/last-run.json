@@ -1,20 +1,20 @@
 {
-  "run_id": "run_1788390918112",
-  "finished_at": "2026-09-02T23:15:18.112Z",
-  "duration_ms": 64778,
+  "run_id": "run_1788391400317",
+  "finished_at": "2026-09-02T23:23:20.317Z",
+  "duration_ms": 60614,
   "search_profile": "consultoria-gestao",
   "extra_queries": [],
   "counts": {
     "raw": 2171,
-    "unique": 1558,
-    "passed_filters": 782,
+    "unique": 1554,
+    "passed_filters": 775,
     "eligible": 98,
     "published": 34
   },
   "blocked_reasons": {
     "SALARIO_ABAIXO_DO_PISO": 75,
-    "SENIORIDADE_EXCLUIDA": 131,
-    "LOCALIZACAO_FORA_DOS_CRITERIOS": 475,
+    "SENIORIDADE_EXCLUIDA": 133,
+    "LOCALIZACAO_FORA_DOS_CRITERIOS": 476,
     "FOCO_COMERCIAL_NO_TITULO": 38,
     "VAGA_ANTIGA": 57
   },
@@ -24,56 +24,56 @@
       "label": "Jooble Brasil",
       "status": "OK",
       "jobs": 924,
-      "ms": 6734
+      "ms": 8892
     },
     {
       "id": "adzuna_br",
       "label": "Adzuna Brasil",
       "status": "OK",
       "jobs": 637,
-      "ms": 11610
+      "ms": 12571
     },
     {
       "id": "gupy",
       "label": "Gupy (portal publico, best-effort)",
       "status": "OK",
       "jobs": 581,
-      "ms": 52618
+      "ms": 49304
     },
     {
       "id": "remotive",
       "label": "Remotive (remoto internacional)",
       "status": "OK",
       "jobs": 18,
-      "ms": 520
+      "ms": 451
     },
     {
       "id": "adzuna_intl",
       "label": "Adzuna internacional (US/GB/CA)",
       "status": "OK",
       "jobs": 9,
-      "ms": 16556
+      "ms": 15309
     },
     {
       "id": "arbeitnow",
       "label": "Arbeitnow (remoto Europa)",
       "status": "OK",
       "jobs": 1,
-      "ms": 460
+      "ms": 276
     },
     {
       "id": "himalayas",
       "label": "Himalayas (remoto internacional)",
       "status": "OK",
       "jobs": 1,
-      "ms": 197
+      "ms": 69
     },
     {
       "id": "remoteok",
       "label": "RemoteOK (remoto internacional)",
       "status": "OK",
       "jobs": 0,
-      "ms": 626
+      "ms": 465
     },
     {
       "id": "ats_boards",
