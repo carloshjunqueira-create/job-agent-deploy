@@ -1,8 +1,2234 @@
 {
   "schema_version": "3.0.0",
-  "generated_at": null,
-  "search_profile": { "id": "consultoria-gestao", "label": "Consultoria e gestao" },
-  "run_id": null,
-  "mix": {},
-  "jobs": []
+  "generated_at": "2026-09-02T22:12:41.218Z",
+  "search_profile": {
+    "id": "consultoria-gestao",
+    "label": "Consultoria e gestao"
+  },
+  "run_id": "run_1788387161218",
+  "mix": {
+    "sao_paulo": 22,
+    "remote_intl": 14,
+    "sjrp": 9
+  },
+  "jobs": [
+    {
+      "id": "7b03a25b0cc0fb81",
+      "title": "Gerente de Projetos de Cobrança | Cobrança",
+      "company": "Safra",
+      "location": "São Paulo, São Paulo",
+      "location_bucket": "sao_paulo",
+      "location_label": "Sao Paulo, SP",
+      "work_model": "onsite",
+      "employment_type": "vacancy_type_effective",
+      "salary_brl_monthly": null,
+      "salary_raw": null,
+      "posted_at": "2026-08-19T13:45:43.216Z",
+      "age_days": 14,
+      "url": "https://venhasersafra.gupy.io/job/eyJqb2JJZCI6MTIxODAxMDQsInNvdXJjZSI6Imd1cHlfcG9ydGFsIn0=?jobBoardSource=gupy_portal",
+      "source": "gupy",
+      "also_seen_in": [
+        "gupy"
+      ],
+      "score": {
+        "rules": 85,
+        "ai": null,
+        "final": 85,
+        "components": {
+          "role": 25,
+          "experience": 18,
+          "skills": 15,
+          "seniority": 10,
+          "industry": 10,
+          "salary": -1,
+          "location": 5,
+          "recency": 3
+        }
+      },
+      "why_fits": [
+        "Titulo alinhado aos cargos-alvo: \"Gerente de Projetos de Cobrança | Cobrança\"",
+        "Descricao cobre temas do seu repertorio: gerente, operacoes, processos, estrategia",
+        "Skills tecnicas que voce domina: power bi, sql, automacao, inteligencia artificial",
+        "Industria prioritaria: banco, credito",
+        "Sao Paulo, SP com sinal de oportunidade superior"
+      ],
+      "gaps": [
+        "Salario nao divulgado - confirmar na candidatura"
+      ],
+      "ats_missing": [],
+      "verdict": "",
+      "risk": "",
+      "cv_variant": "",
+      "description_excerpt": "A área de Cobrança é responsável pela estratégia de recuperação de crédito do Banco Safra, atuando na gestão operacional, transformação digital, sustentação tecnológica e melhoria contínua dos processos relacionados aos produtos de crédito.Responsabilidades e atribuiçõesLiderar a frente de projetos e sustentação tecnológica da área de Cobrança, impulsionando a evolução contínua dos processos, a estabilidade operacional e a entrega de iniciativas estratégicas voltadas à recuperação de crédito.Atuar na gestão de pessoas, condução de projetos multidisciplinares e integração entre as áreas de negócio e tecnologia, garantindo soluções alinhadas aos objetivos da organização e à geração de resultados sustentáveis.Requisitos e qualificaçõesGestão de projetos, sustentação tecnológica e operações de cobrança.Experiência em projetos de crédito e cobrança.Liderança e desenvolvimento de equipes.Conhecimento em metodologias Agile, Scrum e PMBOK.Utilização de Power BI, SQL, automação e inteligência artificial para ganho de eficiência operacional.LocalSão Paulo - 100% presencialInformações adicionaisTrilhas de capacitação acadêmica e técnica;Oportunidade de encarreiramento;Vale Refeição e Vale Ali"
+    },
+    {
+      "id": "e644018c7c8e8777",
+      "title": "Pessoa Gerente de Projetos",
+      "company": "Confidencial",
+      "location": "São Paulo, São Paulo",
+      "location_bucket": "sao_paulo",
+      "location_label": "Sao Paulo, SP",
+      "work_model": "hybrid",
+      "employment_type": "vacancy_type_effective",
+      "salary_brl_monthly": null,
+      "salary_raw": null,
+      "posted_at": "2026-08-13T15:02:15.031Z",
+      "age_days": 20,
+      "url": "https://vagasconfidencial-2.gupy.io/job/eyJqb2JJZCI6MTE3NzY2MTQsInNvdXJjZSI6Imd1cHlfcG9ydGFsIn0=?jobBoardSource=gupy_portal",
+      "source": "gupy",
+      "also_seen_in": [
+        "gupy"
+      ],
+      "score": {
+        "rules": 85,
+        "ai": null,
+        "final": 85,
+        "components": {
+          "role": 25,
+          "experience": 18,
+          "skills": 15,
+          "seniority": 10,
+          "industry": 10,
+          "salary": -1,
+          "location": 5,
+          "recency": 3
+        }
+      },
+      "why_fits": [
+        "Titulo alinhado aos cargos-alvo: \"Pessoa Gerente de Projetos\"",
+        "Descricao cobre temas do seu repertorio: consultoria, gerente, processos, projetos",
+        "Skills tecnicas que voce domina: power bi, sql, automacao, dados",
+        "Industria prioritaria: consultoria",
+        "Sao Paulo, SP com sinal de oportunidade superior"
+      ],
+      "gaps": [
+        "Salario nao divulgado - confirmar na candidatura"
+      ],
+      "ats_missing": [],
+      "verdict": "",
+      "risk": "",
+      "cv_variant": "",
+      "description_excerpt": "Sobre a AlmapBBDOQUEM SOMOS!#1 Agência Global da Década - Cannes Lions. Somos uma potência de criatividade e negócios que se reinventa todos os dias. Acreditamos que a criatividade é protagonista na geração de valor para as marcas, no crescimento dos negócios dos clientes e, não menos importante, na transformação das pessoas. Porque as pessoas são o centro da cultura da agência.Aqui na AlmapBBDO estimulamos um ambiente cada vez mais plural que permita trocas e aprendizados. Convidamos pessoas negras, LGBTQIAPN+, com deficiência, mulheres e vindas de diferentes níveis socioeconômicos, regiões e universidades do país a fazer parte do nosso time. Este é o nosso horizonte definitivo, visto por todas as equipes de nossa agência. E é assim que construímos, dia após dia, um ambiente diverso e uma grande ideia chamada AlmapBBDO.Venha fazer parte do nosso time!Responsabilidades e atribuiçõesGerir de forma ágil o portfólio de projetos de times de dados e tecnologia em parceria com as lideranças da área;Proporcionar as melhores condições de trabalho possíveis aos times, através da organização do backlog, acompanhamento das execuções, correções de rota e feedback recorrente;Trabalhar em colabo"
+    },
+    {
+      "id": "386a2db5c063bfeb",
+      "title": "Gerente de Projetos Tech",
+      "company": "Smarthis",
+      "location": "",
+      "location_bucket": "remote_intl",
+      "location_label": "Remoto internacional",
+      "work_model": "remote",
+      "employment_type": "vacancy_type_effective",
+      "salary_brl_monthly": null,
+      "salary_raw": null,
+      "posted_at": "2026-08-04T18:38:27.911Z",
+      "age_days": 29,
+      "url": "https://smarthis.gupy.io/job/eyJqb2JJZCI6MTE5NDIwNDUsInNvdXJjZSI6Imd1cHlfcG9ydGFsIn0=?jobBoardSource=gupy_portal",
+      "source": "gupy",
+      "also_seen_in": [
+        "gupy"
+      ],
+      "score": {
+        "rules": 85,
+        "ai": null,
+        "final": 85,
+        "components": {
+          "role": 25,
+          "experience": 18,
+          "skills": 15,
+          "seniority": 10,
+          "industry": 10,
+          "salary": -1,
+          "location": 6,
+          "recency": 2
+        }
+      },
+      "why_fits": [
+        "Titulo alinhado aos cargos-alvo: \"Gerente de Projetos Tech\"",
+        "Descricao cobre temas do seu repertorio: gerente, planejamento, projetos, portfolio",
+        "Skills tecnicas que voce domina: automacao, data, analytics, inteligencia artificial",
+        "Pede idioma que voce fala: ingles",
+        "Industria prioritaria: saude"
+      ],
+      "gaps": [
+        "Salario nao divulgado - confirmar na candidatura"
+      ],
+      "ats_missing": [],
+      "verdict": "",
+      "risk": "",
+      "cv_variant": "",
+      "description_excerpt": "Quem somos:A Smarthis é referência em transformação digital na América Latina, com atuação em mais de 25 países e um time de 200+ especialistas apaixonados por inovação. Nossa expertise está em soluções integradas de ponta a ponta, combinando: Inteligência Artificial Agentes Inteligentes (Agentic AI) Data & Analytics Automação e Orquestração de ProcessosTrabalhamos lado a lado com os maiores fornecedores globais de tecnologia, alinhando soluções avançadas às estratégias de negócio de nossos clientes. Nosso compromisso é impulsionar resultados concretos em diversos setores, sempre promovendo um ambiente ágil, colaborativo e voltado à inovação contínua. Nossos diferenciais: UiPath Diamond Partner – Somos a única empresa da América Latina a alcançar o mais alto nível de parceria global com a UiPath, o que reforça nossa excelência técnica e compromisso com qualidade. Abordagem Glocal – Entregamos soluções tecnológicas globais, ajustadas às realidades locais. Consideramos as particularidades culturais e mercadológicas de cada região para garantir relevância e eficiência. Onde Estamos:Temos escritórios no Rio de Janeiro, São Paulo, Miami, Buenos Aires, Madrid e Perth. Mas, para além da l"
+    },
+    {
+      "id": "6869121f00975718",
+      "title": "Gerente de Operações Outbound (Curitiba e São Paulo)",
+      "company": "Motz",
+      "location": "São Paulo, Estado de São Paulo",
+      "location_bucket": "sao_paulo",
+      "location_label": "Sao Paulo, SP",
+      "work_model": "hybrid",
+      "employment_type": "vacancy_type_effective",
+      "salary_brl_monthly": null,
+      "salary_raw": null,
+      "posted_at": "2026-08-20T12:58:31Z",
+      "age_days": 13,
+      "url": "https://www.adzuna.com.br/details/5849812847?utm_medium=api&utm_source=f4cf42d6",
+      "source": "adzuna_br",
+      "also_seen_in": [
+        "adzuna_br",
+        "gupy"
+      ],
+      "score": {
+        "rules": 84,
+        "ai": null,
+        "final": 84,
+        "components": {
+          "role": 25,
+          "experience": 18,
+          "skills": 13,
+          "seniority": 10,
+          "industry": 10,
+          "salary": -1,
+          "location": 5,
+          "recency": 4
+        }
+      },
+      "why_fits": [
+        "Titulo alinhado aos cargos-alvo: \"Gerente de Operações Outbound (Curitiba e São Paulo)\"",
+        "Descricao cobre temas do seu repertorio: gerente, operacoes, processos, estrategia",
+        "Skills tecnicas que voce domina: dados, ia",
+        "Pede idioma que voce fala: ingles",
+        "Industria prioritaria: saude, logistica"
+      ],
+      "gaps": [
+        "Salario nao divulgado - confirmar na candidatura"
+      ],
+      "ats_missing": [],
+      "verdict": "",
+      "risk": "",
+      "cv_variant": "",
+      "description_excerpt": "🚚 Transforme o transporte com a Motz!Somos uma transportadora digital que conecta embarcadores e caminhoneiros de todo o Brasil, desburocratizando processos e gerando renda por meio da tecnologia. Desde 2020, contamos com a herança de estrutura e segurança da Votorantim Cimentos e já transportamos mais de 19 milhões de toneladas em mais de 700 mil viagens!Especialistas em transporte para construção civil e agronegócio, buscamos pessoas corajosas, inovadoras e comprometidas com a segurança. Valorizamos o sentimento de empreendedorismo, a busca por soluções simples e inovadoras e, acima de tudo, o senso de integridade.Curte um ambiente inovador, acelerado e acolhedor? Vem crescer com a gente! 🚀#VemPraMotz\n\nResponsabilidades e atribuições\nResponsabilidades e atribuiçõesResponsável por assegurar a execução eficiente do transporte do volume Outbound da Votorantim, gerindo a equipe operacional e promovendo o alinhamento estratégico entre Motz e Votorantim, visando o cumprimento das metas de volume, nível de serviço e rentabilidade das operações, de acordo com o contrato.E o seu dia a dia como será? 💼• Garantir a execução eficiente do transporte do volume Outbound da Votorantim, assegu"
+    },
+    {
+      "id": "fdf20a546e77d15a",
+      "title": "Gerente de Projetos PMO Especialista",
+      "company": "Grupo SysMap",
+      "location": "São Paulo, Estado de São Paulo",
+      "location_bucket": "sao_paulo",
+      "location_label": "Sao Paulo, SP",
+      "work_model": "hybrid",
+      "employment_type": "vacancy_type_effective",
+      "salary_brl_monthly": null,
+      "salary_raw": null,
+      "posted_at": "2026-08-09T12:00:46Z",
+      "age_days": 24,
+      "url": "https://www.adzuna.com.br/details/5834735945?utm_medium=api&utm_source=f4cf42d6",
+      "source": "adzuna_br",
+      "also_seen_in": [
+        "adzuna_br",
+        "gupy"
+      ],
+      "score": {
+        "rules": 84,
+        "ai": null,
+        "final": 84,
+        "components": {
+          "role": 25,
+          "experience": 18,
+          "skills": 15,
+          "seniority": 10,
+          "industry": 10,
+          "salary": -1,
+          "location": 5,
+          "recency": 2
+        }
+      },
+      "why_fits": [
+        "Titulo alinhado aos cargos-alvo: \"Gerente de Projetos PMO Especialista\"",
+        "Descricao cobre temas do seu repertorio: gerente, manager, processos, planejamento",
+        "Skills tecnicas que voce domina: power bi, automacao, power automate, dados",
+        "Pede idioma que voce fala: ingles",
+        "Industria prioritaria: servicos financeiros, seguros"
+      ],
+      "gaps": [
+        "Salario nao divulgado - confirmar na candidatura"
+      ],
+      "ats_missing": [],
+      "verdict": "",
+      "risk": "",
+      "cv_variant": "",
+      "description_excerpt": "Você é apaixonado(a) por tecnologia e inovação? 💡 No Grupo SysMap – que reúne SysMap Solutions, TriggoLabs e triggo.ai – acreditamos que grandes resultados nascem de pessoas incríveis. Somos uma empresa brasileira de tecnologia que, desde 1999, ajuda organizações a superar desafios complexos e acelerar sua transformação digital. Nossa atuação abrange diversos segmentos, como Telecom, Varejo, Educação, Financeiro, Indústria/Cosméticos e Energia, sempre com foco em soluções inovadoras e de alto impacto. 👉 Candidate-se agora e construa o futuro da tecnologia conosco! Responsabilidades e atribuiçõesAvaliar e elevar a maturidade em gerenciamento de projetos, conduzindo diagnósticos organizacionais, definindo planos de evolução e monitorando indicadores de maturidade do PMO e do portfólio corporativo;Planejar, liderar e monitorar projetos estratégicos de transformação digital, tecnologia, inteligência artificial, inovação e negócios, garantindo alinhamento aos objetivos corporativos, orçamento, cronograma e qualidade;Estruturar, consolidar e fortalecer o PMO corporativo, estabelecendo padrões, metodologias, processos, templates, governança, fluxos de aprovação e repositório central de "
+    },
+    {
+      "id": "801bb0f87c8a68de",
+      "title": "Coordenador de Planejamento (S&OP e S&OE)",
+      "company": "Torrent do Brasil",
+      "location": "São Paulo, Estado de São Paulo",
+      "location_bucket": "sao_paulo",
+      "location_label": "Sao Paulo, SP",
+      "work_model": "onsite",
+      "employment_type": "vacancy_type_effective",
+      "salary_brl_monthly": null,
+      "salary_raw": null,
+      "posted_at": "2026-08-30T12:20:53Z",
+      "age_days": 3,
+      "url": "https://www.adzuna.com.br/details/5862277351?utm_medium=api&utm_source=f4cf42d6",
+      "source": "adzuna_br",
+      "also_seen_in": [
+        "adzuna_br",
+        "jooble",
+        "gupy"
+      ],
+      "score": {
+        "rules": 84,
+        "ai": null,
+        "final": 84,
+        "components": {
+          "role": 25,
+          "experience": 18,
+          "skills": 15,
+          "seniority": 10,
+          "industry": 10,
+          "salary": -1,
+          "location": 2,
+          "recency": 5
+        }
+      },
+      "why_fits": [
+        "Titulo alinhado aos cargos-alvo: \"Coordenador de Planejamento (S&OP e S&OE)\"",
+        "Descricao cobre temas do seu repertorio: coordenador, processos, planejamento, indicadores",
+        "Skills tecnicas que voce domina: power bi, dados, sap",
+        "Pede idioma que voce fala: ingles",
+        "Industria prioritaria: saude, supply chain"
+      ],
+      "gaps": [
+        "Salario nao divulgado - confirmar na candidatura",
+        "Sao Paulo, SP: so vale se a oportunidade for superior a atual - nao ficou evidente aqui"
+      ],
+      "ats_missing": [],
+      "verdict": "",
+      "risk": "",
+      "cv_variant": "",
+      "description_excerpt": "Na Torrent, um dos nossos valores é a Justiça e Cuidado - Promovendo Igualdade – por isso respeitamos as diferenças e valorizamos a diversidade. As nossas oportunidades estão disponíveis igualmente para todos, independente de identidade de gênero, cor, raça, nacionalidade, deficiência ou religião. Para nós, ser diverso, é ter equidade e garantir as oportunidades de forma justa, reconhecendo as necessidades e aspirações de cada um, em busca do sucesso para todos .Venha fazer parte do nosso time!Responsabilidades e atribuiçõesSuportar na análise e tendências históricas, sazonalidades e dados de mercado para construir e refinar o baseline de previsão de vendas;Participar ativamente e conduzir reuniões de alinhamento de demanda com as áreas de Vendas, Marketing e Finanças;Elaborar, acompanhar e reportar indicadores críticos da área, como Forecast Accuracy (Acurácia da Previsão), Bias (Viés), Out of Stock (Ruptura) e Cobertura de Estoque;Atuar de forma efetiva no planejamento de lançamentos de novos produtos (NPD) e no phase in/out, minimizando riscos de perdas por validade (shelf life);Desenvolver e atualizar dashboards gerenciais para dar visibilidade ao desempenho da demanda e apoiar"
+    },
+    {
+      "id": "38786ca2e6d7790e",
+      "title": "Remote Healthcare Strategy & Operations Consultant",
+      "company": "Impact Advisors, LLC",
+      "location": "Schiller Park, Cook County",
+      "location_bucket": "remote_intl",
+      "location_label": "Remoto internacional",
+      "work_model": "remote",
+      "employment_type": "",
+      "salary_brl_monthly": 111773,
+      "salary_raw": {
+        "min": 248384.05,
+        "max": 248384.05,
+        "currency": "USD",
+        "period": "yearly",
+        "confidence": "source"
+      },
+      "posted_at": "2026-09-01T13:25:30Z",
+      "age_days": 1,
+      "url": "https://www.adzuna.com/land/ad/5865091871?se=QpBbRBun8RG2HomFYOMXfQ&utm_medium=api&utm_source=f4cf42d6&v=4309780447AB12766BB9747CB5EEBD43514D5EE4",
+      "source": "adzuna_us",
+      "also_seen_in": [
+        "adzuna_us"
+      ],
+      "score": {
+        "rules": 84,
+        "ai": null,
+        "final": 84,
+        "components": {
+          "role": 25,
+          "experience": 11,
+          "skills": 7,
+          "seniority": 10,
+          "industry": 10,
+          "salary": 10,
+          "location": 6,
+          "recency": 5
+        }
+      },
+      "why_fits": [
+        "Titulo alinhado aos cargos-alvo: \"Remote Healthcare Strategy & Operations Consultant\"",
+        "Descricao cobre temas do seu repertorio: consultant, operations, strategy",
+        "Skills tecnicas que voce domina: data, analytics",
+        "Industria prioritaria: healthcare, consulting",
+        "Salario publicado acima do alvo (~R$ 111.773/mes)"
+      ],
+      "gaps": [],
+      "ats_missing": [],
+      "verdict": "",
+      "risk": "",
+      "cv_variant": "",
+      "description_excerpt": "A leading healthcare consulting firm in Chicago is looking for a Strategy & Operations Managing Consultant / Associate Director to lead initiatives that enhance patient care. You will support teams by driving operational improvements through data analytics and maintaining strong client relationships. Required qualifications include a Bachelor's or Master's degree and extensive experience in healthcare consulting. This role offers a competitive salary range of $125,000 to $210,000 and may requir…"
+    },
+    {
+      "id": "2e365bed86245e77",
+      "title": "Coordenador(a) de Planejamento",
+      "company": "Gupy",
+      "location": "",
+      "location_bucket": "remote_intl",
+      "location_label": "Remoto internacional",
+      "work_model": "remote",
+      "employment_type": "vacancy_type_effective",
+      "salary_brl_monthly": null,
+      "salary_raw": null,
+      "posted_at": "2026-09-01T12:47:55.668Z",
+      "age_days": 1,
+      "url": "https://vempra.gupy.io/job/eyJqb2JJZCI6MTIyNjI4NDksInNvdXJjZSI6Imd1cHlfcG9ydGFsIn0=?jobBoardSource=gupy_portal",
+      "source": "gupy",
+      "also_seen_in": [
+        "gupy"
+      ],
+      "score": {
+        "rules": 84,
+        "ai": null,
+        "final": 84,
+        "components": {
+          "role": 21,
+          "experience": 18,
+          "skills": 15,
+          "seniority": 10,
+          "industry": 10,
+          "salary": -1,
+          "location": 6,
+          "recency": 5
+        }
+      },
+      "why_fits": [
+        "Titulo alinhado aos cargos-alvo: \"Coordenador(a) de Planejamento\"",
+        "Descricao cobre temas do seu repertorio: coordenador, operations, processos, estrategia",
+        "Skills tecnicas que voce domina: automacao, dados, analytics, ia",
+        "Industria prioritaria: seguros, unimed",
+        "Publicada ha 1 dia(s)"
+      ],
+      "gaps": [
+        "Salario nao divulgado - confirmar na candidatura"
+      ],
+      "ats_missing": [],
+      "verdict": "",
+      "risk": "",
+      "cv_variant": "",
+      "description_excerpt": "Conheça mais sobre a gente!Nosso propósito é claro: impulsionar o potencial humano. Acreditamos que, com tecnologia e inovação, podemos transformar a forma como pessoas e empresas se conectam. Somos a AI Talent Platform nº 1 para gestão de pessoas no Brasil, com uma jornada completa que vai do recrutamento ao desenvolvimento e acompanhamento, agora com agentes de IA e dados centralizados atuando de forma integrada.Na Gupy, estimulamos o desenvolvimento contínuo em um ambiente com desafios reais, autonomia, colaboração entre áreas e espaço para inovar. O aprendizado faz parte do dia a dia e é potencializado por times diversos e colaborativos, que acreditam no poder das conexões genuínas.Para nós, diversidade é muito importante! Se você pertence a um grupo diverso, saiba que todas as nossas vagas são abertas para você. Queremos construir um time cada vez mais inclusivo, onde todos possam crescer e contribuir de forma única.Fazer parte da Gupy é criar o futuro do trabalho com propósito, tecnologia e impacto real na vida das pessoas.Responsabilidades e atribuiçõesComo Coordenador(a), você vai:Liderar o time de Revenue Planning e garantir a previsibilidade e o crescimento sustentável da"
+    },
+    {
+      "id": "21b27f92ebdbd42a",
+      "title": "Gerente de Projetos",
+      "company": "Confidencial",
+      "location": "São Paulo, Estado de São Paulo",
+      "location_bucket": "sao_paulo",
+      "location_label": "Sao Paulo, SP",
+      "work_model": "hybrid",
+      "employment_type": "permanent",
+      "salary_brl_monthly": null,
+      "salary_raw": null,
+      "posted_at": "2026-08-29T18:49:58Z",
+      "age_days": 4,
+      "url": "https://www.adzuna.com.br/details/5861435678?utm_medium=api&utm_source=f4cf42d6",
+      "source": "adzuna_br",
+      "also_seen_in": [
+        "adzuna_br",
+        "jooble",
+        "gupy"
+      ],
+      "score": {
+        "rules": 83,
+        "ai": null,
+        "final": 83,
+        "components": {
+          "role": 25,
+          "experience": 18,
+          "skills": 11,
+          "seniority": 10,
+          "industry": 10,
+          "salary": -1,
+          "location": 5,
+          "recency": 5
+        }
+      },
+      "why_fits": [
+        "Titulo alinhado aos cargos-alvo: \"Gerente de Projetos\"",
+        "Descricao cobre temas do seu repertorio: gerente, projetos, transformacao, indicadores",
+        "Skills tecnicas que voce domina: dados",
+        "Pede idioma que voce fala: ingles",
+        "Industria prioritaria: saude"
+      ],
+      "gaps": [
+        "Salario nao divulgado - confirmar na candidatura"
+      ],
+      "ats_missing": [],
+      "verdict": "",
+      "risk": "",
+      "cv_variant": "",
+      "description_excerpt": "Estamos à procura de uma pessoa Gerente de Projetos Sênior com sólida experiência em gerenciamento de projetos de implantação de software e habilidade comprovada para liderar equipes multidisciplinares. Valorizamos profissionais com forte orientação para o negócio, visão estratégica, excelente comunicação, capacidade de tomada de decisão e senso de ownership, atuando como verdadeiros donos dos projetos e responsáveis pelo sucesso das entregas de ponta a ponta.Buscamos um profissional com formação na área de Tecnologia, experiência em gerenciamento de projetos utilizando metodologias Waterfall, Ágil e Híbridas, domínio de boas práticas como PMI, Scrum e Kanban, inglês para conversação e bom conhecimento técnico que permita atuar como elo entre as áreas de negócio e tecnologia.Também esperamos maturidade para conduzir projetos em ambientes dinâmicos, sabendo gerenciar cenários onde parte das informações pode ser estratégica ou confidencial, preservando o sigilo das informações sem comprometer o andamento das entregas.Responsabilidades e atribuiçõesProfissional atuante no nível tático, responsável por definir, planejar e acompanhar os planos de implantação tecnológica e evolução digit"
+    },
+    {
+      "id": "8152fcedee28caf9",
+      "title": "Engenheiro Sênior | PMO e Gestão de Empreendimentos",
+      "company": "Sabesp",
+      "location": "São Paulo, Estado de São Paulo",
+      "location_bucket": "sao_paulo",
+      "location_label": "Sao Paulo, SP",
+      "work_model": "onsite",
+      "employment_type": "Efetivo",
+      "salary_brl_monthly": null,
+      "salary_raw": null,
+      "posted_at": "2026-08-25T03:04:01.1870000",
+      "age_days": 9,
+      "url": "https://www.adzuna.com.br/land/ad/5854575150?se=hiU6Rhun8RG2HomFYOMXfQ&utm_medium=api&utm_source=f4cf42d6&v=3A839B9CBF75AEB9B89C802BBFE2FC3D83F83975",
+      "source": "adzuna_br",
+      "also_seen_in": [
+        "adzuna_br",
+        "jooble",
+        "gupy"
+      ],
+      "score": {
+        "rules": 83,
+        "ai": null,
+        "final": 83,
+        "components": {
+          "role": 25,
+          "experience": 18,
+          "skills": 15,
+          "seniority": 10,
+          "industry": 10,
+          "salary": -1,
+          "location": 2,
+          "recency": 4
+        }
+      },
+      "why_fits": [
+        "Titulo alinhado aos cargos-alvo: \"Engenheiro Sênior | PMO e Gestão de Empreendimentos\"",
+        "Descricao cobre temas do seu repertorio: processos, planejamento, pmo, projetos",
+        "Skills tecnicas que voce domina: power bi, dados, ai",
+        "Industria prioritaria: saude"
+      ],
+      "gaps": [
+        "Salario nao divulgado - confirmar na candidatura",
+        "Sao Paulo, SP: so vale se a oportunidade for superior a atual - nao ficou evidente aqui"
+      ],
+      "ats_missing": [],
+      "verdict": "",
+      "risk": "",
+      "cv_variant": "",
+      "description_excerpt": "Estamos em busca de um(a) Engenheiro(a) Sênior para integrar a área de Empreendimentos de Esgotos da RMSP. O profissional atuará no gerenciamento e acompanhamento de carteira de projetos, contribuindo para o aprimoramento das práticas de PMO (Project Management Office), monitoramento de indicadores de desempenho, acompanhamento da evolução dos empreendimentos, consolidação de informações gerenciais e suporte à tomada de decisão.Buscamos um profissional com perfil analítico, organizado, orientado a resultados e com capacidade para transformar dados em informações estratégicas, promovendo maior eficiência na gestão dos projetos e contratos.Perfil DesejadoProfissional com forte capacidade analítica, organização, visão de processos e habilidade para transformar informações em conhecimento gerencial. Espera-se iniciativa, boa comunicação, senso de prioridade e capacidade de atuar em ambiente colaborativo, apoiando a gestão estratégica dos empreendimentos.Sobre a EmpresaA Nova Sabesp é muito mais do que uma empresa de saneamento. Somos uma força que move cidades, leva qualidade de vida para milhões de pessoas e faz a diferença de verdade!Constantemente, seguimos inovando para garantir ab"
+    },
+    {
+      "id": "708929c50595096f",
+      "title": "Gerente de Projetos",
+      "company": "Food Brands Alimentos",
+      "location": "Jundiaí, São Paulo",
+      "location_bucket": "sao_paulo",
+      "location_label": "Sao Paulo, SP",
+      "work_model": "onsite",
+      "employment_type": "vacancy_type_effective",
+      "salary_brl_monthly": null,
+      "salary_raw": null,
+      "posted_at": "2026-08-12T14:01:24.926Z",
+      "age_days": 21,
+      "url": "https://kisabor.gupy.io/job/eyJqb2JJZCI6MTE4OTAxMTQsInNvdXJjZSI6Imd1cHlfcG9ydGFsIn0=?jobBoardSource=gupy_portal",
+      "source": "gupy",
+      "also_seen_in": [
+        "gupy"
+      ],
+      "score": {
+        "rules": 83,
+        "ai": null,
+        "final": 83,
+        "components": {
+          "role": 25,
+          "experience": 18,
+          "skills": 13,
+          "seniority": 10,
+          "industry": 10,
+          "salary": -1,
+          "location": 5,
+          "recency": 3
+        }
+      },
+      "why_fits": [
+        "Titulo alinhado aos cargos-alvo: \"Gerente de Projetos\"",
+        "Descricao cobre temas do seu repertorio: gerente, processos, projetos, portfolio",
+        "Skills tecnicas que voce domina: power bi, erp",
+        "Industria prioritaria: alimentos, food",
+        "Sao Paulo, SP com sinal de oportunidade superior"
+      ],
+      "gaps": [
+        "Salario nao divulgado - confirmar na candidatura"
+      ],
+      "ats_missing": [],
+      "verdict": "",
+      "risk": "",
+      "cv_variant": "",
+      "description_excerpt": "Fundada em setembro de 2004, nossa empresa mantém o compromisso de investir continuamente em pesquisa e desenvolvimento de tecnologias para o setor alimentício. Dominamos processos de industrialização de alimentos com excelência, tornando acessíveis produtos de qualidade a um número cada vez maior de pessoas.Seguimos uma filosofia de crescimento responsável, baseada no propósito de oferecer alimentos saudáveis e na valorização do ser humano. Essa conduta nos levou a conquistar um espaço de destaque nos mercados em que atuamos, sustentados pela confiança de colaboradores, clientes e fornecedores.Se você busca uma oportunidade para fazer parte de uma empresa sólida, com propósito e que valoriza o ser humano, essa vaga é para você!Responsabilidades e atribuiçõesPrincipais ResponsabilidadesEstruturar, implementar e manter a metodologia de gerenciamento de projetos de TI e das áreas de negócio.Apoiar gestores e líderes de projetos na elaboração de cronogramas, planos de ação e definição de escopo.Monitorar o andamento dos projetos, identificando desvios de prazo, custo, qualidade e recursos.Consolidar indicadores (KPIs) e dashboards executivos para acompanhamento do portfólio de projeto"
+    },
+    {
+      "id": "cd6d64327bf297fc",
+      "title": "Controller / Business Controller",
+      "company": "Moveon Consulting - Servicos de Consultoria Ltda",
+      "location": "São Paulo, São Paulo",
+      "location_bucket": "sao_paulo",
+      "location_label": "Sao Paulo, SP",
+      "work_model": "onsite",
+      "employment_type": "vacancy_legal_entity",
+      "salary_brl_monthly": null,
+      "salary_raw": null,
+      "posted_at": "2026-08-26T19:07:54.010Z",
+      "age_days": 7,
+      "url": "https://moveon.gupy.io/job/eyJqb2JJZCI6MTIzMDQzMDAsInNvdXJjZSI6Imd1cHlfcG9ydGFsIn0=?jobBoardSource=gupy_portal",
+      "source": "gupy",
+      "also_seen_in": [
+        "gupy"
+      ],
+      "score": {
+        "rules": 83,
+        "ai": null,
+        "final": 83,
+        "components": {
+          "role": 25,
+          "experience": 18,
+          "skills": 15,
+          "seniority": 10,
+          "industry": 10,
+          "salary": -1,
+          "location": 2,
+          "recency": 4
+        }
+      },
+      "why_fits": [
+        "Titulo alinhado aos cargos-alvo: \"Controller / Business Controller\"",
+        "Descricao cobre temas do seu repertorio: processos, planejamento, projetos, controladoria",
+        "Skills tecnicas que voce domina: power bi, automacao, dados, data",
+        "Pede idioma que voce fala: ingles",
+        "Industria prioritaria: consultoria, consulting"
+      ],
+      "gaps": [
+        "Salario nao divulgado - confirmar na candidatura",
+        "Sao Paulo, SP: so vale se a oportunidade for superior a atual - nao ficou evidente aqui"
+      ],
+      "ats_missing": [],
+      "verdict": "",
+      "risk": "",
+      "cv_variant": "",
+      "description_excerpt": "Buscamos um(a) Controller com perfil de Business Partner, capaz de atuar como braço direito da liderança e transformar informações financeiras em decisões de negócio.A posição exige um profissional hands-on, analítico, ágil e orientado a resultados, com experiência em ambientes de tecnologia e/ou serviços, gestão de múltiplos CNPJs e forte atuação em planejamento, performance financeira e governança.Mais do que uma atuação tradicional de Controladoria, buscamos alguém com visão ampla do negócio, capacidade de questionar números, identificar oportunidades de eficiência e apoiar diretamente a alta administração em decisões relacionadas a EBITDA, geração de caixa, margem e produtividade.O perfil comportamental terá peso relevante na avaliação: procuramos alguém com senso de urgência, mentalidade de dono, alta tolerância à pressão, comunicação executiva e visão moderna e data driven da área financeira.Responsabilidades e atribuições\nResponsabilidadesLiderar as atividades de Controladoria, garantindo qualidade, consistência e confiabilidade das informações financeiras;Gerenciar e consolidar os resultados financeiros de múltiplos CNPJs;Conduzir os processos de budget, forecast e planejam"
+    },
+    {
+      "id": "3e71d9261b868640",
+      "title": "Gerente de Projetos Clínicos I CRO",
+      "company": "Synvia",
+      "location": "",
+      "location_bucket": "remote_intl",
+      "location_label": "Remoto internacional",
+      "work_model": "remote",
+      "employment_type": "vacancy_type_effective",
+      "salary_brl_monthly": null,
+      "salary_raw": null,
+      "posted_at": "2026-08-24T13:21:26.271Z",
+      "age_days": 9,
+      "url": "https://synvia.gupy.io/job/eyJqb2JJZCI6MTIyNjE5NjAsInNvdXJjZSI6Imd1cHlfcG9ydGFsIn0=?jobBoardSource=gupy_portal",
+      "source": "gupy",
+      "also_seen_in": [
+        "gupy"
+      ],
+      "score": {
+        "rules": 82,
+        "ai": null,
+        "final": 82,
+        "components": {
+          "role": 25,
+          "experience": 18,
+          "skills": 10,
+          "seniority": 10,
+          "industry": 10,
+          "salary": -1,
+          "location": 6,
+          "recency": 4
+        }
+      },
+      "why_fits": [
+        "Titulo alinhado aos cargos-alvo: \"Gerente de Projetos Clínicos I CRO\"",
+        "Descricao cobre temas do seu repertorio: gerente, operations, processos, planejamento",
+        "Skills tecnicas que voce domina: dados, data",
+        "Pede idioma que voce fala: ingles",
+        "Industria prioritaria: saude, clinica"
+      ],
+      "gaps": [
+        "Salario nao divulgado - confirmar na candidatura"
+      ],
+      "ats_missing": [],
+      "verdict": "",
+      "risk": "",
+      "cv_variant": "",
+      "description_excerpt": "Para compor nosso time, buscamos profissionais que queiram contribuir com nossa missão de melhorar a vida de cada vez mais pessoas. Se você possui um perfil inovador, pensa fora da caixa, e gosta de trabalhar em um ambiente moderno e dinâmico, essa vaga é para você. ﻿Vem com a gente fazer parte dessa jornada. #VemSerSynviaResponsabilidades e atribuiçõesContamos com você para: Gerenciar projetos de pesquisa clínica Fases I–IV, em modelo full service, sendo responsável pelo planejamento, execução e acompanhamento do estudo desde a iniciação até o encerramento, assegurando o cumprimento do escopo contratado, cronograma, orçamento, qualidade e requisitos regulatórios aplicáveisAtuar como principal ponto de contato do projeto junto ao patrocinador, conduzindo a comunicação do estudo, alinhamento de expectativas, acompanhamento de performance, apresentação de status e gerenciamento de questões críticas.Liderar e coordenar equipes multidisciplinares e áreas funcionais envolvidas na execução dos estudos, incluindo Clinical Operations, Start-up, Assuntos Regulatórios, Data Management, Farmacovigilância, Logística, Qualidade, Finanças e demais áreas aplicáveis ao projeto.Desenvolver, impleme"
+    },
+    {
+      "id": "d1b23cbed507203d",
+      "title": "Program Manager - PMO - HÍBRIDO",
+      "company": "#sejaveriter",
+      "location": "São Paulo, Estado de São Paulo",
+      "location_bucket": "sao_paulo",
+      "location_label": "Sao Paulo, SP",
+      "work_model": "hybrid",
+      "employment_type": "vacancy_type_effective",
+      "salary_brl_monthly": null,
+      "salary_raw": null,
+      "posted_at": "2026-09-01T00:00:00.0000000",
+      "age_days": 2,
+      "url": "https://www.adzuna.com.br/details/5819850112?utm_medium=api&utm_source=f4cf42d6",
+      "source": "adzuna_br",
+      "also_seen_in": [
+        "adzuna_br",
+        "jooble",
+        "gupy"
+      ],
+      "score": {
+        "rules": 82,
+        "ai": null,
+        "final": 82,
+        "components": {
+          "role": 25,
+          "experience": 18,
+          "skills": 10,
+          "seniority": 10,
+          "industry": 10,
+          "salary": -1,
+          "location": 5,
+          "recency": 5
+        }
+      },
+      "why_fits": [
+        "Titulo alinhado aos cargos-alvo: \"Program Manager - PMO - HÍBRIDO\"",
+        "Descricao cobre temas do seu repertorio: consultoria, gerente, manager, estrategia",
+        "Skills tecnicas que voce domina: dados, ai",
+        "Industria prioritaria: banco, servicos financeiros",
+        "Sao Paulo, SP com sinal de oportunidade superior"
+      ],
+      "gaps": [
+        "Salario nao divulgado - confirmar na candidatura"
+      ],
+      "ats_missing": [],
+      "verdict": "",
+      "risk": "",
+      "cv_variant": "",
+      "description_excerpt": "A Verity está buscando novos talentos!Somos uma consultoria de transformação e engenharia digital e buscamos Program Manager PMO para fazer parte dessa jornada.Olha só quais são as experiências e conhecimentos que você precisa ter para acelerar e transformar com a gente:Responsabilidades e atribuiçõesAtuar como PMO Estratégico em uma iniciativa digital de grande porte, sendo responsável pela condução do planejamento integrado, governança executiva, acompanhamento do roadmap, gestão de riscos e orquestração de dependências entre múltiplas squads, áreas internas e stakeholders de negócio.O profissional terá a missão de garantir a visão consolidada do programa, conectando frentes de produto, tecnologia, arquitetura, UX, dados, CRM, sistemas core, canais digitais e demais áreas envolvidas. A atuação será em alto nível, sem substituir o papel dos POs das squads, mas assegurando alinhamento entre prioridades, capacidade, entregas, dependências, riscos e marcos estratégicos.Além da coordenação das squads diretamente envolvidas, será responsável por articular os times parceiros e áreas internas dependentes, garantindo que decisões, integrações, insumos técnicos e entregas externas avancem "
+    },
+    {
+      "id": "b530c52fa557ccdd",
+      "title": "Coordenador / Gerente Operações de Data Center",
+      "company": "Scala Data Centers",
+      "location": "Barueri, São Paulo",
+      "location_bucket": "sao_paulo",
+      "location_label": "Sao Paulo, SP",
+      "work_model": "onsite",
+      "employment_type": "vacancy_type_effective",
+      "salary_brl_monthly": null,
+      "salary_raw": null,
+      "posted_at": "2026-08-24T14:03:58.499Z",
+      "age_days": 9,
+      "url": "https://scaladatacenters.gupy.io/job/eyJqb2JJZCI6MTIyNjE2ODgsInNvdXJjZSI6Imd1cHlfcG9ydGFsIn0=?jobBoardSource=gupy_portal",
+      "source": "gupy",
+      "also_seen_in": [
+        "gupy"
+      ],
+      "score": {
+        "rules": 82,
+        "ai": null,
+        "final": 82,
+        "components": {
+          "role": 21,
+          "experience": 18,
+          "skills": 15,
+          "seniority": 10,
+          "industry": 10,
+          "salary": -1,
+          "location": 5,
+          "recency": 4
+        }
+      },
+      "why_fits": [
+        "Titulo alinhado aos cargos-alvo: \"Coordenador / Gerente Operações de Data Center\"",
+        "Descricao cobre temas do seu repertorio: gerente, coordenador, operacoes, processos",
+        "Skills tecnicas que voce domina: automacao, dados, data, inteligencia artificial",
+        "Pede idioma que voce fala: ingles",
+        "Industria prioritaria: saude"
+      ],
+      "gaps": [
+        "Salario nao divulgado - confirmar na candidatura"
+      ],
+      "ats_missing": [],
+      "verdict": "",
+      "risk": "",
+      "cv_variant": "",
+      "description_excerpt": "Venha ser um Scaler! 💚🚀Quem somos?A Scala Data Centers é a plataforma líder em data centers sustentáveis no mercado Hyperscale. Com presença estratégica na América Latina e respaldada por investidores globais, desenvolvemos e operamos infraestrutura digital de ponta, combinando alta eficiência energética, inovação e compromisso com a sustentabilidade para atender às crescentes demandas por computação em nuvem, inteligência artificial e armazenamento de dados.O que é importante para nós?Nosso compromisso vai além da infraestrutura – trabalhamos para criar impacto positivo nas comunidades onde atuamos e para impulsionar um futuro digital mais eficiente e responsável. Somos reconhecidos por operar de forma 100% sustentável e carbono neutro desde nossa fundação, utilizando exclusivamente energia renovável certificada.Nossos ValoresObsessão pelo ClienteInspirar nossos clientes a repensar o futuro.Conhecemos profundamente seus negócios e necessidades. Temos senso de urgência, antecipamos impactos e os colocamos no centro da decisão, assim solucionamos seus problemas e superamos suas expectativas.Vigor EmpreendedorCrescer e expandir com responsabilidade.Conhecemos profundamente seus neg"
+    },
+    {
+      "id": "3f5b7c386533f0af",
+      "title": "Gerente de Operações Inbound",
+      "company": "Numen",
+      "location": "São Paulo, São Paulo",
+      "location_bucket": "sao_paulo",
+      "location_label": "Sao Paulo, SP",
+      "work_model": "hybrid",
+      "employment_type": "vacancy_type_effective",
+      "salary_brl_monthly": null,
+      "salary_raw": null,
+      "posted_at": "2026-07-20T20:00:28.356Z",
+      "age_days": 44,
+      "url": "https://numen.gupy.io/job/eyJqb2JJZCI6MTE2NDkzMDIsInNvdXJjZSI6Imd1cHlfcG9ydGFsIn0=?jobBoardSource=gupy_portal",
+      "source": "gupy",
+      "also_seen_in": [
+        "gupy"
+      ],
+      "score": {
+        "rules": 82,
+        "ai": null,
+        "final": 82,
+        "components": {
+          "role": 25,
+          "experience": 18,
+          "skills": 15,
+          "seniority": 10,
+          "industry": 10,
+          "salary": -1,
+          "location": 5,
+          "recency": 0
+        }
+      },
+      "why_fits": [
+        "Titulo alinhado aos cargos-alvo: \"Gerente de Operações Inbound\"",
+        "Descricao cobre temas do seu repertorio: consultoria, gerente, operacoes, planning",
+        "Skills tecnicas que voce domina: analytics, ia, sap, s/4hana",
+        "Pede idioma que voce fala: ingles",
+        "Industria prioritaria: consultoria"
+      ],
+      "gaps": [
+        "Salario nao divulgado - confirmar na candidatura"
+      ],
+      "ats_missing": [],
+      "verdict": "",
+      "risk": "",
+      "cv_variant": "",
+      "description_excerpt": "A Numen é uma das maiores consultorias brasileiras especializadas em SAP. Com cultura essencialmente nacional, expandimos para a Europa e América do Norte. Além da forte atuação em projetos SAP, somos parceiros de grandes players como AWS, Salesforce e Celonis. Reconhecida pelo seu lado humano, a Numen apoia empresas em suas jornadas de transformação digital, sempre com foco na geração de valor sustentável. Aqui, acreditamos que tecnologia só faz sentido quando conecta pessoas. Por isso, buscamos profissionais colaborativos, comprometidos com a excelência, com vontade de aprender, compartilhar conhecimento e que valorizem o respeito nas relações. Você terá a oportunidade de integrar projetos globais, complexos e desafiadores, com aprendizados constantes e oportunidades reais de desenvolvimento. Nossa missão é aproximar pessoas e tecnologia para construir negócios mais ágeis, inteligentes e humanos. A Numen nasceu do sonho da nossa fundadora, Patrícia Terue: criar uma empresa onde as pessoas desejassem trabalhar. Esse sonho se tornou realidade e hoje guia a nossa missão de sermos a empresa preferida dos nossos clientes e dos nossos colaboradores.Aqui, as pessoas são o que nos move.E"
+    },
+    {
+      "id": "5efef6319f0eba50",
+      "title": "Gerente de Projetos Sênior (Infraestrutura, Cloud & IA) (Híbrido/SP) [Projeto Internacional - Espanhol Avançado]",
+      "company": "Somos BHS 💚",
+      "location": "São Paulo, São Paulo",
+      "location_bucket": "sao_paulo",
+      "location_label": "Sao Paulo, SP",
+      "work_model": "hybrid",
+      "employment_type": "vacancy_type_effective",
+      "salary_brl_monthly": null,
+      "salary_raw": null,
+      "posted_at": "2026-08-26T21:03:11.242Z",
+      "age_days": 7,
+      "url": "https://bhs.gupy.io/job/eyJqb2JJZCI6MTIzMDU0MjksInNvdXJjZSI6Imd1cHlfcG9ydGFsIn0=?jobBoardSource=gupy_portal",
+      "source": "gupy",
+      "also_seen_in": [
+        "gupy"
+      ],
+      "score": {
+        "rules": 82,
+        "ai": null,
+        "final": 82,
+        "components": {
+          "role": 25,
+          "experience": 18,
+          "skills": 11,
+          "seniority": 10,
+          "industry": 10,
+          "salary": -1,
+          "location": 5,
+          "recency": 4
+        }
+      },
+      "why_fits": [
+        "Titulo alinhado aos cargos-alvo: \"Gerente de Projetos Sênior (Infraestrutura, Cloud & IA) (Híbrido/SP) [Projeto Internacional - Espanhol Avançado]\"",
+        "Descricao cobre temas do seu repertorio: gerente, processos, projetos, transformacao",
+        "Skills tecnicas que voce domina: automacao, inteligencia artificial, ia",
+        "Industria prioritaria: saude",
+        "Sao Paulo, SP com sinal de oportunidade superior"
+      ],
+      "gaps": [
+        "Salario nao divulgado - confirmar na candidatura"
+      ],
+      "ats_missing": [],
+      "verdict": "",
+      "risk": "",
+      "cv_variant": "",
+      "description_excerpt": "Nós somos a BHS!Com 31 anos de experiência no mercado, proporcionamos soluções modernas de TI. 🚀Somos reconhecidos como a MELHOR empresa para se trabalhar em MG e TI do BRASIL pelo GPTW - Great Place to Work, e estamos classificados como a 4ª melhor empresa para se trabalhar na categoria LATAM.✨ O que a gente espera de você?· Habilidade de relacionamento com pessoas de diferentes áreas e de diversos níveis de hierarquia;· Autogerenciamento;· Colaboração;· Ser proativo e saber trabalhar fora da zona de conforto;· Alguém que queira fazer parte de projetos incríveis e tenha muita vontade de aprender, ensinar e crescer junto com a BHS.Responsabilidades e atribuições💪 Suas atividades serão:\n\n·\n\nGerenciar simultaneamente projetos de Infraestrutura e Cloud, acompanhando escopo, cronogramas, riscos, dependências, entregas e principais indicadores;\n· Elaborar, acompanhar e atualizar planos de projeto, garantindo visibilidade sobre prazos, atividades, responsáveis e marcos;· Gerenciar escopos, mudanças e impactos dos projetos, atuando de forma proativa na identificação e mitigação de riscos;· Garantir a organização e atualização da documentação dos projetos;· Conduzir reuniões de acompanha"
+    },
+    {
+      "id": "d45f4b99e1883ad2",
+      "title": "GERENTE DE PROJETOS - MATRIZ - SÃO PAULO/SP",
+      "company": "Roldão Atacadista",
+      "location": "São Paulo, São Paulo",
+      "location_bucket": "sao_paulo",
+      "location_label": "Sao Paulo, SP",
+      "work_model": "onsite",
+      "employment_type": "vacancy_type_effective",
+      "salary_brl_monthly": null,
+      "salary_raw": null,
+      "posted_at": "2026-07-20T12:01:28.168Z",
+      "age_days": 44,
+      "url": "https://roldao.gupy.io/job/eyJqb2JJZCI6MTE3MDczNTEsInNvdXJjZSI6Imd1cHlfcG9ydGFsIn0=?jobBoardSource=gupy_portal",
+      "source": "gupy",
+      "also_seen_in": [
+        "gupy"
+      ],
+      "score": {
+        "rules": 82,
+        "ai": null,
+        "final": 82,
+        "components": {
+          "role": 25,
+          "experience": 18,
+          "skills": 15,
+          "seniority": 10,
+          "industry": 10,
+          "salary": -1,
+          "location": 5,
+          "recency": 0
+        }
+      },
+      "why_fits": [
+        "Titulo alinhado aos cargos-alvo: \"GERENTE DE PROJETOS - MATRIZ - SÃO PAULO/SP\"",
+        "Descricao cobre temas do seu repertorio: gerente, processos, estrategia, planejamento",
+        "Skills tecnicas que voce domina: data, inteligencia artificial, ia, erp",
+        "Industria prioritaria: alimentos, atacado",
+        "Sao Paulo, SP com sinal de oportunidade superior"
+      ],
+      "gaps": [
+        "Salario nao divulgado - confirmar na candidatura"
+      ],
+      "ats_missing": [],
+      "verdict": "",
+      "risk": "",
+      "cv_variant": "",
+      "description_excerpt": "Realizar a gestão da área de projetos, mantendo os padrões de acordo com os procedimentos da empresa, escopo dos projetos, recursos humanos e materiais, especificações dos contratos, padrões de qualidade, mitigação de riscos, comunicação, integração do projeto, metas de custo, rentabilidade e prazos estabelecidos, visando a obtenção dos resultados, contribuindo na perpetuação dos negócios.Responsabilidades e atribuiçõesEstruturação e Processos: Desenvolver, implementar e padronizar a Metodologia de Gestão de Projetos (MGP) da empresa, criando processos internos, fluxos, modelos de documentos e templates para garantir a melhoria contínua e a governança do setor.Gestão de Portfólio (PMO): Analisar, priorizar e monitorar o portfólio de projetos da companhia, garantindo o alinhamento com a estratégia organizacional, orçamentos e diretrizes do Roldão Atacadista.Planejamento e Execução: Definir escopo, cronograma, custos e responsabilidades de cada projeto, acompanhando de perto todas as fases e garantindo a entrega das etapas acordadas.Gestão do Cronograma \"Big Bang\": Experiência em implantação de sistemas de todos os subprojetos (WMS, PDV, RM, ERP, Backoffice) e garantir que todos eles"
+    },
+    {
+      "id": "4b8dbd5eef6b2740",
+      "title": "Coordenador de Melhoria Contínua",
+      "company": "Casa K&M",
+      "location": "Paulínia, São Paulo",
+      "location_bucket": "sao_paulo",
+      "location_label": "Sao Paulo, SP",
+      "work_model": "onsite",
+      "employment_type": "vacancy_type_effective",
+      "salary_brl_monthly": null,
+      "salary_raw": null,
+      "posted_at": "2026-09-01T16:58:28.509Z",
+      "age_days": 1,
+      "url": "https://casakm.gupy.io/job/eyJqb2JJZCI6MTIzOTU2MDgsInNvdXJjZSI6Imd1cHlfcG9ydGFsIn0=?jobBoardSource=gupy_portal",
+      "source": "gupy",
+      "also_seen_in": [
+        "gupy"
+      ],
+      "score": {
+        "rules": 82,
+        "ai": null,
+        "final": 82,
+        "components": {
+          "role": 25,
+          "experience": 18,
+          "skills": 13,
+          "seniority": 10,
+          "industry": 10,
+          "salary": -1,
+          "location": 2,
+          "recency": 5
+        }
+      },
+      "why_fits": [
+        "Titulo alinhado aos cargos-alvo: \"Coordenador de Melhoria Contínua\"",
+        "Descricao cobre temas do seu repertorio: coordenador, operacoes, processos, projetos",
+        "Skills tecnicas que voce domina: power bi, dados",
+        "Industria prioritaria: unimed, saude",
+        "Publicada ha 1 dia(s)"
+      ],
+      "gaps": [
+        "Salario nao divulgado - confirmar na candidatura",
+        "Sao Paulo, SP: so vale se a oportunidade for superior a atual - nao ficou evidente aqui"
+      ],
+      "ats_missing": [],
+      "verdict": "",
+      "risk": "",
+      "cv_variant": "",
+      "description_excerpt": "Responsável por identificar oportunidades de otimização nos processos da empresa, promovendo ganhos de eficiência, produtividade, qualidade e redução de custos. Seu papel é analisar indicadores de desempenho, mapear fluxos de trabalho, identificar gargalos e desenvolver projetos que contribuam para a evolução contínua das operações e dos resultados do negócio\n\nResponsabilidades e atribuiçõesCoordenar projetos de melhoria contínua visando aumento de produtividade, qualidade e eficiência operacional.\nMapear, analisar e redesenhar processos para identificar oportunidades de otimização.\nImplementar e acompanhar metodologias de melhoria contínua, como Lean Manufacturing, Kaizen, Six Sigma e PDCA.\nMonitorar indicadores de desempenho (KPIs) e elaborar relatórios gerenciais de resultados.\nIdentificar desperdícios, gargalos e oportunidades de redução de custos nos processos.\nLiderar equipes multidisciplinares na execução de projetos de melhoria.\nDesenvolver e acompanhar planos de ação para solução de problemas e alcance de metas.\nGarantir a padronização de processos e a disseminação de melhores práticas.\nPromover treinamentos e capacitações relacionados às ferramentas de melhoria contínua.\n"
+    },
+    {
+      "id": "b8578e403e066ca1",
+      "title": "Especialista em Processos e Projetos (Sucesso do Contador)",
+      "company": "Omie",
+      "location": "São Paulo, São Paulo",
+      "location_bucket": "sao_paulo",
+      "location_label": "Sao Paulo, SP",
+      "work_model": "hybrid",
+      "employment_type": "vacancy_type_effective",
+      "salary_brl_monthly": null,
+      "salary_raw": null,
+      "posted_at": "2026-08-27T18:03:21.976Z",
+      "age_days": 6,
+      "url": "https://carreirasomie.gupy.io/job/eyJqb2JJZCI6MTIyNzk2MDUsInNvdXJjZSI6Imd1cHlfcG9ydGFsIn0=?jobBoardSource=gupy_portal",
+      "source": "gupy",
+      "also_seen_in": [
+        "gupy"
+      ],
+      "score": {
+        "rules": 82,
+        "ai": null,
+        "final": 82,
+        "components": {
+          "role": 25,
+          "experience": 18,
+          "skills": 14,
+          "seniority": 10,
+          "industry": 10,
+          "salary": -1,
+          "location": 2,
+          "recency": 4
+        }
+      },
+      "why_fits": [
+        "Titulo alinhado aos cargos-alvo: \"Especialista em Processos e Projetos (Sucesso do Contador)\"",
+        "Descricao cobre temas do seu repertorio: coordenador, operacoes, processos, projetos",
+        "Skills tecnicas que voce domina: automacao, dados, erp",
+        "Industria prioritaria: saude"
+      ],
+      "gaps": [
+        "Salario nao divulgado - confirmar na candidatura",
+        "Sao Paulo, SP: so vale se a oportunidade for superior a atual - nao ficou evidente aqui"
+      ],
+      "ats_missing": [],
+      "verdict": "",
+      "risk": "",
+      "cv_variant": "",
+      "description_excerpt": "A Omie tem como propósito trazer prosperidade para o ecossistema empreendedor brasileiro. Por isso, buscamos por pessoas com mentalidade de crescimento, valorizando perfis que tenham capacidade de adaptação, senso colaborativo e sejam motivadas pela inovação e pelo aprendizado contínuo.Faça parte da história de uma das empresas de tecnologia que mais cresce no país! 🚀Missão do cargoConstruir, estruturar e evoluir os processos da área de contas, unindo a visão de processo à jornada do contador, garantindo que a operação comercial seja eficiente, escalável e centrada na experiência do cliente ao longo de todo o ciclo de relacionamento.#VempraOmieResponsabilidades e atribuiçõesMapear a jornada do contador de ponta a ponta (onboarding, uso do produto, relacionamento contínuo, renovação/retenção) e desenhar processos que sustentem cada etapa.Estruturar e formalizar os processos internos da área de contas: gestão de carteira, priorização de demandas, escalonamento de casos, rotinas de acompanhamento.Identificar gaps entre o processo atual da área de contas e as necessidades reais da jornada do contador, propondo redesenhos orientados a dados.Criar e manter documentação viva dos processo"
+    },
+    {
+      "id": "79241392bdcadb60",
+      "title": "Remote Healthcare Strategy & Operations Consultant (Chicago)",
+      "company": "Impact Advisors, LLC",
+      "location": "The Loop, Chicago",
+      "location_bucket": "remote_intl",
+      "location_label": "Remoto internacional",
+      "work_model": "remote",
+      "employment_type": "",
+      "salary_brl_monthly": 117000,
+      "salary_raw": {
+        "min": 260000,
+        "max": 436800,
+        "currency": "USD",
+        "period": "yearly",
+        "confidence": "source"
+      },
+      "posted_at": "2026-08-05T23:46:48Z",
+      "age_days": 28,
+      "url": "https://www.adzuna.com/land/ad/5829998267?se=QpBbRBun8RG2HomFYOMXfQ&utm_medium=api&utm_source=f4cf42d6&v=F2CD3DDC28C38409B188306C0D9EC5302A20D26D",
+      "source": "adzuna_us",
+      "also_seen_in": [
+        "adzuna_us"
+      ],
+      "score": {
+        "rules": 81,
+        "ai": null,
+        "final": 81,
+        "components": {
+          "role": 25,
+          "experience": 11,
+          "skills": 7,
+          "seniority": 10,
+          "industry": 10,
+          "salary": 10,
+          "location": 6,
+          "recency": 2
+        }
+      },
+      "why_fits": [
+        "Titulo alinhado aos cargos-alvo: \"Remote Healthcare Strategy & Operations Consultant (Chicago)\"",
+        "Descricao cobre temas do seu repertorio: consultant, operations, strategy",
+        "Skills tecnicas que voce domina: data, analytics",
+        "Industria prioritaria: healthcare, consulting",
+        "Salario publicado acima do alvo (~R$ 117.000/mes)"
+      ],
+      "gaps": [],
+      "ats_missing": [],
+      "verdict": "",
+      "risk": "",
+      "cv_variant": "",
+      "description_excerpt": "A leading healthcare consulting firm in Chicago is looking for a Strategy & Operations Managing Consultant / Associate Director to lead initiatives that enhance patient care. You will support teams by driving operational improvements through data analytics and maintaining strong client relationships. Required qualifications include a Bachelor's or Master's degree and extensive experience in healthcare consulting. This role offers a competitive salary range of $125,000 to $210,000 and may requir…"
+    },
+    {
+      "id": "f2eaa3ef9cee799d",
+      "title": "Gerente de Operações de Telecom",
+      "company": "Tempo",
+      "location": "Barueri, São Paulo",
+      "location_bucket": "sao_paulo",
+      "location_label": "Sao Paulo, SP",
+      "work_model": "onsite",
+      "employment_type": "vacancy_type_effective",
+      "salary_brl_monthly": null,
+      "salary_raw": null,
+      "posted_at": "2026-08-25T12:43:20.860Z",
+      "age_days": 8,
+      "url": "https://tempo.gupy.io/job/eyJqb2JJZCI6MTIyNzk1MzYsInNvdXJjZSI6Imd1cHlfcG9ydGFsIn0=?jobBoardSource=gupy_portal",
+      "source": "gupy",
+      "also_seen_in": [
+        "gupy"
+      ],
+      "score": {
+        "rules": 81,
+        "ai": null,
+        "final": 81,
+        "components": {
+          "role": 25,
+          "experience": 18,
+          "skills": 10,
+          "seniority": 10,
+          "industry": 10,
+          "salary": -1,
+          "location": 5,
+          "recency": 4
+        }
+      },
+      "why_fits": [
+        "Titulo alinhado aos cargos-alvo: \"Gerente de Operações de Telecom\"",
+        "Descricao cobre temas do seu repertorio: gerente, operacoes, processos, projetos",
+        "Skills tecnicas que voce domina: automacao, dados",
+        "Industria prioritaria: distribuicao",
+        "Sao Paulo, SP com sinal de oportunidade superior"
+      ],
+      "gaps": [
+        "Salario nao divulgado - confirmar na candidatura"
+      ],
+      "ats_missing": [],
+      "verdict": "",
+      "risk": "",
+      "cv_variant": "",
+      "description_excerpt": "Você conhece a Tempo?Tempo é o player definitivo para o mercado de serviços no Brasil. Somos líderes nos segmentos de atuação – Assistências e Conveniências – temos como nossos clientes as principais seguradoras, montadoras de veículos, bancos, financeiras e varejistas do país, consolidando a distribuição de serviços, através dos canais B2B e B2B2C.Somos fortemente preocupados com a qualidade e a missão de entregar sempre experiências positivas. Para isso, contamos com uma robusta infraestrutura tecnológica bem como parceiros altamente qualificados que se conectam através de uma plataforma desenvolvida in-house, ou que contam com a engrenagem das soluções mais reconhecidas de mercado.Responsabilidades e atribuiçõesPronto para um desafio que realmente faz a diferença?Buscamos um(a) Gerente de Operações de Telecom com perfil estratégico, foco em resultados e experiência em gestão de operações para garantir a excelência dos serviços, a expansão do negócio e a satisfação dos clientes.\n\nO que você fará no dia a dia:Liderar operações de telecomunicações e infraestrutura de redes, assegurando a continuidade dos serviços e o cumprimento dos SLAs;Conduzir projetos de implantação de novos cl"
+    },
+    {
+      "id": "e9204b560ffba4db",
+      "title": "Gerente de Operações Inbound e Novos Negócios Construção Civil (Curitiba e São Paulo)",
+      "company": "Motz",
+      "location": "São Paulo, São Paulo",
+      "location_bucket": "sao_paulo",
+      "location_label": "Sao Paulo, SP",
+      "work_model": "hybrid",
+      "employment_type": "vacancy_type_effective",
+      "salary_brl_monthly": null,
+      "salary_raw": null,
+      "posted_at": "2026-08-18T16:59:10.526Z",
+      "age_days": 15,
+      "url": "https://motz.gupy.io/job/eyJqb2JJZCI6MTIxNjQ3MjgsInNvdXJjZSI6Imd1cHlfcG9ydGFsIn0=?jobBoardSource=gupy_portal",
+      "source": "gupy",
+      "also_seen_in": [
+        "gupy"
+      ],
+      "score": {
+        "rules": 81,
+        "ai": null,
+        "final": 81,
+        "components": {
+          "role": 25,
+          "experience": 18,
+          "skills": 11,
+          "seniority": 10,
+          "industry": 10,
+          "salary": -1,
+          "location": 5,
+          "recency": 3
+        }
+      },
+      "why_fits": [
+        "Titulo alinhado aos cargos-alvo: \"Gerente de Operações Inbound e Novos Negócios Construção Civil (Curitiba e São Paulo)\"",
+        "Descricao cobre temas do seu repertorio: gerente, operacoes, processos, estrategia",
+        "Skills tecnicas que voce domina: dados, ia",
+        "Pede idioma que voce fala: ingles",
+        "Industria prioritaria: saude, logistica"
+      ],
+      "gaps": [
+        "Salario nao divulgado - confirmar na candidatura"
+      ],
+      "ats_missing": [],
+      "verdict": "",
+      "risk": "",
+      "cv_variant": "",
+      "description_excerpt": "🚚 Transforme o transporte com a Motz!Somos uma transportadora digital que conecta embarcadores e caminhoneiros de todo o Brasil, desburocratizando processos e gerando renda por meio da tecnologia. Desde 2020, contamos com a herança de estrutura e segurança da Votorantim Cimentos e já transportamos mais de 19 milhões de toneladas em mais de 700 mil viagens!Especialistas em transporte para construção civil e agronegócio, buscamos pessoas corajosas, inovadoras e comprometidas com a segurança. Valorizamos o sentimento de empreendedorismo, a busca por soluções simples e inovadoras e, acima de tudo, o senso de integridade.Curte um ambiente inovador, acelerado e acolhedor? Vem crescer com a gente! 🚀#VemPraMotz\n\nResponsabilidades e atribuiçõesResponsabilidades e atribuiçõesResponsável por garantir a excelência operacional das operações Inbound e dos Novos Negócios da Construção Civil, assegurando capacidade logística, nível de serviço, eficiência operacional, rentabilidade e desenvolvimento sustentável das operações, promovendo o alinhamento estratégico entre Motz e clientes.E o seu dia a dia como será? 💼• Garantir a execução eficiente das operações Inbound e dos Novos Negócios da Const"
+    },
+    {
+      "id": "3159ba277729e90a",
+      "title": "GERENTE DE OPERAÇÕES DE TI",
+      "company": "Vagas e oportunidades no Grupo Rodonaves",
+      "location": "Ribeirão Preto, São Paulo",
+      "location_bucket": "sao_paulo",
+      "location_label": "Sao Paulo, SP",
+      "work_model": "onsite",
+      "employment_type": "vacancy_type_effective",
+      "salary_brl_monthly": null,
+      "salary_raw": null,
+      "posted_at": "2026-08-11T19:46:08.258Z",
+      "age_days": 22,
+      "url": "https://rodonaves.gupy.io/job/eyJqb2JJZCI6MTIwNDI5NDIsInNvdXJjZSI6Imd1cHlfcG9ydGFsIn0=?jobBoardSource=gupy_portal",
+      "source": "gupy",
+      "also_seen_in": [
+        "gupy"
+      ],
+      "score": {
+        "rules": 81,
+        "ai": null,
+        "final": 81,
+        "components": {
+          "role": 25,
+          "experience": 18,
+          "skills": 11,
+          "seniority": 10,
+          "industry": 10,
+          "salary": -1,
+          "location": 5,
+          "recency": 3
+        }
+      },
+      "why_fits": [
+        "Titulo alinhado aos cargos-alvo: \"GERENTE DE OPERAÇÕES DE TI\"",
+        "Descricao cobre temas do seu repertorio: gerente, operacoes, processos, estrategia",
+        "Skills tecnicas que voce domina: automacao, dados, data",
+        "Industria prioritaria: banco",
+        "Sao Paulo, SP com sinal de oportunidade superior"
+      ],
+      "gaps": [
+        "Salario nao divulgado - confirmar na candidatura"
+      ],
+      "ats_missing": [],
+      "verdict": "",
+      "risk": "",
+      "cv_variant": "",
+      "description_excerpt": "SOBRE O GRUPO RODONAVES .... Somos o Grupo Rodonaves, estamos aqui para cuidar das pessoas para que elas possam movimentar seus próprios sonhos. É esse sentimento que faz crescer nosso espírito empreendedor. Com coragem e dedicação, nos firmamos no ramo de transportes e, hoje, expandimos nossa atuação e criamos soluções diversas para todo o Brasil por meio das 6 empresas que compõem o nosso Grupo e nos posicionam como um dos melhores e maiores grupos logísticos do país e referência no setor. Responsabilidades e atribuiçõesMissão do CargoGerenciar as áreas de Operações de TI, Suporte Técnico, Infraestrutura, Redes, Service Desk e Segurança da Informação, assegurando a disponibilidade, estabilidade, desempenho e segurança dos ambientes tecnológicos. Garantir a continuidade dos serviços, a excelência no atendimento aos usuários, a eficiência operacional, a governança dos serviços de TI e a evolução contínua da infraestrutura, contribuindo para a estratégia e os resultados do negócio.Principais ResponsabilidadesGerenciar as áreas de Service Desk, Suporte Técnico e Atendimento aos Usuários, garantindo a excelência na prestação dos serviços e o cumprimento dos níveis de serviço (SLAs).Ge"
+    },
+    {
+      "id": "169ab16baa268a5e",
+      "title": "12185884 - GERENTE DE PROJETOS DE TI",
+      "company": "Quality Digital",
+      "location": "",
+      "location_bucket": "remote_intl",
+      "location_label": "Remoto internacional",
+      "work_model": "remote",
+      "employment_type": "vacancy_type_effective",
+      "salary_brl_monthly": null,
+      "salary_raw": null,
+      "posted_at": "2026-08-21T20:23:28.580Z",
+      "age_days": 12,
+      "url": "https://qualitydigital.gupy.io/job/eyJqb2JJZCI6MTIxODU4ODQsInNvdXJjZSI6Imd1cHlfcG9ydGFsIn0=?jobBoardSource=gupy_portal",
+      "source": "gupy",
+      "also_seen_in": [
+        "gupy"
+      ],
+      "score": {
+        "rules": 80,
+        "ai": null,
+        "final": 80,
+        "components": {
+          "role": 25,
+          "experience": 18,
+          "skills": 8,
+          "seniority": 10,
+          "industry": 10,
+          "salary": -1,
+          "location": 6,
+          "recency": 4
+        }
+      },
+      "why_fits": [
+        "Titulo alinhado aos cargos-alvo: \"12185884 - GERENTE DE PROJETOS DE TI\"",
+        "Descricao cobre temas do seu repertorio: gerente, processos, projetos, melhoria continua",
+        "Skills tecnicas que voce domina: dados",
+        "Industria prioritaria: saude"
+      ],
+      "gaps": [
+        "Salario nao divulgado - confirmar na candidatura"
+      ],
+      "ats_missing": [],
+      "verdict": "",
+      "risk": "",
+      "cv_variant": "",
+      "description_excerpt": "Nós somos a Quality Digital! Saiba mais sobre a gente:Uma frase que nos define - Somos especialistas em soluções de TI e apaixonados por inovação! 🚀Ao infinito e além - Somos #semfronteiras. Nosso time está espalhado pelo Brasil e pelo mundo 🌎Nossa cultura - Mesmo distantes, estamos juntos 🧡 Temos cerimônias para estarmos mais próximos, compartilhar conhecimento e ficar por dentro das novidades da nossa empresa!Somos diversos - Um dos nossos compromissos é fazer da companhia um ambiente cada vez mais diverso, inclusivo e respeitoso, valorizando e promovendo a pluralidade. Por isso, aqui temos espaço para todas as pessoas, independente de raça, gênero, idade, orientação sexual, crença religiosa ou deficiência. 🏳️‍🌈👩🏾‍🦽Nosso objetivo - Potencializar os negócios dos nossos clientes através de soluções inovadoras e sustentáveis. Topa vir com a gente nessa? 🎯Responsabilidades e atribuiçõesO que buscamos:Buscamos um profissional com sólida experiência em gestão de projetos de TI, perfil analítico, visão estratégica e capacidade de atuar como facilitador entre áreas de negócio, equipes técnicas, fornecedores e clientes. Espera-se forte habilidade de comunicação, gestão de demanda"
+    },
+    {
+      "id": "eb24b7f9e513d481",
+      "title": "Controller de Operações de Serviços",
+      "company": "Liga & Associados",
+      "location": "São Paulo, Estado de São Paulo",
+      "location_bucket": "sao_paulo",
+      "location_label": "Sao Paulo, SP",
+      "work_model": "unknown",
+      "employment_type": "full_time",
+      "salary_brl_monthly": 16000,
+      "salary_raw": {
+        "min": 192000,
+        "max": 192000,
+        "currency": "BRL",
+        "period": "yearly",
+        "confidence": "source"
+      },
+      "posted_at": "2026-08-24T12:33:49Z",
+      "age_days": 9,
+      "url": "https://www.adzuna.com.br/details/5854447789?utm_medium=api&utm_source=f4cf42d6",
+      "source": "adzuna_br",
+      "also_seen_in": [
+        "adzuna_br"
+      ],
+      "score": {
+        "rules": 80,
+        "ai": null,
+        "final": 80,
+        "components": {
+          "role": 25,
+          "experience": 18,
+          "skills": 5,
+          "seniority": 10,
+          "industry": 6,
+          "salary": 10,
+          "location": 2,
+          "recency": 4
+        }
+      },
+      "why_fits": [
+        "Titulo alinhado aos cargos-alvo: \"Controller de Operações de Serviços\"",
+        "Descricao cobre temas do seu repertorio: operacoes, processos, projetos, controller",
+        "Skills tecnicas que voce domina: dados",
+        "Salario publicado acima do alvo (~R$ 16.000/mes)"
+      ],
+      "gaps": [
+        "Sao Paulo, SP: so vale se a oportunidade for superior a atual - nao ficou evidente aqui"
+      ],
+      "ats_missing": [],
+      "verdict": "",
+      "risk": "",
+      "cv_variant": "",
+      "description_excerpt": "Sobre a vaga Buscamos um Controller de Operações de Serviços para liderar a otimização de processos, análise de desempenho e gestão de indicadores que impulsionam a excelência operacional da nossa empresa. O candidato será responsável por transformar dados em insights acionáveis, garantir a eficiência dos serviços prestados e colaborar com diversas áreas para alcançar metas estratégicas. Responsabilidades Desenvolver e monitorar KPIs de operação e qualidade de serviços Gerenciar projetos de mel…"
+    },
+    {
+      "id": "9cd8e710f2967e32",
+      "title": "Sr Controller Analyst (FP&A)",
+      "company": "Topaz Brasil",
+      "location": "São Paulo, Estado de São Paulo",
+      "location_bucket": "sao_paulo",
+      "location_label": "Sao Paulo, SP",
+      "work_model": "hybrid",
+      "employment_type": "vacancy_type_effective",
+      "salary_brl_monthly": null,
+      "salary_raw": null,
+      "posted_at": "2026-08-14T12:50:17Z",
+      "age_days": 19,
+      "url": "https://www.adzuna.com.br/details/5842030883?utm_medium=api&utm_source=f4cf42d6",
+      "source": "adzuna_br",
+      "also_seen_in": [
+        "adzuna_br",
+        "gupy"
+      ],
+      "score": {
+        "rules": 80,
+        "ai": null,
+        "final": 80,
+        "components": {
+          "role": 25,
+          "experience": 18,
+          "skills": 13,
+          "seniority": 10,
+          "industry": 10,
+          "salary": -1,
+          "location": 2,
+          "recency": 3
+        }
+      },
+      "why_fits": [
+        "Titulo alinhado aos cargos-alvo: \"Sr Controller Analyst (FP&A)\"",
+        "Descricao cobre temas do seu repertorio: processos, planejamento, melhoria continua, controladoria",
+        "Skills tecnicas que voce domina: power bi, automacao, dados",
+        "Industria prioritaria: saude"
+      ],
+      "gaps": [
+        "Salario nao divulgado - confirmar na candidatura",
+        "Sao Paulo, SP: so vale se a oportunidade for superior a atual - nao ficou evidente aqui"
+      ],
+      "ats_missing": [],
+      "verdict": "",
+      "risk": "",
+      "cv_variant": "",
+      "description_excerpt": "Na Topaz, a tecnologia nos une e a evolução nos conecta! 🚀Em nossa organização, estamos totalmente comprometidos em contribuir para soluções financeiras que tornem a indústria um lugar seguro, acessível e dinâmico. Queremos alcançar diferentes partes do mundo com nosso amplo ecossistema de soluções tecnológicas. Por isso, convidamos você a fazer parte dessa equipe! 😎Além disso, temos ótimos benefícios para você! Sabemos que, juntos, alcançaremos o sucesso, então se candidate e faça parte desse grande time.Responsabilidades e atribuiçõesSeu dia a dia na Topaz: Estamos em busca de um profissional que combine expertise em contabilidade estatutária, contabilidade gerencial, ciência de dados e análise financeira para apoiar internacionalmente nossa operação com a geração de dashboards por meio de relatórios gerenciais e dados não-estruturados. O profissional será responsável por desenvolver e automatizar indicadores financeiros, consolidar dados de diversas fontes e contribuir para a melhoria contínua dos processos estratégicos da empresa em FP&A.- Apoiar na elaboração e acompanhamento do orçamento anual.- Desenvolver e automatizar relatórios em Excel.- Manter atualizado o planejament"
+    },
+    {
+      "id": "e14217cb596ac1f9",
+      "title": "119039 - Coordenador(a) Planejamento e Controle Financeiro II",
+      "company": "Claro",
+      "location": "São Paulo, Estado de São Paulo",
+      "location_bucket": "sao_paulo",
+      "location_label": "Sao Paulo, SP",
+      "work_model": "onsite",
+      "employment_type": "vacancy_type_effective",
+      "salary_brl_monthly": null,
+      "salary_raw": null,
+      "posted_at": "2026-09-02T13:00:28Z",
+      "age_days": 0,
+      "url": "https://www.adzuna.com.br/details/5867225737?utm_medium=api&utm_source=f4cf42d6",
+      "source": "adzuna_br",
+      "also_seen_in": [
+        "adzuna_br",
+        "jooble",
+        "gupy"
+      ],
+      "score": {
+        "rules": 80,
+        "ai": null,
+        "final": 80,
+        "components": {
+          "role": 21,
+          "experience": 18,
+          "skills": 15,
+          "seniority": 10,
+          "industry": 10,
+          "salary": -1,
+          "location": 2,
+          "recency": 5
+        }
+      },
+      "why_fits": [
+        "Titulo alinhado aos cargos-alvo: \"119039 - Coordenador(a) Planejamento e Controle Financeiro II\"",
+        "Descricao cobre temas do seu repertorio: coordenador, processos, planejamento, projetos",
+        "Skills tecnicas que voce domina: power bi, ia, sap",
+        "Pede idioma que voce fala: ingles",
+        "Industria prioritaria: saude"
+      ],
+      "gaps": [
+        "Salario nao divulgado - confirmar na candidatura",
+        "Sao Paulo, SP: so vale se a oportunidade for superior a atual - nao ficou evidente aqui"
+      ],
+      "ats_missing": [],
+      "verdict": "",
+      "risk": "",
+      "cv_variant": "",
+      "description_excerpt": "Responsabilidades e atribuiçõesO que te espera no dia a dia:Coordenar o planejamento, orçamento, forecast e controle orçamentário dos investimentos e despesas de Tecnologia da Informação relacionados a Cloud, Licenciamento de Software (incluindo IaaS/PaaS/SaaS) e Serviços de TI (suporte, manutenção e consultorias).Garantir a governança dos custos recorrentes (run rate) e variáveis de consumo, a aderência aos SLAs de forecast/orçamento, a conciliação com o realizado (SAP e contratos, sejam eles LPU’s ou escopo fechado) e a geração de relatórios e indicadores que sustentem decisões de otimização, renovação contratual e priorização do uso de recursos para projetos de tecnologia.Requisitos e qualificaçõesBuscamos alguém que: Pensa e age a partir das perspectivas dos clientes. Demonstra interesse e curiosidade de conhecer os clientes, seus comportamentos e preferências para atender e superar suas expectativas; Demonstra compromisso permanente em aprender, ensinar e desenvolver, contribuindo para um ambiente descontraído, respeitoso e colaborativo, incentivando a diversidade; É flexível para se desprender de paradigmas e modelos mentais existentes. Busca soluções inovadoras e sustentávei"
+    },
+    {
+      "id": "4114e0e403d0ee75",
+      "title": "COORDENADOR DE PROJETOS ESTRATÉGICOS E INOVAÇÃO",
+      "company": "Tahto - Staff e Executivo #VemSerTahto",
+      "location": "",
+      "location_bucket": "remote_intl",
+      "location_label": "Remoto internacional",
+      "work_model": "remote",
+      "employment_type": "vacancy_type_effective",
+      "salary_brl_monthly": null,
+      "salary_raw": null,
+      "posted_at": "2026-07-24T18:25:01.497Z",
+      "age_days": 40,
+      "url": "https://vemsertahto.gupy.io/job/eyJqb2JJZCI6MTE2MDYwODcsInNvdXJjZSI6Imd1cHlfcG9ydGFsIn0=?jobBoardSource=gupy_portal",
+      "source": "gupy",
+      "also_seen_in": [
+        "gupy"
+      ],
+      "score": {
+        "rules": 78,
+        "ai": null,
+        "final": 78,
+        "components": {
+          "role": 25,
+          "experience": 18,
+          "skills": 9,
+          "seniority": 10,
+          "industry": 10,
+          "salary": -1,
+          "location": 6,
+          "recency": 1
+        }
+      },
+      "why_fits": [
+        "Titulo alinhado aos cargos-alvo: \"COORDENADOR DE PROJETOS ESTRATÉGICOS E INOVAÇÃO\"",
+        "Descricao cobre temas do seu repertorio: coordenador, processos, planejamento, projetos",
+        "Skills tecnicas que voce domina: ia",
+        "Industria prioritaria: saude"
+      ],
+      "gaps": [
+        "Salario nao divulgado - confirmar na candidatura"
+      ],
+      "ats_missing": [],
+      "verdict": "",
+      "risk": "",
+      "cv_variant": "",
+      "description_excerpt": "Somos a Tahto, uma empresa com uma nova mentalidade de negócios, que usa a tecnologia não apenas para criar soluções de atendimento ao cliente, mas para manter o ser humano no centro de tudo o que fazemos. Somos mais de 8 mil colaboradores espalhados em 5 estados do Brasil, pessoas de todas as diversidades, culturas, raças, gêneros, e que são valorizadas pela sua história.Para compor ainda mais esse time de sucesso, buscamos talentos que nos ajudem a ser uma empresa protagonista em transformar a vida de pessoas com soluções em tecnologia e inovações, sempre com muito tato, empatia e qualidade. Se você tem esse perfil e é movido por desafios e novas conquistas, venha fazer parte do nosso time!A Tahto valoriza o potencial dos seus colaboradores e por isso conta com um programa de oportunidades internas, voltado para quem busca crescimento e desenvolvimento profissional. Você pode ser um deles!\"Contamos com o seu calor humano e a sua atitude imaginativa para juntos escrevermos uma nova história. A Tahto é tecnologia, calor humano, criatividade. A Tahto somos nós!#soutahtoResponsabilidades e atribuiçõesGestão e liderança da equipe de especialistas em projetos estratégicos e inovação, "
+    },
+    {
+      "id": "3aed13612e62e978",
+      "title": "PMO Especialista II -  Tech Consumer",
+      "company": "Grupo Boticário",
+      "location": "",
+      "location_bucket": "remote_intl",
+      "location_label": "Remoto internacional",
+      "work_model": "remote",
+      "employment_type": "vacancy_type_effective",
+      "salary_brl_monthly": null,
+      "salary_raw": null,
+      "posted_at": "2026-09-02T13:56:28.966Z",
+      "age_days": 0,
+      "url": "https://grupoboticario.gupy.io/job/eyJqb2JJZCI6MTI0MDg3MzIsInNvdXJjZSI6Imd1cHlfcG9ydGFsIn0=?jobBoardSource=gupy_portal",
+      "source": "gupy",
+      "also_seen_in": [
+        "gupy"
+      ],
+      "score": {
+        "rules": 78,
+        "ai": null,
+        "final": 78,
+        "components": {
+          "role": 25,
+          "experience": 18,
+          "skills": 5,
+          "seniority": 10,
+          "industry": 10,
+          "salary": -1,
+          "location": 6,
+          "recency": 5
+        }
+      },
+      "why_fits": [
+        "Titulo alinhado aos cargos-alvo: \"PMO Especialista II -  Tech Consumer\"",
+        "Descricao cobre temas do seu repertorio: processos, planejamento, pmo, projetos",
+        "Skills tecnicas que voce domina: ia",
+        "Industria prioritaria: credito, saude",
+        "Publicada ha 0 dia(s)"
+      ],
+      "gaps": [
+        "Salario nao divulgado - confirmar na candidatura"
+      ],
+      "ats_missing": [],
+      "verdict": "",
+      "risk": "",
+      "cv_variant": "",
+      "description_excerpt": "SOBRE O GRUPO BOTICÁRIO Um dos maiores grupos de beleza do mundo, o Grupo Boticário é uma empresa brasileira presente em mais de 40 países. É dono das marcas O Boticário, Eudora, Quem Disse, Berenice?, Vult, O.U.i, Dr. JONES, Tô.que.tô, TRUSS, e do marketplace Beleza na Web, além de atuar com produtos licenciados como Australian Gold, Bio Oil, Nuxe, e Pampers e sua divisão para o mercado B2B. Essa interação entre diferentes marcas, ativos, plataformas, rede de franqueados, representantes, distribuidores, varejistas, sellers e fornecedores formam o ecossistema de beleza do Grupo Boticário que oferece, ainda, soluções digitais de gestão de negócio para o varejo brasileiro por meio das suas marcas Mooz, Casa Magalhães e GAVB. São mais de 19 mil colaboradores diretos, com mais de 4 mil lojas em 1.780 cidades brasileiras.Vem fazer beleza com a gente! Responsabilidades e atribuiçõesComo será o seu dia? Organizar agendas relacionadas a diretoria: fazer a gestão das agendas 2x2, Quinzenal Pauta Livre, MensalCentralizar a governança de processos e temas cross a diretoria Tech Consumer;Liderar a condução e processo de desdobramentos do ciclo de OKR na diretoriaConsolidar informações de proje"
+    },
+    {
+      "id": "422504d0925fe391",
+      "title": "Controller |São José do Rio Preto, SP",
+      "company": "Heads",
+      "location": "São José do Rio Preto, Estado de São Paulo",
+      "location_bucket": "sjrp",
+      "location_label": "Sao Jose do Rio Preto, SP",
+      "work_model": "unknown",
+      "employment_type": "",
+      "salary_brl_monthly": null,
+      "salary_raw": null,
+      "posted_at": "2026-08-15T12:18:10Z",
+      "age_days": 18,
+      "url": "https://www.adzuna.com.br/details/5843160117?utm_medium=api&utm_source=f4cf42d6",
+      "source": "adzuna_br",
+      "also_seen_in": [
+        "adzuna_br"
+      ],
+      "score": {
+        "rules": 71,
+        "ai": null,
+        "final": 71,
+        "components": {
+          "role": 25,
+          "experience": 18,
+          "skills": 3,
+          "seniority": 10,
+          "industry": 6,
+          "salary": -1,
+          "location": 7,
+          "recency": 3
+        }
+      },
+      "why_fits": [
+        "Titulo alinhado aos cargos-alvo: \"Controller |São José do Rio Preto, SP\"",
+        "Descricao cobre temas do seu repertorio: processos, transformacao, controladoria, controller",
+        "Skills tecnicas que voce domina: automacao"
+      ],
+      "gaps": [
+        "Salario nao divulgado - confirmar na candidatura"
+      ],
+      "ats_missing": [],
+      "verdict": "",
+      "risk": "",
+      "cv_variant": "",
+      "description_excerpt": "Controller | São José do Rio Preto/SP Buscamos Controller para um grupo de grande porte do segmento de varejo , em um importante momento de crescimento, transformação e profissionalização da gestão. A posição terá papel estratégico no fortalecimento da Controladoria, Contabilidade e Fiscal , com o desafio de elevar a qualidade das informações, estruturar processos e controles, aprimorar o acompanhamento de resultados e avançar na automação da área. Procuramos uma liderança hands-on, analítica e…"
+    },
+    {
+      "id": "7e205644803b291f",
+      "title": "Senior SAP Data Management Consultant (m/w/d) – ILM & S/4HANA Transformation",
+      "company": "Natuvion GmbH",
+      "location": "Remote job",
+      "location_bucket": "remote_intl",
+      "location_label": "Remoto internacional",
+      "work_model": "remote",
+      "employment_type": "Experienced, fulltime permanent",
+      "salary_brl_monthly": null,
+      "salary_raw": null,
+      "posted_at": "2026-09-02T05:30:19.000Z",
+      "age_days": 1,
+      "url": "https://www.arbeitnow.com/jobs/companies/natuvion-gmbh/remote-senior-sap-data-management-consultant-ilm-s-4hana-transformation-berlin-404059",
+      "source": "arbeitnow",
+      "also_seen_in": [
+        "arbeitnow"
+      ],
+      "score": {
+        "rules": 71,
+        "ai": null,
+        "final": 71,
+        "components": {
+          "role": 25,
+          "experience": 11,
+          "skills": 12,
+          "seniority": 10,
+          "industry": 3,
+          "salary": -1,
+          "location": 6,
+          "recency": 5
+        }
+      },
+      "why_fits": [
+        "Titulo alinhado aos cargos-alvo: \"Senior SAP Data Management Consultant (m/w/d) – ILM & S/4HANA Transformation\"",
+        "Descricao cobre temas do seu repertorio: consultant, transformation, budget",
+        "Skills tecnicas que voce domina: data, sap, s/4hana",
+        "Pede idioma que voce fala: english",
+        "Publicada ha 1 dia(s)"
+      ],
+      "gaps": [
+        "Salario nao divulgado - confirmar na candidatura"
+      ],
+      "ats_missing": [],
+      "verdict": "",
+      "risk": "",
+      "cv_variant": "",
+      "description_excerpt": "Gestalte die Zukunft der Daten in der SAP-Welt. Mit uns. \n Du fühlst dich im SAP-Universum zu Hause und möchtest in einer agilen Tech-Kultur arbeiten, in der du wirklich etwas bewegen kannst? Für dich sind Daten nicht nur Zahlen, sondern strategische Assets, die Unternehmen zukunftsfähig machen? Dann sollten wir uns kennenlernen!\n Wir suchen dich als Senior SAP Data Management Consultant (m/w/d) – ILM & S/4HANA Transformation \n zur Verstärkung unseres Teams – mit echtem Gestaltungsspielraum und spannenden Projekten rund um SAP- und Non-SAP-Migrationen , Datenmanagement und digitale Transformation. \n Deine Aufgaben: \n Beratung mit Impact: Du unterstützt unsere Kunden fachlich und technisch bei Data-Management-Initiativen im SAP-Umfeld – hierzu zählt beispielsweise Data Volume Management, Archivierung per SAP ILM oder die Stilllegung von Systemen.\n\n Data Cleansing & Volume Management: Du bereinigst und optimierst Datenbestände und organisierst die Stilllegung von Kundensystemen.\n\n ILM & Customizing: Du konzipierst und setzt ILM-Anforderungen per Customizing am System um.\n\n Technische Analysen & Eigenentwicklungen: Die Analyse von Systemlandschaften per Natuvion DCS Analyze gehört zu "
+    },
+    {
+      "id": "adffe94c969682c9",
+      "title": "Gerente de Supply Chain (Suprimentos, Estoque e Logística)",
+      "company": "O.S CONSULTORIA",
+      "location": "São José do Rio Preto, Estado de São Paulo",
+      "location_bucket": "sjrp",
+      "location_label": "Sao Jose do Rio Preto, SP",
+      "work_model": "unknown",
+      "employment_type": "full_time",
+      "salary_brl_monthly": null,
+      "salary_raw": null,
+      "posted_at": "2026-07-27T20:11:55Z",
+      "age_days": 37,
+      "url": "https://www.adzuna.com.br/details/5817717991?utm_medium=api&utm_source=f4cf42d6",
+      "source": "adzuna_br",
+      "also_seen_in": [
+        "adzuna_br"
+      ],
+      "score": {
+        "rules": 70,
+        "ai": null,
+        "final": 70,
+        "components": {
+          "role": 25,
+          "experience": 18,
+          "skills": 0,
+          "seniority": 10,
+          "industry": 10,
+          "salary": -1,
+          "location": 7,
+          "recency": 1
+        }
+      },
+      "why_fits": [
+        "Titulo alinhado aos cargos-alvo: \"Gerente de Supply Chain (Suprimentos, Estoque e Logística)\"",
+        "Descricao cobre temas do seu repertorio: gerente, operacoes, planejamento, eficiencia",
+        "Industria prioritaria: distribuicao, supply chain"
+      ],
+      "gaps": [
+        "Salario nao divulgado - confirmar na candidatura"
+      ],
+      "ats_missing": [],
+      "verdict": "",
+      "risk": "",
+      "cv_variant": "",
+      "description_excerpt": "1. Identificação do Cargo Cargo: Gerente de Supply Chain Área: Operações / Suprimentos Subordinação: Diretoria Executiva Áreas sob responsabilidade: Compras Gestão de fornecedores Planejamento de abastecimento Estoque Logística interna Logística de distribuição 2. Missão do Cargo Garantir o abastecimento eficiente, econômico e confiável da empresa , assegurando disponibilidade de produtos, eficiência logística, gestão estratégica de fornecedores e controle de estoques, contribuindo para a renta…"
+    },
+    {
+      "id": "038fab8ff9788a06",
+      "title": "GERENTE DE PROJETOS SR - RHA3129",
+      "company": "Spread Tecnologia",
+      "location": "",
+      "location_bucket": "remote_intl",
+      "location_label": "Remoto internacional",
+      "work_model": "remote",
+      "employment_type": "vacancy_legal_entity",
+      "salary_brl_monthly": null,
+      "salary_raw": null,
+      "posted_at": "2026-08-17T17:49:06.572Z",
+      "age_days": 16,
+      "url": "https://spread.gupy.io/job/eyJqb2JJZCI6MTIxMzk5NTAsInNvdXJjZSI6Imd1cHlfcG9ydGFsIn0=?jobBoardSource=gupy_portal",
+      "source": "gupy",
+      "also_seen_in": [
+        "gupy"
+      ],
+      "score": {
+        "rules": 68,
+        "ai": null,
+        "final": 68,
+        "components": {
+          "role": 25,
+          "experience": 14,
+          "skills": 5,
+          "seniority": 10,
+          "industry": 6,
+          "salary": -1,
+          "location": 6,
+          "recency": 3
+        }
+      },
+      "why_fits": [
+        "Titulo alinhado aos cargos-alvo: \"GERENTE DE PROJETOS SR - RHA3129\"",
+        "Descricao cobre temas do seu repertorio: gerente, projetos, custos, indicadores"
+      ],
+      "gaps": [
+        "Salario nao divulgado - confirmar na candidatura"
+      ],
+      "ats_missing": [],
+      "verdict": "",
+      "risk": "",
+      "cv_variant": "",
+      "description_excerpt": "Venha fazer parte de uma empresa que ama transformar com tecnologia e abraça a diversidade em todas as suas formas!Responsabilidades e atribuiçõesGerenciar projetos de TI, especialmente iniciativas de desenvolvimento de software.Conduzir projetos de grande porte, realizando gestão de escopo, cronograma, riscos, custos e entregas.Atuar na gestão de equipes multidisciplinares e stakeholders.Aplicar metodologias Ágeis, especialmente Scrum.Identificar, acompanhar e tratar riscos, impedimentos e situações críticas do projeto.Atuar na gestão e resolução de crises, garantindo agilidade na tomada de decisão.Acompanhar indicadores, status, entregas e resultados dos projetos.Garantir comunicação efetiva com equipes, clientes e demais partes interessadas.Requisitos e qualificaçõesImprescindível:Experiência sólida como Gerente de Projetos em TI.Experiência comprovada em projetos de desenvolvimento de software.Experiência com Agile e Scrum.Vivência na gestão de projetos de grande porte e alta complexidade.Formação superior concluída ou em andamento.Curso ou certificação em Gerenciamento de Crises.Perfil resiliente, organizado, analítico e com capacidade de atuar sob pressão.Forte capacidade de "
+    },
+    {
+      "id": "f14254984e2c158f",
+      "title": "Coordenador de Comissões/Remuneração Variável",
+      "company": "Acelera RH",
+      "location": "São José do Rio Preto, SP",
+      "location_bucket": "sjrp",
+      "location_label": "Sao Jose do Rio Preto, SP",
+      "work_model": "onsite",
+      "employment_type": "Efetivo",
+      "salary_brl_monthly": null,
+      "salary_raw": null,
+      "posted_at": "2026-08-31T00:00:00.0000000",
+      "age_days": 3,
+      "url": "https://br.jooble.org/away/-8814807976467614459?p=1&pos=5&rgn=5880&cid=668&ckey=coordenador+de+operacoes&jobAge=68&relb=138&brelb=115&scr=3445.35792&bscr=2871.1316&aq=2956310264752629966&elckey=-7939811780303010012",
+      "source": "jooble",
+      "also_seen_in": [
+        "jooble"
+      ],
+      "score": {
+        "rules": 67,
+        "ai": null,
+        "final": 67,
+        "components": {
+          "role": 15,
+          "experience": 18,
+          "skills": 10,
+          "seniority": 10,
+          "industry": 3,
+          "salary": -1,
+          "location": 7,
+          "recency": 5
+        }
+      },
+      "why_fits": [
+        "Descricao cobre temas do seu repertorio: coordenador, operacoes, processos, projetos",
+        "Skills tecnicas que voce domina: power bi, automacao, sap",
+        "Publicada ha 3 dia(s)"
+      ],
+      "gaps": [
+        "Titulo so parcialmente alinhado aos cargos-alvo",
+        "Salario nao divulgado - confirmar na candidatura"
+      ],
+      "ats_missing": [],
+      "verdict": "",
+      "risk": "",
+      "cv_variant": "",
+      "description_excerpt": "...Gestão de projetos e melhoria contínua. Diferenciais: Conhecimento em SAP e Power BI. Vivência com automação de processos. Vivência em operações de remuneração, incentivos comerciais. Vaga 100% presencial Candidate-se agora e venha transformar conosco! \r\n Formação Acadêmica:..."
+    },
+    {
+      "id": "57cdc73929e30fa5",
+      "title": "Senior Program Manager, Change & Transformation (Remote)",
+      "company": "Parent Organization",
+      "location": "Canada",
+      "location_bucket": "remote_intl",
+      "location_label": "Remoto internacional",
+      "work_model": "remote",
+      "employment_type": "",
+      "salary_brl_monthly": 74880,
+      "salary_raw": {
+        "min": 166400,
+        "max": 187200,
+        "currency": "USD",
+        "period": "yearly",
+        "confidence": "source"
+      },
+      "posted_at": "2026-09-02T14:51:07Z",
+      "age_days": 0,
+      "url": "https://www.adzuna.ca/details/5867507439?utm_medium=api&utm_source=f4cf42d6",
+      "source": "adzuna_ca",
+      "also_seen_in": [
+        "adzuna_ca"
+      ],
+      "score": {
+        "rules": 66,
+        "ai": null,
+        "final": 66,
+        "components": {
+          "role": 21,
+          "experience": 11,
+          "skills": 0,
+          "seniority": 10,
+          "industry": 3,
+          "salary": 10,
+          "location": 6,
+          "recency": 5
+        }
+      },
+      "why_fits": [
+        "Titulo alinhado aos cargos-alvo: \"Senior Program Manager, Change & Transformation (Remote)\"",
+        "Descricao cobre temas do seu repertorio: manager, transformation, governance",
+        "Salario publicado acima do alvo (~R$ 74.880/mes)",
+        "Publicada ha 0 dia(s)"
+      ],
+      "gaps": [],
+      "ats_missing": [],
+      "verdict": "",
+      "risk": "",
+      "cv_variant": "",
+      "description_excerpt": "Job Title: Senior Program Manager, Change & Transformation Location: 100% Remote, Canada Employment Type: T4 Contract Experience: 10 Years Rate: CAD 80 - 90 per hour Work Hours: Must support EST business hours and collaborate with global teams Role Summary We are hiring for this role where the selected candidate will work on a project focused on Technical Advisory, business transformation, and cross-functional program execution. You will lead complex programs, establish effective governance, in…"
+    },
+    {
+      "id": "b1971779edc769ba",
+      "title": "Strategy Consultant / Sr Strategy Consultant – Remote",
+      "company": "YO IT Consulting",
+      "location": "Toronto, Ontario",
+      "location_bucket": "remote_intl",
+      "location_label": "Remoto internacional",
+      "work_model": "remote",
+      "employment_type": "contract",
+      "salary_brl_monthly": null,
+      "salary_raw": null,
+      "posted_at": "2026-09-01T11:44:14Z",
+      "age_days": 1,
+      "url": "https://www.adzuna.ca/details/5864929821?utm_medium=api&utm_source=f4cf42d6",
+      "source": "adzuna_ca",
+      "also_seen_in": [
+        "adzuna_ca"
+      ],
+      "score": {
+        "rules": 65,
+        "ai": null,
+        "final": 65,
+        "components": {
+          "role": 25,
+          "experience": 7,
+          "skills": 3,
+          "seniority": 10,
+          "industry": 10,
+          "salary": -1,
+          "location": 6,
+          "recency": 5
+        }
+      },
+      "why_fits": [
+        "Titulo alinhado aos cargos-alvo: \"Strategy Consultant / Sr Strategy Consultant – Remote\"",
+        "Skills tecnicas que voce domina: ai",
+        "Industria prioritaria: consulting",
+        "Publicada ha 1 dia(s)"
+      ],
+      "gaps": [
+        "Salario nao divulgado - confirmar na candidatura"
+      ],
+      "ats_missing": [],
+      "verdict": "",
+      "risk": "",
+      "cv_variant": "",
+      "description_excerpt": "Overview Job Type: Contractor Location: Remote Role Description If you’re a senior strategy consultant who thrives on ambiguity, structured problem-solving, market analysis, and executive-level decision-making, this is a unique opportunity to contribute directly to how the next generation of AI systems reason through complex business and international strategy challenges. We’re looking for experienced strategy professionals who understand market entry, competitive positioning, and operating mod…"
+    },
+    {
+      "id": "f68a15cad6dfdbe5",
+      "title": "Gerente De Controladoria",
+      "company": "Grupo FAJ",
+      "location": "São José do Rio Preto, SP",
+      "location_bucket": "sjrp",
+      "location_label": "Sao Jose do Rio Preto, SP",
+      "work_model": "unknown",
+      "employment_type": "Efetivo",
+      "salary_brl_monthly": null,
+      "salary_raw": null,
+      "posted_at": "2026-08-22T03:07:12.7570000",
+      "age_days": 12,
+      "url": "https://br.jooble.org/away/5352454248262857734?p=1&pos=1&rgn=5880&cid=668&ckey=gerente+de+operacoes&jobAge=281&relb=128&brelb=100&scr=3279.276288&bscr=2561.9346&aq=-1020237765634464774&elckey=-2555182084270396717",
+      "source": "jooble",
+      "also_seen_in": [
+        "jooble"
+      ],
+      "score": {
+        "rules": 65,
+        "ai": null,
+        "final": 65,
+        "components": {
+          "role": 21,
+          "experience": 18,
+          "skills": 3,
+          "seniority": 10,
+          "industry": 3,
+          "salary": -1,
+          "location": 7,
+          "recency": 4
+        }
+      },
+      "why_fits": [
+        "Titulo alinhado aos cargos-alvo: \"Gerente De Controladoria\"",
+        "Descricao cobre temas do seu repertorio: gerente, coordenador, operacoes, projetos",
+        "Skills tecnicas que voce domina: erp"
+      ],
+      "gaps": [
+        "Salario nao divulgado - confirmar na candidatura"
+      ],
+      "ats_missing": [],
+      "verdict": "",
+      "risk": "",
+      "cv_variant": "",
+      "description_excerpt": "...de Negócios ou Auditoria. \r\n~01 ano na função ou 03 anos como Coordenador de Controladoria. \r\n~ Conhecimento avançado em ERP (preferencialmente... ...o atingimento das metas de EBITDA e rentabilidade dos projetos. \r\n Estruturação de operações financeiras e captação de recursos..."
+    },
+    {
+      "id": "87587df5845fa2ff",
+      "title": "Consultor Interno - Business Partner | Operações de Farmácia (Rio Preto)",
+      "company": "RD Saúde",
+      "location": "São José do Rio Preto, Estado de São Paulo",
+      "location_bucket": "sjrp",
+      "location_label": "Sao Jose do Rio Preto, SP",
+      "work_model": "unknown",
+      "employment_type": "contract",
+      "salary_brl_monthly": null,
+      "salary_raw": null,
+      "posted_at": "2026-08-15T12:43:04Z",
+      "age_days": 18,
+      "url": "https://www.adzuna.com.br/details/5843217668?utm_medium=api&utm_source=f4cf42d6",
+      "source": "adzuna_br",
+      "also_seen_in": [
+        "adzuna_br"
+      ],
+      "score": {
+        "rules": 61,
+        "ai": null,
+        "final": 61,
+        "components": {
+          "role": 25,
+          "experience": 7,
+          "skills": 0,
+          "seniority": 10,
+          "industry": 10,
+          "salary": -1,
+          "location": 7,
+          "recency": 3
+        }
+      },
+      "why_fits": [
+        "Titulo alinhado aos cargos-alvo: \"Consultor Interno - Business Partner | Operações de Farmácia (Rio Preto)\"",
+        "Industria prioritaria: saude"
+      ],
+      "gaps": [
+        "Salario nao divulgado - confirmar na candidatura"
+      ],
+      "ats_missing": [],
+      "verdict": "",
+      "risk": "",
+      "cv_variant": "",
+      "description_excerpt": "Description A RD Saúde é uma empresa líder no mercado brasileiro de farmácias. Com as nossas marcas Raia e Drogasil, temos mais de 3.600 unidades espalhadas por todo o país e mais de 60 mil funcionários(as) empenhados(as) em cuidar de perto da saúde e bem-estar das pessoas em todos os momentos da vida. Até 2030, queremos ser o grupo que mais contribui para uma sociedade mais saudável. Para isso, entendemos que o nosso compromisso vai além do cuidado com a saúde individual. É preciso cuidar das …"
+    },
+    {
+      "id": "78fc98d1f5e2f8d1",
+      "title": "Controller",
+      "company": "MaZa Empregos",
+      "location": "São José do Rio Preto, Estado de São Paulo",
+      "location_bucket": "sjrp",
+      "location_label": "Sao Jose do Rio Preto, SP",
+      "work_model": "unknown",
+      "employment_type": "",
+      "salary_brl_monthly": null,
+      "salary_raw": null,
+      "posted_at": "2026-09-01T19:08:59Z",
+      "age_days": 1,
+      "url": "https://www.adzuna.com.br/details/5865399437?utm_medium=api&utm_source=f4cf42d6",
+      "source": "adzuna_br",
+      "also_seen_in": [
+        "adzuna_br"
+      ],
+      "score": {
+        "rules": 60,
+        "ai": null,
+        "final": 60,
+        "components": {
+          "role": 25,
+          "experience": 11,
+          "skills": 0,
+          "seniority": 10,
+          "industry": 3,
+          "salary": -1,
+          "location": 7,
+          "recency": 5
+        }
+      },
+      "why_fits": [
+        "Titulo alinhado aos cargos-alvo: \"Controller\"",
+        "Descricao cobre temas do seu repertorio: planejamento, controller, custos",
+        "Publicada ha 1 dia(s)"
+      ],
+      "gaps": [
+        "Salario nao divulgado - confirmar na candidatura"
+      ],
+      "ats_missing": [],
+      "verdict": "",
+      "risk": "",
+      "cv_variant": "",
+      "description_excerpt": "Gestão econômico-financeira da empresa. Responsável por garantir a confiabilidade das informações contábeis e gerenciais, além de liderar o planejamento orçamentário, o controle de custos e a análise de desempenho corporativo. Horário: Segunda a sexta-feira das 07:30 às 17:00 Requisito: Experiência na área; Ensino Superior completo em Ciências Contábeis, Administração, Economia ou áreas correlatas. Trabalhar em São José do Rio Preto Tipo de vaga: Efetivo CLT Pagamento: R$14.000,00 por mês Benef…"
+    },
+    {
+      "id": "a0331a0959893aaf",
+      "title": "Consultor de Negócios (Pap)",
+      "company": "Divulga Vagas Consultoria",
+      "location": "São José do Rio Preto, Estado de São Paulo",
+      "location_bucket": "sjrp",
+      "location_label": "Sao Jose do Rio Preto, SP",
+      "work_model": "unknown",
+      "employment_type": "",
+      "salary_brl_monthly": null,
+      "salary_raw": null,
+      "posted_at": "2026-09-01T19:10:22Z",
+      "age_days": 1,
+      "url": "https://www.adzuna.com.br/details/5865409864?utm_medium=api&utm_source=f4cf42d6",
+      "source": "adzuna_br",
+      "also_seen_in": [
+        "adzuna_br"
+      ],
+      "score": {
+        "rules": 60,
+        "ai": null,
+        "final": 60,
+        "components": {
+          "role": 25,
+          "experience": 4,
+          "skills": 0,
+          "seniority": 10,
+          "industry": 10,
+          "salary": -1,
+          "location": 7,
+          "recency": 5
+        }
+      },
+      "why_fits": [
+        "Titulo alinhado aos cargos-alvo: \"Consultor de Negócios (Pap)\"",
+        "Industria prioritaria: consultoria",
+        "Publicada ha 1 dia(s)"
+      ],
+      "gaps": [
+        "Salario nao divulgado - confirmar na candidatura"
+      ],
+      "ats_missing": [],
+      "verdict": "",
+      "risk": "",
+      "cv_variant": "",
+      "description_excerpt": "Descrição da Vaga: Você é movido por metas, gosta de conversar com pessoas e busca crescimento profissional? Estamos contratando Consultores Comerciais para atuação externa com venda de maquininhas Mercado Pago. Requisitos: CNH ativa (categoria A ou B) Veículo próprio (carro ou moto) Ensino médio completo Experiência com vendas externas será um diferencial Disponibilidade para trabalho 100% externo Escolaridade Mínima: Ensino Médio Jornada de Trabalho: Segunda a sexta das 8h as 18h Benefícios: …"
+    },
+    {
+      "id": "16b219f840402771",
+      "title": "Business Development Consultant (REMOTE)",
+      "company": "Simplyhealth",
+      "location": "Field Broughton, Grange-Over-Sands",
+      "location_bucket": "remote_intl",
+      "location_label": "Remoto internacional",
+      "work_model": "remote",
+      "employment_type": "contract",
+      "salary_brl_monthly": 26572,
+      "salary_raw": {
+        "min": 46212.12,
+        "max": 46212.12,
+        "currency": "GBP",
+        "period": "yearly",
+        "confidence": "source"
+      },
+      "posted_at": "2026-09-02T17:32:11Z",
+      "age_days": 0,
+      "url": "https://www.adzuna.co.uk/jobs/land/ad/5867326901?se=WD_QRhun8RGaM741qTQfSw&utm_medium=api&utm_source=f4cf42d6&v=178AD17199F7C0A278366BA8B407DDE524EBEE38",
+      "source": "adzuna_gb",
+      "also_seen_in": [
+        "adzuna_gb"
+      ],
+      "score": {
+        "rules": 60,
+        "ai": null,
+        "final": 60,
+        "components": {
+          "role": 15,
+          "experience": 4,
+          "skills": 0,
+          "seniority": 10,
+          "industry": 10,
+          "salary": 10,
+          "location": 6,
+          "recency": 5
+        }
+      },
+      "why_fits": [
+        "Industria prioritaria: healthcare",
+        "Salario publicado acima do alvo (~R$ 26.572/mes)",
+        "Publicada ha 0 dia(s)"
+      ],
+      "gaps": [
+        "Titulo so parcialmente alinhado aos cargos-alvo"
+      ],
+      "ats_missing": [],
+      "verdict": "",
+      "risk": "",
+      "cv_variant": "",
+      "description_excerpt": "Role: Business Development Consultant Contract Type: 12-month Fixed Term Salary: Competitive plus OTE of 25% Location: REMOTE covering clients in outer London (must be able to travel for client meetings on occasion) Are you passionate about making a positive impact on people’s lives? Do you want to be part of a company that is striving to revolutionise access to healthcare in the UK? At Simplyhealth, our health plans provide the opportunity to attend routine dental treatments, visit the opticia…"
+    },
+    {
+      "id": "e5c3817ef015a94e",
+      "title": "Consultor(a) SAP FI - Pleno",
+      "company": "NTT DATA Business Solutions",
+      "location": "São José do Rio Preto, SP",
+      "location_bucket": "sjrp",
+      "location_label": "Sao Jose do Rio Preto, SP",
+      "work_model": "unknown",
+      "employment_type": "Efetivo",
+      "salary_brl_monthly": null,
+      "salary_raw": null,
+      "posted_at": "2026-08-29T19:08:34.0900000",
+      "age_days": 4,
+      "url": "https://br.jooble.org/away/-3014289069078908158?p=1&pos=18&rgn=5880&cid=668&ckey=consultor+de+negocios&jobAge=97&relb=141&brelb=100&scr=2873.009091&bscr=2037.5951&aq=-1143766863597454660&elckey=5656773197574487274",
+      "source": "jooble",
+      "also_seen_in": [
+        "jooble"
+      ],
+      "score": {
+        "rules": 60,
+        "ai": null,
+        "final": 60,
+        "components": {
+          "role": 15,
+          "experience": 11,
+          "skills": 3,
+          "seniority": 10,
+          "industry": 10,
+          "salary": -1,
+          "location": 7,
+          "recency": 5
+        }
+      },
+      "why_fits": [
+        "Descricao cobre temas do seu repertorio: consultor, consultoria, projetos",
+        "Skills tecnicas que voce domina: sap",
+        "Industria prioritaria: consultoria"
+      ],
+      "gaps": [
+        "Titulo so parcialmente alinhado aos cargos-alvo",
+        "Salario nao divulgado - confirmar na candidatura"
+      ],
+      "ats_missing": [],
+      "verdict": "",
+      "risk": "",
+      "cv_variant": "",
+      "description_excerpt": "...apaixonadas que impulsionam a inovação – desde consultoria e implementação até serviços gerenciados... ...where you grow!\r\n\r\n Buscamos um(a) Consultor( a) SAP FI Pleno para atuar em projetos e... ...forma integrada com diferentes áreas do negócio e equipes multidisciplinares...."
+    },
+    {
+      "id": "5b53843439bcb0b0",
+      "title": "2257444 - COORDENADOR ADMINISTRATIVO",
+      "company": "Administração",
+      "location": "",
+      "location_bucket": "remote_intl",
+      "location_label": "Remoto internacional",
+      "work_model": "remote",
+      "employment_type": "vacancy_legal_entity",
+      "salary_brl_monthly": null,
+      "salary_raw": null,
+      "posted_at": "2026-08-17T17:37:57.894Z",
+      "age_days": 16,
+      "url": "https://medmais.gupy.io/job/eyJqb2JJZCI6MTIxNDY1MDYsInNvdXJjZSI6Imd1cHlfcG9ydGFsIn0=?jobBoardSource=gupy_portal",
+      "source": "gupy",
+      "also_seen_in": [
+        "gupy"
+      ],
+      "score": {
+        "rules": 60,
+        "ai": null,
+        "final": 60,
+        "components": {
+          "role": 25,
+          "experience": 7,
+          "skills": 0,
+          "seniority": 10,
+          "industry": 10,
+          "salary": -1,
+          "location": 6,
+          "recency": 3
+        }
+      },
+      "why_fits": [
+        "Titulo alinhado aos cargos-alvo: \"2257444 - COORDENADOR ADMINISTRATIVO\"",
+        "Industria prioritaria: saude, distribuicao"
+      ],
+      "gaps": [
+        "Salario nao divulgado - confirmar na candidatura"
+      ],
+      "ats_missing": [],
+      "verdict": "",
+      "risk": "",
+      "cv_variant": "",
+      "description_excerpt": "Faça Parte do Time Med+ e Transforme Vidas! Se você é um profissional comprometido, apaixonado pela área da saúde e segurança e deseja fazer a diferença, o Grupo Med+ é o lugar certo para você!Somos movidos pela missão de salvar vidas e acreditamos profundamente em nosso propósito de transformar a terceirização de mão de obra no Brasil, convertendo recursos humanos em pessoas felizes.Somos referência nacional no fornecimento de terceirização de Emergency Response para infraestruturas críticas, atuando em três pilares essenciais: Medicina e Segurança do Trabalho, Urgência e Emergência, Prevenção e combate a incêndios.Você se identifica com a nossa empresa? Então essa é a sua chance! 🚀 Venha fazer parte do nosso time e ser um Med Member.Responsabilidades e atribuiçõesO preposto atuará na execução dos serviços descritos nas especificações técnicas. \nEle será o representante da Med Mais junto aos clientes para todos os assuntos referentes à gestão do contrato, bem como responsáveis pela organização administrativa das demandas (distribuição das solicitações de itens de serviço, feitas pelo cliente e acompanhamento da disponibilidade dos profissionais da contratada para execução das ati"
+    },
+    {
+      "id": "730b52668ecdf925",
+      "title": "Consultor Negócios Pleno 6H l Loja São José do Rio Preto/SP",
+      "company": "Vem Pra Vivo!",
+      "location": "São José do Rio Preto, São Paulo",
+      "location_bucket": "sjrp",
+      "location_label": "Sao Jose do Rio Preto, SP",
+      "work_model": "onsite",
+      "employment_type": "vacancy_type_effective",
+      "salary_brl_monthly": null,
+      "salary_raw": null,
+      "posted_at": "2026-09-02T13:09:54.046Z",
+      "age_days": 0,
+      "url": "https://lojasvivo.gupy.io/job/eyJqb2JJZCI6MTIzNzk2MjksInNvdXJjZSI6Imd1cHlfcG9ydGFsIn0=?jobBoardSource=gupy_portal",
+      "source": "gupy",
+      "also_seen_in": [
+        "gupy"
+      ],
+      "score": {
+        "rules": 60,
+        "ai": null,
+        "final": 60,
+        "components": {
+          "role": 15,
+          "experience": 11,
+          "skills": 3,
+          "seniority": 10,
+          "industry": 10,
+          "salary": -1,
+          "location": 7,
+          "recency": 5
+        }
+      },
+      "why_fits": [
+        "Descricao cobre temas do seu repertorio: consultor, processos, qualidade",
+        "Skills tecnicas que voce domina: dados",
+        "Industria prioritaria: saude",
+        "Publicada ha 0 dia(s)"
+      ],
+      "gaps": [
+        "Titulo so parcialmente alinhado aos cargos-alvo",
+        "Salario nao divulgado - confirmar na candidatura"
+      ],
+      "ats_missing": [],
+      "verdict": "",
+      "risk": "",
+      "cv_variant": "",
+      "description_excerpt": "Vice-Presidência: B2CDiretoria: Regional SPLocal de Trabalho: Loja Vivo São José do Rio PretoResponsabilidades e atribuiçõesResponsável por abordar ao cliente no salão e no balcão, visando facilitar e agilizar o atendimento, identificar as necessidades de todos os clientes, inclusive atendimento personalizado de alto valor (Platinum e V) e pessoa Jurídica, e ofertar os melhores produtos e serviços, visando atender, vender, reter, encantar e fidelizar , superando os objetivos quantitativos e qualitativos. Realiza o atendimento básico de tecnologia: backup, configuração de e-mail e redes sociais e possíveis dúvidas sobre os devices.Cumprir os requisitos para manutenção do Sistema de Gestão de Saúde e Segurança Ocupacional, participar dos programas de Saúde e Segurança Ocupacional.,Conhecer a Política de Meio Ambiente da Telefônica e implementar nas atividades desenvolvidas diariamente a fim de garantir as boas práticas para gestão ambiental da companhiaRequisitos e qualificaçõesENSINO MÉDIO COMPLETO - CERTIFICADO DE CONCLUSÃOInformações adicionaisVeja o que ofereceremos para você: Na Vivo não medimos esforços em apoiar e valorizar nossos colaboradores. Não são apenas excelentes benef"
+    }
+  ]
 }
