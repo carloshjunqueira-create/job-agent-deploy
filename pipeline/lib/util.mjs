@@ -72,11 +72,15 @@ export async function httpFetch(url, { method = "GET", headers = {}, body, timeo
         try { body = (await response.text()).replace(/\s+/g, " ").slice(0, 300); } catch { /* sem corpo */ }
         const error = new Error(`HTTP ${response.status} em ${url}${body ? ` | resposta: ${body}` : ""}`);
         error.status = response.status;
+        // Erro do cliente (400, 401, 403, 404...): repetir nao muda nada. Marcamos
+        // para o laco de retry nao insistir tres vezes no mesmo request invalido.
+        error.noRetry = true;
         throw error;
       }
       return response;
     } catch (error) {
       clearTimeout(timer);
+      if (error.noRetry) throw error;
       lastError = error.name === "AbortError" ? new Error(`timeout apos ${timeout}ms em ${url}`) : error;
       if (attempt < retries) { await sleep(1000 * (attempt + 1)); continue; }
       throw lastError;

@@ -18,31 +18,49 @@ export function estimateCost({ model, inputTokens = 0, outputTokens = 0, pricing
   return (inputTokens / 1e6) * price.input + (outputTokens / 1e6) * price.output;
 }
 
+// Parametros de amostragem que alguns modelos deixam de aceitar com o tempo.
+// Se a API recusar um deles, refazemos a chamada sem ele em vez de falhar.
+const DROPPABLE_PARAMS = ["temperature", "top_p", "top_k"];
+
 /** Chamada crua a API. Lanca erro legivel; quem chama decide se degrada. */
-export async function callClaude({ model, system, prompt, maxTokens = 4000, temperature = 0 }) {
+export async function callClaude({ model, system, prompt, maxTokens = 4000, temperature = null }) {
   const key = process.env.ANTHROPIC_API_KEY;
   if (!key) throw new Error("ANTHROPIC_API_KEY nao configurada");
-  const response = await httpFetch(API_URL, {
-    method: "POST",
-    timeout: 120000,
-    retries: 2,
-    headers: {
-      "x-api-key": key,
-      "anthropic-version": API_VERSION,
-      "content-type": "application/json",
-      // Chaves criadas dentro de um workspace ("identity-linked") exigem este
-      // cabecalho; sem ele a API recusa com HTTP 400. Chaves comuns ignoram.
-      ...(process.env.ANTHROPIC_WORKSPACE_ID ? { "anthropic-workspace-id": process.env.ANTHROPIC_WORKSPACE_ID } : {})
-    },
-    body: JSON.stringify({
-      model,
-      max_tokens: maxTokens,
-      temperature,
-      system,
-      messages: [{ role: "user", content: prompt }]
-    })
-  });
-  const data = await response.json();
+
+  const headers = {
+    "x-api-key": key,
+    "anthropic-version": API_VERSION,
+    "content-type": "application/json",
+    // Chaves do tipo "Pessoal" com escopo "todos os workspaces" exigem este
+    // cabecalho; sem ele a API recusa com HTTP 400. Chaves de workspace ignoram.
+    ...(process.env.ANTHROPIC_WORKSPACE_ID ? { "anthropic-workspace-id": process.env.ANTHROPIC_WORKSPACE_ID } : {})
+  };
+
+  const body = { model, max_tokens: maxTokens, system, messages: [{ role: "user", content: prompt }] };
+  if (temperature != null) body.temperature = temperature;
+
+  const post = async (payload) => {
+    const response = await httpFetch(API_URL, {
+      method: "POST", timeout: 120000, retries: 2, headers, body: JSON.stringify(payload)
+    });
+    return response.json();
+  };
+
+  let data;
+  try {
+    data = await post(body);
+  } catch (error) {
+    // "`temperature` is deprecated for this model" e afins: tira o parametro e tenta de novo.
+    const match = error.status === 400 && /`?(\w+)`? is (deprecated|not supported|unsupported)/i.exec(error.message || "");
+    const param = match?.[1];
+    if (param && DROPPABLE_PARAMS.includes(param) && body[param] !== undefined) {
+      delete body[param];
+      data = await post(body);
+    } else {
+      throw error;
+    }
+  }
+
   const text = (data.content || []).filter((b) => b.type === "text").map((b) => b.text).join("");
   return { text, usage: data.usage || null };
 }
@@ -205,7 +223,7 @@ ${coverBlock}
 
 Somente JSON.`;
 
-  const { text, usage } = await callClaude({ model, system: TAILOR_SYSTEM, prompt, maxTokens: includeCoverLetter ? 6000 : 4000, temperature: 0.3 });
+  const { text, usage } = await callClaude({ model, system: TAILOR_SYSTEM, prompt, maxTokens: includeCoverLetter ? 6000 : 4000 });
   const parsed = extractJson(text);
   if (!parsed) throw new Error("resposta da IA nao veio como JSON valido");
   return { result: parsed, usage };

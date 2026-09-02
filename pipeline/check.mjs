@@ -189,6 +189,10 @@ const wfDiag = await fs.readFile(path.join(ROOT, ".github/workflows/diagnose.yml
 check("diagnostico testa a conexao com a IA", wfDiag.includes("ANTHROPIC_API_KEY") && wfDiag.includes("ANTHROPIC_WORKSPACE_ID"));
 const diagSrc = await fs.readFile(path.join(ROOT, "pipeline/diagnose.mjs"), "utf8");
 check("diagnostico explica o erro de workspace", diagSrc.includes("callClaude") && diagSrc.includes("ANTHROPIC_WORKSPACE_ID"));
+check("nao envia temperature por padrao", aiSrcEager.includes("temperature = null") && aiSrcEager.includes("if (temperature != null) body.temperature"));
+check("refaz a chamada sem o parametro que a API recusou", aiSrcEager.includes("DROPPABLE_PARAMS") && /deprecated\|not supported\|unsupported/.test(aiSrcEager));
+const utilSrc2 = await fs.readFile(path.join(ROOT, "pipeline/lib/util.mjs"), "utf8");
+check("erro 4xx nao e repetido tres vezes", utilSrc2.includes("error.noRetry = true") && utilSrc2.includes("if (error.noRetry) throw error;"));
 
 console.log("\n4. Score e hierarquia geografica");
 const sSjrp = scoreJob(make({}), profile, { fx });
