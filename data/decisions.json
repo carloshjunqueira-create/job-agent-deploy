@@ -1,5 +1,14 @@
 {
   "schema_version": "1.0.0",
-  "updated_at": null,
-  "decisions": {}
+  "updated_at": "2026-09-02T23:50:56.595Z",
+  "decisions": {
+    "87587df5845fa2ff": {
+      "status": "closed",
+      "at": "2026-09-02T23:50:55.093Z",
+      "title": "Consultor Interno - Business Partner | Operações de Farmácia (Rio Preto)",
+      "company": "RD Saúde",
+      "url": "https://www.adzuna.com.br/details/5843217668?utm_medium=api&utm_source=f4cf42d6",
+      "score": 61
+    }
+  }
 }
