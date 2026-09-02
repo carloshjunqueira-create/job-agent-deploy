@@ -1,10 +1,9 @@
 name: Buscar vagas
 
+# Sem agendamento por opcao: a busca so roda quando voce mandar, pelo botao
+# "Nova busca" no site ou por "Run workflow" aqui na aba Actions.
+# Isso mantem o gasto da API 100% sob seu controle.
 on:
-  schedule:
-    # 09:00 e 19:00 no horario de Brasilia (UTC-3)
-    - cron: "0 12 * * 1-5"
-    - cron: "0 22 * * 0-4"
   workflow_dispatch:
     inputs:
       extra_queries:
@@ -16,7 +15,7 @@ on:
         required: false
         default: ""
       skip_ai:
-        description: "Rodar sem a IA (so score deterministico)"
+        description: "Rodar sem a IA (so score deterministico, custo zero)"
         type: boolean
         required: false
         default: false
@@ -33,11 +32,11 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 25
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v5
         with:
-          node-version: "20"
+          node-version: "22"
 
       - name: Auto-teste da logica de triagem
         run: node pipeline/check.mjs
@@ -64,9 +63,13 @@ jobs:
               out.push("| Etapa | Vagas |", "|---|---|");
               for (const [k, v] of Object.entries(r.counts)) out.push(`| ${k} | ${v} |`);
               out.push("", "| Fonte | Status | Vagas | Detalhe |", "|---|---|---|---|");
-              for (const s of r.sources) out.push(`| ${s.label} | ${s.status} | ${s.jobs} | ${(s.detail || "").slice(0, 120)} |`);
+              for (const s of r.sources) out.push(`| ${s.label} | ${s.status} | ${s.jobs} | ${(s.detail || "").slice(0, 200)} |`);
               out.push("");
-              out.push(`IA: ${r.ai.enabled ? r.ai.model : "desligada"} | tokens entrada ${r.ai.input_tokens || 0} | saida ${r.ai.output_tokens || 0}`);
+              if (r.ai.enabled) {
+                out.push(`**IA:** ${r.ai.model} — entrada ${r.ai.input_tokens || 0} tokens, saida ${r.ai.output_tokens || 0} tokens, **custo estimado US$ ${(r.ai.estimated_cost_usd || 0).toFixed(4)}**`);
+              } else {
+                out.push("**IA:** desligada nesta rodada (custo zero)");
+              }
               out.push("", `Mix por regiao: ${JSON.stringify(r.mix)}`);
               if (Object.keys(r.blocked_reasons || {}).length) out.push("", `Descartes: ${JSON.stringify(r.blocked_reasons)}`);
               console.log(out.join("\n"));
@@ -81,7 +84,7 @@ jobs:
           if git diff --staged --quiet; then
             echo "Nenhuma mudanca no feed."
           else
-            git commit -m "feed: rodada automatica $(date -u +'%Y-%m-%d %H:%M UTC')"
+            git commit -m "feed: rodada de $(date -u +'%Y-%m-%d %H:%M UTC')"
             git pull --rebase --autostash origin "${{ github.ref_name }}" || true
             git push
           fi
