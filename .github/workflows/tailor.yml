@@ -1,0 +1,44 @@
+name: Gerar CV e carta para uma vaga
+
+on:
+  workflow_dispatch:
+    inputs:
+      job_id:
+        description: "ID da vaga (aparece no card do feed)"
+        required: true
+
+concurrency:
+  group: tailor-${{ inputs.job_id }}
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
+jobs:
+  tailor:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Gerar materiais
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          JOB_ID: ${{ inputs.job_id }}
+        run: node pipeline/tailor.mjs
+
+      - name: Publicar
+        run: |
+          git config user.name "job-agent-bot"
+          git config user.email "job-agent-bot@users.noreply.github.com"
+          git add data/tailored/
+          if git diff --staged --quiet; then
+            echo "Nada novo."
+          else
+            git commit -m "cv: materiais para a vaga ${{ inputs.job_id }}"
+            git pull --rebase --autostash origin "${{ github.ref_name }}" || true
+            git push
+          fi
