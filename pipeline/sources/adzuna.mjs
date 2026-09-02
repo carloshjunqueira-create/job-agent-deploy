@@ -6,7 +6,38 @@ export const id = "adzuna";
 /**
  * Adzuna: agregador com cobertura no Brasil (br) e internacional (us, gb, ca...).
  * Requer app_id + app_key gratuitos em https://developer.adzuna.com/
+ *
+ * A API responde HTTP 400 para qualquer parametro que nao reconheca — foi o que
+ * derrubou a versao anterior, que enviava "content_type" (com underscore) e
+ * "what_phrase". Aqui so entram parametros documentados, e existe um fallback:
+ * se a chamada completa levar 400, refazemos com o conjunto minimo.
  */
+
+const buildUrl = (country, page, params) =>
+  `https://api.adzuna.com/v1/api/jobs/${country}/search/${page}?${params.toString()}`;
+
+async function fetchPage({ country, page, appId, appKey, query, where, perPage, maxDaysOld }) {
+  const base = () => {
+    const p = new URLSearchParams({ app_id: appId, app_key: appKey });
+    p.set("what", query);
+    if (where) p.set("where", where);
+    return p;
+  };
+
+  const full = base();
+  full.set("results_per_page", String(perPage));
+  if (maxDaysOld) full.set("max_days_old", String(maxDaysOld));
+
+  try {
+    return await httpJson(buildUrl(country, page, full), { retries: 1 });
+  } catch (error) {
+    if (error.status !== 400) throw error;
+    const data = await httpJson(buildUrl(country, page, base()), { retries: 1 });
+    if (data) data.__usedFallback = true;
+    return data;
+  }
+}
+
 export async function collect({ options = {}, profile, log }) {
   const appId = process.env.ADZUNA_APP_ID;
   const appKey = process.env.ADZUNA_APP_KEY;
@@ -16,6 +47,7 @@ export async function collect({ options = {}, profile, log }) {
   const perPage = Math.min(options.results_per_page || 50, 50);
   const maxPages = options.max_pages || 1;
   const remoteOnly = Boolean(options.remote_only);
+  const maxDaysOld = options.max_days_old;
 
   const queries = remoteOnly
     ? (profile.queries_international || profile.queries || [])
@@ -24,25 +56,18 @@ export async function collect({ options = {}, profile, log }) {
   const wheres = remoteOnly
     ? [""]
     : (profile.locations || [])
-        .filter((l) => l.enabled !== false && l.kind === "city" && l.adzuna_where)
-        .map((l) => l.adzuna_where);
+        .filter((l) => l.enabled !== false && l.kind === "city")
+        .map((l) => l.adzuna_where || l.label.split(",")[0]);
 
   const jobs = [];
+  let usedFallback = false;
+
   for (const country of countries) {
-    for (const query of queries.slice(0, 10)) {
+    for (const query of queries.slice(0, options.max_queries || 8)) {
       for (const where of (wheres.length ? wheres : [""])) {
         for (let page = 1; page <= maxPages; page += 1) {
-          const params = new URLSearchParams({
-            app_id: appId,
-            app_key: appKey,
-            results_per_page: String(perPage),
-            what_phrase: query,
-            content_type: "application/json"
-          });
-          if (where) params.set("where", where);
-          if (options.max_days_old) params.set("max_days_old", String(options.max_days_old));
-          const url = `https://api.adzuna.com/v1/api/jobs/${country}/search/${page}?${params.toString()}`;
-          const data = await httpJson(url);
+          const data = await fetchPage({ country, page, appId, appKey, query, where, perPage, maxDaysOld });
+          if (data?.__usedFallback) usedFallback = true;
           const results = data?.results || [];
           for (const r of results) {
             const locationRaw = r.location?.display_name || "";
@@ -74,6 +99,6 @@ export async function collect({ options = {}, profile, log }) {
       }
     }
   }
-  log?.(`adzuna: ${jobs.length} vagas brutas de ${countries.join(",")}`);
+  log?.(`adzuna: ${jobs.length} vagas brutas de ${countries.join(",")}${usedFallback ? " (a API recusou os opcionais; usei o conjunto minimo)" : ""}`);
   return jobs;
 }

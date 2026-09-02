@@ -45,7 +45,7 @@
           ],
           "adzuna_where": "Sao Jose do Rio Preto",
           "weight": 1,
-          "quota": 1,
+          "quota": 0.55,
           "enabled": true
         },
         {
@@ -55,7 +55,7 @@
           "match": [],
           "weight": 0.85,
           "quota": 0.3,
-          "enabled": false,
+          "enabled": true,
           "note": "Vagas 100% remotas fora do Brasil. Exige ingles ou frances; Carlos e fluente nos dois."
         },
         {
@@ -68,7 +68,7 @@
           "adzuna_where": "Sao Paulo",
           "weight": 0.7,
           "quota": 0.15,
-          "enabled": false,
+          "enabled": true,
           "superiority_rule": {
             "enabled": true,
             "min_salary_brl": 18000,
@@ -273,22 +273,37 @@
       "ai_ranking": {
         "enabled": true,
         "model": "claude-sonnet-5",
-        "model_options": [
-          "claude-sonnet-5 - melhor julgamento, ~US$10-12/mes com 2 rodadas por dia",
-          "claude-haiku-4-5-20251001 - mais barato, ~US$3-4/mes"
-        ],
         "candidates_sent_to_ai": 60,
         "batch_size": 12,
         "blend": {
           "rules": 0.35,
           "ai": 0.65
         },
-        "max_description_chars": 4000
+        "max_description_chars": 4000,
+        "note": "Modelo usado para ranquear e explicar as vagas. Volume alto de tokens: e aqui que o custo se concentra."
       },
       "ai_tailoring": {
         "enabled": true,
-        "model": "claude-sonnet-5"
+        "model": "claude-sonnet-5",
+        "note": "Modelo usado para gerar CV adaptado e carta. Roda so quando voce clica na vaga, um texto por vez: pode ser um modelo melhor sem pesar no custo."
       }
     }
-  ]
+  ],
+  "ai_pricing_usd_per_mtok": {
+    "claude-opus-5": {
+      "input": 5,
+      "output": 25,
+      "label": "Opus 5 - julgamento mais fino, mais caro"
+    },
+    "claude-sonnet-5": {
+      "input": 2,
+      "output": 10,
+      "label": "Sonnet 5 - melhor equilibrio"
+    },
+    "claude-haiku-4-5-20251001": {
+      "input": 1,
+      "output": 5,
+      "label": "Haiku 4.5 - mais rapido e barato"
+    }
+  }
 }

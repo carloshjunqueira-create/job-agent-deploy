@@ -7,6 +7,17 @@ export function aiAvailable() {
   return Boolean(process.env.ANTHROPIC_API_KEY);
 }
 
+/**
+ * Custo estimado em dolares a partir dos tokens efetivamente consumidos.
+ * A tabela de precos fica em config/search-profiles.json (ai_pricing_usd_per_mtok),
+ * entao da para corrigir sem mexer no codigo quando a Anthropic mudar o preco.
+ */
+export function estimateCost({ model, inputTokens = 0, outputTokens = 0, pricing = {} }) {
+  const price = pricing[model];
+  if (!price) return null;
+  return (inputTokens / 1e6) * price.input + (outputTokens / 1e6) * price.output;
+}
+
 /** Chamada crua a API. Lanca erro legivel; quem chama decide se degrada. */
 export async function callClaude({ model, system, prompt, maxTokens = 4000, temperature = 0 }) {
   const key = process.env.ANTHROPIC_API_KEY;

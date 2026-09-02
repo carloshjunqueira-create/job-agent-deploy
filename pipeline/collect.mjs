@@ -5,7 +5,7 @@ import { fileURLToPath } from "node:url";
 import { mapLimit, nowIso, unique } from "./lib/util.mjs";
 import { dedupe } from "./lib/normalize.mjs";
 import { scoreJob, applyQuotas } from "./lib/score.mjs";
-import { aiAvailable, rankBatch } from "./lib/ai.mjs";
+import { aiAvailable, rankBatch, estimateCost } from "./lib/ai.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const readJson = async (rel, fallback = null) => {
@@ -161,6 +161,16 @@ async function main() {
       }
     }
     if (aiUsage.errors.length) log(`  ! IA: ${aiUsage.errors.length} lote(s) falharam; essas vagas ficam so com o score de regras`);
+    const cost = estimateCost({
+      model: aiCfg.model,
+      inputTokens: aiUsage.input_tokens,
+      outputTokens: aiUsage.output_tokens,
+      pricing: searchConfig.ai_pricing_usd_per_mtok || {}
+    });
+    if (cost != null) {
+      aiUsage.estimated_cost_usd = Number(cost.toFixed(4));
+      log(`IA: ${aiUsage.input_tokens} tokens de entrada, ${aiUsage.output_tokens} de saida — custo estimado US$ ${cost.toFixed(4)}`);
+    }
   } else if (!aiAvailable() && !DRY_RUN) {
     log("IA desligada: ANTHROPIC_API_KEY ausente. O feed usa apenas o score deterministico.");
   }

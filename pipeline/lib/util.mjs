@@ -65,7 +65,15 @@ export async function httpFetch(url, { method = "GET", headers = {}, body, timeo
         if (attempt < retries) { await sleep(1200 * (attempt + 1)); continue; }
         throw lastError;
       }
-      if (!response.ok) throw new Error(`HTTP ${response.status} em ${url}`);
+      if (!response.ok) {
+        // Ler o corpo do erro: quase toda API diz ali qual parametro esta errado.
+        // Sem isso, um 400 vira adivinhacao.
+        let body = "";
+        try { body = (await response.text()).replace(/\s+/g, " ").slice(0, 300); } catch { /* sem corpo */ }
+        const error = new Error(`HTTP ${response.status} em ${url}${body ? ` | resposta: ${body}` : ""}`);
+        error.status = response.status;
+        throw error;
+      }
       return response;
     } catch (error) {
       clearTimeout(timer);

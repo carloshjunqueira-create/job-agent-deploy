@@ -3,7 +3,7 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { nowIso } from "./lib/util.mjs";
-import { tailorForJob, aiAvailable } from "./lib/ai.mjs";
+import { tailorForJob, aiAvailable, estimateCost } from "./lib/ai.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const readJson = async (rel, fallback = null) => {
@@ -48,12 +48,21 @@ const { result, usage } = await tailorForJob({
   model
 });
 
+const cost = estimateCost({
+  model,
+  inputTokens: usage?.input_tokens || 0,
+  outputTokens: usage?.output_tokens || 0,
+  pricing: searchConfig.ai_pricing_usd_per_mtok || {}
+});
+if (cost != null) console.log(`custo estimado desta geracao: US$ ${cost.toFixed(4)}`);
+
 const output = {
   job_id: jobId,
   job: { title: job.title, company: job.company, url: job.url },
   generated_at: nowIso(),
   model,
   usage,
+  estimated_cost_usd: cost != null ? Number(cost.toFixed(4)) : null,
   ...result
 };
 

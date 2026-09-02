@@ -363,7 +363,9 @@ function renderRodadas() {
         <span class="tag">${r.counts.passed_filters} passaram nos filtros</span>
         <span class="tag t-good">${r.counts.published} publicadas</span>
         <span class="tag">${(r.duration_ms / 1000).toFixed(0)}s</span>
-        ${r.ai?.enabled ? `<span class="tag">IA ${esc(r.ai.model)} · ${(r.ai.input_tokens || 0).toLocaleString("pt-BR")} tokens</span>` : '<span class="tag t-warn">sem IA</span>'}
+        ${r.ai?.enabled
+          ? `<span class="tag">IA ${esc(r.ai.model)}</span><span class="tag">${(r.ai.input_tokens || 0).toLocaleString("pt-BR")} tokens entrada</span>${r.ai.estimated_cost_usd != null ? `<span class="tag t-good">US$ ${r.ai.estimated_cost_usd.toFixed(4)}</span>` : ""}`
+          : '<span class="tag t-warn">sem IA · custo zero</span>'}
       </div>
       ${r.extra_queries?.length ? `<p class="ats"><b>Termos extras:</b> ${r.extra_queries.map(esc).join(" · ")}</p>` : ""}
       <div class="table-wrap"><table>
@@ -426,8 +428,19 @@ function hydrateCriteriaForm() {
   $("#cfg-recency").value = p.filters?.recency_days_max ?? 45;
   $("#cfg-max-company").value = p.filters?.max_per_company ?? 3;
   $("#cfg-ai-enabled").checked = p.ai_ranking?.enabled !== false;
-  $("#cfg-ai-model").value = p.ai_ranking?.model || "claude-sonnet-5";
   $("#cfg-ai-candidates").value = p.ai_ranking?.candidates_sent_to_ai ?? 60;
+
+  // As opções de modelo e os preços vêm da própria configuração do repositório,
+  // então adicionar ou remover um modelo não exige mexer nesta página.
+  const pricing = state.config.ai_pricing_usd_per_mtok || {};
+  const modelOptions = Object.entries(pricing)
+    .map(([id, info]) => `<option value="${esc(id)}">${esc(info.label || id)} — US$ ${info.input}/${info.output} por Mtok</option>`)
+    .join("");
+  $("#cfg-ai-model").innerHTML = modelOptions;
+  $("#cfg-ai-model-tailor").innerHTML = modelOptions;
+  $("#cfg-ai-model").value = p.ai_ranking?.model || "claude-sonnet-5";
+  $("#cfg-ai-model-tailor").value = p.ai_tailoring?.model || p.ai_ranking?.model || "claude-sonnet-5";
+  renderCostEstimate();
 
   $("#cfg-locations").innerHTML = (p.locations || []).map((l, i) => `
     <div class="loc-row" data-index="${i}">
@@ -441,6 +454,38 @@ function hydrateCriteriaForm() {
   bucketSelect.innerHTML = '<option value="">Todas as regiões</option>' +
     (p.locations || []).map((l) => `<option value="${esc(l.id)}">${esc(l.label)}</option>`).join("");
   bucketSelect.value = state.filters.bucket || "";
+}
+
+/**
+ * Estimativa de custo por rodada, na tela, antes de gastar.
+ * Base: ~1.300 tokens de entrada por vaga enviada (descrição cortada em 4.000
+ * caracteres) mais o perfil repetido a cada lote, e ~220 tokens de saída por vaga.
+ * É aproximação — o valor real de cada rodada aparece na aba Rodadas.
+ */
+function renderCostEstimate() {
+  const target = $("#cost-estimate");
+  if (!target || !state.config) return;
+  const pricing = state.config.ai_pricing_usd_per_mtok || {};
+  const model = $("#cfg-ai-model").value;
+  const price = pricing[model];
+  const candidates = Number($("#cfg-ai-candidates").value) || 60;
+  if (!price || !$("#cfg-ai-enabled").checked) {
+    target.textContent = $("#cfg-ai-enabled").checked ? "" : "IA desligada: as rodadas não custam nada e o feed sai só com o score de regras.";
+    return;
+  }
+  const profileActive = activeProfile();
+  const batchSize = profileActive?.ai_ranking?.batch_size || 12;
+  const batches = Math.ceil(candidates / batchSize);
+  const inputTokens = candidates * 1300 + batches * 900;
+  const outputTokens = candidates * 220;
+  const cost = (inputTokens / 1e6) * price.input + (outputTokens / 1e6) * price.output;
+
+  const tailorModel = $("#cfg-ai-model-tailor").value;
+  const tailorPrice = pricing[tailorModel];
+  const tailorCost = tailorPrice ? (9000 / 1e6) * tailorPrice.input + (2500 / 1e6) * tailorPrice.output : null;
+
+  target.innerHTML = `Estimativa: <b>US$ ${cost.toFixed(2)}</b> por busca (${candidates} vagas na IA)` +
+    (tailorCost != null ? ` · <b>US$ ${tailorCost.toFixed(3)}</b> por CV + carta gerado` : "");
 }
 
 function readCriteriaForm() {
@@ -469,6 +514,9 @@ function readCriteriaForm() {
   p.ai_ranking.enabled = $("#cfg-ai-enabled").checked;
   p.ai_ranking.model = $("#cfg-ai-model").value;
   p.ai_ranking.candidates_sent_to_ai = Number($("#cfg-ai-candidates").value) || 60;
+  p.ai_tailoring = p.ai_tailoring || {};
+  p.ai_tailoring.enabled = true;
+  p.ai_tailoring.model = $("#cfg-ai-model-tailor").value;
   $$("#cfg-locations .loc-row").forEach((row) => {
     const loc = p.locations[Number(row.dataset.index)];
     if (!loc) return;
@@ -674,6 +722,11 @@ function bind() {
     } catch (error) {
       toast(`Não consegui salvar: ${error.message}`);
     }
+  });
+
+  ["#cfg-ai-model", "#cfg-ai-model-tailor", "#cfg-ai-candidates", "#cfg-ai-enabled"].forEach((sel) => {
+    $(sel).addEventListener("change", renderCostEstimate);
+    $(sel).addEventListener("input", renderCostEstimate);
   });
 
   $("#btn-download-criteria").addEventListener("click", () => {

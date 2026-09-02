@@ -8,7 +8,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { toCanonicalJob, dedupe, detectWorkModel, parseSalaryFromText, monthlyBrl } from "./lib/normalize.mjs";
 import { scoreJob, applyQuotas } from "./lib/score.mjs";
-import { extractJson } from "./lib/ai.mjs";
+import { extractJson, estimateCost } from "./lib/ai.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const readJson = async (rel) => JSON.parse(await fs.readFile(path.join(ROOT, rel), "utf8"));
@@ -146,6 +146,37 @@ check("extrai JSON de bloco markdown", (() => {
 })());
 check("extrai JSON sem cerca", Array.isArray(extractJson('[{"id":"b","ai_score":10}]')));
 check("devolve null quando nao ha JSON", extractJson("desculpe, nao consegui") === null);
+
+console.log("\n8. Custo e modelos");
+const pricing = searchConfig.ai_pricing_usd_per_mtok || {};
+check("tabela de precos existe", Object.keys(pricing).length >= 2, Object.keys(pricing).join(","));
+check("modelo do ranking esta na tabela de precos", Boolean(pricing[profile.ai_ranking.model]), profile.ai_ranking.model);
+check("modelo do CV e carta esta na tabela de precos", Boolean(pricing[profile.ai_tailoring.model]), profile.ai_tailoring.model);
+check("calcula custo corretamente", (() => {
+  const c = estimateCost({ model: "claude-sonnet-5", inputTokens: 1e6, outputTokens: 1e5, pricing });
+  return Math.abs(c - (2 + 1)) < 1e-9;
+})(), String(estimateCost({ model: "claude-sonnet-5", inputTokens: 1e6, outputTokens: 1e5, pricing })));
+check("custo devolve null para modelo desconhecido", estimateCost({ model: "inexistente", inputTokens: 1000, pricing }) === null);
+
+console.log("\n9. Regressoes de conector");
+// Comentarios sao removidos antes de checar: eles citam os parametros errados
+// justamente para documentar o bug, e nao devem contar como uso.
+const codeOnly = (text) => text.replace(/\/\*[\s\S]*?\*\//g, "").replace(/^\s*\/\/.*$/gm, "");
+const adzunaSrc = codeOnly(await fs.readFile(path.join(ROOT, "pipeline/sources/adzuna.mjs"), "utf8"));
+check("adzuna nao envia content_type (causava HTTP 400)", !adzunaSrc.includes("content_type"));
+check("adzuna usa o parametro documentado 'what'", /p\.set\("what",/.test(adzunaSrc) && !adzunaSrc.includes("what_phrase"));
+const gupySrc = codeOnly(await fs.readFile(path.join(ROOT, "pipeline/sources/gupy.mjs"), "utf8"));
+check("gupy nao filtra por cidade na API (acentos quebravam a busca)", !/city:/.test(gupySrc) && !/set\("city"/.test(gupySrc));
+const utilSrc = await fs.readFile(path.join(ROOT, "pipeline/lib/util.mjs"), "utf8");
+check("erros HTTP carregam o corpo da resposta", utilSrc.includes("resposta: ${body}"));
+
+console.log("\n10. Workflows sem agendamento");
+for (const wf of ["collect.yml", "tailor.yml", "diagnose.yml"]) {
+  const text = await fs.readFile(path.join(ROOT, ".github/workflows", wf), "utf8");
+  const active = text.split("\n").filter((l) => !l.trim().startsWith("#")).join("\n");
+  check(`${wf} nao tem gatilho de agendamento`, !/^\s*schedule:/m.test(active) && !/^\s*-\s*cron:/m.test(active));
+  check(`${wf} usa actions atualizadas`, active.includes("@v5"));
+}
 
 console.log(`\n=====================\n${passed} verificacoes ok, ${failures.length} falha(s).`);
 if (failures.length) {

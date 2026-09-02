@@ -1,8 +1,10 @@
 # Como colocar no ar
 
-Sete passos. Do zero ao feed rodando sozinho leva cerca de 30 minutos, e a maior parte é esperar página de cadastro.
+Sete passos, cerca de 30 minutos — e a maior parte é esperar página de cadastro.
 
 Ordem importa: **1 → 2 → 3** já deixa o site no ar. O **4** liga a IA. O **5** liga as fontes brasileiras. O **6** liga o botão "Nova busca". O **7** é conferência.
+
+> **Nada roda sozinho.** Nenhum workflow tem agendamento: a busca só acontece quando você clica. Se em algum momento quiser voltar a agendar, basta acrescentar um bloco `schedule` em `.github/workflows/collect.yml`.
 
 ---
 
@@ -26,7 +28,7 @@ git status
 
 # 4. commit e push
 git add -A
-git commit -m "v3: pipeline automatico no GitHub Actions, feed com IA e criterios editaveis"
+git commit -m "v3: pipeline no GitHub Actions sob demanda, feed com IA e criterios editaveis"
 git push
 ```
 
@@ -68,9 +70,29 @@ Sem isso a rodada roda, mas o commit final falha.
    - **Name**: `ANTHROPIC_API_KEY`
    - **Secret**: a chave copiada
 
-**Custo esperado**: com `claude-sonnet-5` e duas rodadas por dia, algo em torno de **US$ 10 a 12 por mês**. Se quiser cortar para uns US$ 3 a 4, troque o modelo para `claude-haiku-4-5-20251001` no painel **Critérios → Inteligência artificial** do próprio site.
+**Custo real, por unidade de uso** (não há mensalidade porque nada roda sozinho):
+
+| Ação | Haiku 4.5 | Sonnet 5 | Opus 5 |
+|---|---|---|---|
+| Uma busca completa (60 vagas na IA) | ~US$ 0,15 | ~US$ 0,30 | ~US$ 0,74 |
+| Um CV + carta gerado | ~US$ 0,04 | ~US$ 0,04 | ~US$ 0,11 |
+
+Rodando três buscas por semana com Sonnet e gerando cinco materiais por mês, dá algo perto de **US$ 4 por mês**. Os US$ 10 de crédito duram bastante.
+
+A tela mostra a estimativa antes de você rodar, e a aba **Rodadas** mostra o custo real de cada rodada que já aconteceu. Se quiser gastar zero numa rodada específica, marque **Rodar sem IA** no modal de busca.
 
 Sem esse secret o feed continua saindo, mas só com o score de regras — sem veredito, sem gaps, sem CV nem carta.
+
+### Qual modelo escolher
+
+Em **Critérios → Inteligência artificial** há dois menus, porque as duas tarefas têm economias diferentes:
+
+- **Modelo do ranking** — lê 60 vagas por rodada. É onde o custo se concentra. `claude-sonnet-5` é a escolha padrão: separa bem "vaga de coordenação de operações" de "vaga comercial disfarçada", que é exatamente o julgamento que você precisa. `claude-haiku-4-5-20251001` corta o custo pela metade e ainda entrega um ranking decente — bom para quando você quiser varrer muito.
+- **Modelo do CV e da carta** — roda um texto por vez, quando você clica. Custa centavos mesmo no modelo mais caro, então aqui vale usar `claude-opus-5`: é o texto que uma pessoa vai ler para decidir se te chama.
+
+Uma combinação que faz sentido: **Haiku no ranking, Opus na carta**. Você varre barato e escreve bem.
+
+Os modelos e preços vêm da tabela `ai_pricing_usd_per_mtok` em `config/search-profiles.json`. Quando a Anthropic lançar um modelo novo, adicione uma linha lá e ele aparece nos dois menus — não precisa mexer no código.
 
 ## 5. Chaves das fontes brasileiras
 
@@ -84,7 +106,7 @@ São as duas fontes que cobrem vagas no Brasil por API. Ambas gratuitas.
    - `ADZUNA_APP_ID`
    - `ADZUNA_APP_KEY`
 
-Plano gratuito: cerca de 1.000 chamadas por mês. As duas rodadas diárias cabem com folga.
+Plano gratuito: cerca de **1.000 chamadas por mês**. Cada busca consome ~30 chamadas (8 cargos × 2 cidades no Brasil, mais 5 cargos × 3 países no exterior), então dá para umas **30 buscas por mês**. Se quiser mais fôlego, reduza `max_queries` em `config/sources.json`.
 
 ### Jooble
 
@@ -108,18 +130,18 @@ O site é estático: para ele disparar uma busca e salvar critérios, precisa de
 3. **Generate token** e copie.
 4. Abra o site → botão **Conectar** → cole o token e o repositório (`carloshjunqueira-create/job-application-agent`) → **Salvar e testar**. Deve aparecer "Conectado a …" em verde.
 
-**Sobre segurança**: o token dá acesso de escrita só a esse repositório, que é público e não tem nada sensível. Ele fica no `localStorage` do navegador — não é enviado a nenhum servidor além da própria API do GitHub. Ainda assim: não use esse token em computador compartilhado, e o botão **Remover token** apaga na hora. Se preferir não usar token, tudo continua funcionando pelo cron e pelo botão **Run workflow** na aba **Actions**; você só perde o disparo pela página e o salvamento de critérios pela interface (nesse caso o botão **Salvar critérios** baixa o JSON para você subir à mão).
+**Sobre segurança**: o token dá acesso de escrita só a esse repositório, que é público e não tem nada sensível. Ele fica no `localStorage` do navegador — não é enviado a nenhum servidor além da própria API do GitHub. Ainda assim: não use esse token em computador compartilhado, e o botão **Remover token** apaga na hora. Se preferir não usar token, tudo continua funcionando pelo botão **Run workflow** na aba **Actions**; você só perde o disparo pela própria página e o salvamento de critérios pela interface (nesse caso o botão **Salvar critérios** baixa o JSON para você subir à mão).
 
 ## 7. Primeira rodada e conferência
 
 Na ordem:
 
-1. **Actions → Diagnóstico das fontes → Run workflow.** Em 1 a 2 minutos o resumo mostra, fonte por fonte, `OK`, `PULADA` ou `ERRO` com a mensagem. É aqui que se descobre qual endpoint precisa de ajuste — os conectores foram escritos a partir da documentação pública, mas nunca foram executados contra a rede.
-2. **Actions → Buscar vagas → Run workflow.** Deixe os campos em branco. Ao terminar, o resumo traz o funil (coletadas → únicas → passaram nos filtros → publicadas), o desempenho de cada fonte, o gasto de tokens e o motivo de cada descarte.
+1. **Actions → Diagnóstico das fontes → Run workflow.** Não usa a API da Anthropic, então não custa nada. Em 1 a 2 minutos o resumo mostra, fonte por fonte, `OK`, `PULADA` ou `ERRO` — e agora o erro traz o corpo da resposta da API, dizendo qual parâmetro foi recusado.
+2. **Actions → Buscar vagas → Run workflow.** Deixe os campos em branco. Ao terminar, o resumo traz o funil (coletadas → únicas → passaram nos filtros → publicadas), o desempenho de cada fonte, o custo estimado em dólares e o motivo de cada descarte.
 3. Abra o site e recarregue. O feed deve estar preenchido.
 4. Ajuste em **Critérios** o que estiver fora do lugar e salve. A próxima rodada já usa.
 
-A partir daí ele roda sozinho às 9h e às 19h (horário de Brasília), de segunda a sexta.
+A partir daí, sempre que quiser um feed novo: botão **Nova busca** no site (ou **Run workflow** no GitHub). Nada roda sem você mandar.
 
 ---
 
@@ -149,6 +171,8 @@ Quanto mais específico esse arquivo, melhor tudo o que sai do outro lado. É o 
 | Botão "Nova busca" diz que não está conectado | token ausente ou expirado | Passo 6 |
 | Site carrega com layout antigo | cache do service worker anterior | **Ctrl + F5** |
 | "Bad credentials" ao conectar | token expirado ou sem permissão | Gere outro com Actions e Contents em read/write |
-| Rodada gasta mais token que o esperado | muitas vagas indo para a IA | **Critérios → Vagas enviadas à IA por rodada**, reduza de 60 para 30 |
+| Rodada gasta mais token que o esperado | muitas vagas indo para a IA | **Critérios → Vagas enviadas à IA por rodada**, reduza de 60 para 30, ou troque o modelo do ranking para Haiku |
+| Adzuna com `HTTP 400` | parâmetro recusado pela API | Já corrigido nesta versão (`content_type` e `what_phrase` saíram). Se voltar, a mensagem de erro agora diz qual parâmetro é |
+| Gupy retorna 0 vagas | formato da resposta mudou | O relatório mostra as chaves que a API devolveu; ajuste `pipeline/sources/gupy.mjs` ou desligue a fonte |
 
-O comando `npm run check` roda 40 verificações offline da lógica de triagem e é executado pelo próprio workflow antes de qualquer coleta — se ele falhar, a rodada para antes de gastar chamada de API.
+O comando `npm run check` roda 55 verificações offline da lógica de triagem e é executado pelo próprio workflow antes de qualquer coleta — se ele falhar, a rodada para antes de gastar chamada de API.

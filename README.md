@@ -1,6 +1,8 @@
 # Job Application Agent
 
-Agente de busca e triagem de vagas. O site publicado no GitHub Pages é a interface; o **GitHub Actions é o backend**. Nada de gerar JSON à mão e commitar depois: as buscas rodam sozinhas em horário fixo e sob demanda pelo botão da própria página.
+Agente de busca e triagem de vagas. O site publicado no GitHub Pages é a interface; o **GitHub Actions é o backend**. Nada de gerar JSON à mão e commitar depois: a busca roda inteira do outro lado e publica o feed sozinha.
+
+**Nada é agendado.** Nenhum workflow tem `schedule`: tudo só acontece quando você manda, pelo botão **Nova busca** no site ou por **Run workflow** na aba Actions. O gasto com a API fica inteiramente sob seu controle.
 
 **Comece por [docs/DEPLOY.md](docs/DEPLOY.md)** — é o passo a passo para colocar no ar.
 
@@ -11,7 +13,7 @@ Agente de busca e triagem de vagas. O site publicado no GitHub Pages é a interf
 ```
    GitHub Actions (backend)                    GitHub Pages (interface)
 ┌───────────────────────────────┐           ┌──────────────────────────────┐
-│ cron 2x/dia  +  botão do site │           │  Feed ranqueado e explicado  │
+│  só roda quando você manda    │           │  Feed ranqueado e explicado  │
 │              ↓                │           │  Critérios editáveis         │
 │  10 conectores de vagas       │           │  Decisões (kanban)           │
 │              ↓                │           │  CV + carta por vaga         │
@@ -40,6 +42,17 @@ Duas alavancas independentes, ambas editáveis na interface:
 - **cota** — quanto do feed cada região ocupa (55% / 30% / 15%). Se uma região não tiver oferta suficiente, a sobra é preenchida pelas melhores vagas das outras.
 
 São Paulo tem ainda uma **regra de superioridade**: só pontua cheio quando o título é de gerência para cima ou o salário publicado passa de R$ 18 mil. Do contrário perde mais da metade dos pontos de região.
+
+### Qual modelo a IA usa
+
+Dois modelos, escolhidos separadamente em **Critérios → Inteligência artificial** (ou em `config/search-profiles.json`):
+
+| Onde | Campo na config | O que faz | Peso no custo |
+|---|---|---|---|
+| Ranking | `profiles[0].ai_ranking.model` | Lê as ~60 melhores candidatas contra o seu perfil | Alto — é aqui que o dinheiro vai |
+| CV e carta | `profiles[0].ai_tailoring.model` | Escreve o material de uma vaga por vez | Baixo — centavos por peça |
+
+As opções e os preços vivem em `ai_pricing_usd_per_mtok`, no mesmo arquivo. A interface monta os dois menus a partir dessa tabela, então **adicionar um modelo novo é adicionar uma linha ali** — nada muda no código. E a tela mostra a estimativa de custo antes de você rodar; a aba **Rodadas** mostra o custo real de cada rodada que já aconteceu.
 
 ## Fontes de vagas
 
@@ -73,14 +86,14 @@ pipeline/
   lib/               normalização, score, cliente da API da Claude
   sources/           um arquivo por fonte
 data/                saída gerada e commitada pelo bot
-.github/workflows/   collect (cron + sob demanda), tailor, diagnose
+.github/workflows/   collect, tailor, diagnose — todos manuais
 legacy/              versão anterior, mantida para consulta
 ```
 
 ## Comandos locais
 
 ```bash
-npm run check         # auto-teste offline, sem rede — 40 verificações
+npm run check         # auto-teste offline, sem rede — 55 verificações
 npm run collect:dry   # rodada completa sem gravar nada
 npm run collect       # rodada completa
 npm run diagnose      # testa cada fonte de vagas
@@ -91,7 +104,8 @@ Variáveis: `ANTHROPIC_API_KEY`, `ADZUNA_APP_ID`, `ADZUNA_APP_KEY`, `JOOBLE_API_
 
 ## Limites conhecidos
 
-- Os endpoints das fontes foram escritos a partir da documentação pública, mas **não foram testados contra a rede** no ambiente onde este código foi gerado. A primeira execução do workflow **Diagnóstico das fontes** é o teste real — ele diz, fonte por fonte, o que respondeu.
-- O conector da Gupy usa um endpoint público não documentado. Ele pode quebrar sem aviso; por isso falha isolado.
+- O conector da Gupy usa um endpoint público não documentado. Ele pode quebrar sem aviso; por isso falha isolado, e quando volta vazio o relatório mostra o formato que a API devolveu.
+- Erros HTTP carregam o corpo da resposta da API no relatório. Um `400` diz qual parâmetro a API recusou, em vez de virar adivinhação.
+- Remotive e Arbeitnow trazem sobretudo vagas de engenharia e do mercado alemão. Rendem pouco para cargos de gestão — estão ali porque são gratuitas e ocasionalmente acertam.
 - A conversão de moeda usa taxas fixas em `config/search-profiles.json` (`fx_to_brl`). Ajuste quando o câmbio mudar muito.
 - Salário lido do texto da descrição é uma heurística conservadora: na dúvida, o agente marca "salário não divulgado" em vez de chutar.

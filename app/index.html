@@ -139,15 +139,18 @@
     <fieldset>
       <legend>Inteligência artificial</legend>
       <label class="checkbox"><input id="cfg-ai-enabled" type="checkbox"> Usar a Claude para reordenar e explicar as vagas</label>
-      <div class="grid-2">
-        <label>Modelo
-          <select id="cfg-ai-model">
-            <option value="claude-sonnet-5">claude-sonnet-5 — melhor julgamento</option>
-            <option value="claude-haiku-4-5-20251001">claude-haiku-4-5 — mais barato</option>
-          </select>
-        </label>
-        <label>Vagas enviadas à IA por rodada <input id="cfg-ai-candidates" type="number" min="10" max="150"></label>
-      </div>
+
+      <label>Modelo do <b>ranking</b> — lê todas as vagas candidatas, é onde o custo se concentra
+        <select id="cfg-ai-model"></select>
+      </label>
+
+      <label>Modelo do <b>CV e da carta</b> — roda só quando você clica numa vaga, um texto por vez
+        <select id="cfg-ai-model-tailor"></select>
+      </label>
+
+      <label>Vagas enviadas à IA por rodada <input id="cfg-ai-candidates" type="number" min="10" max="150"></label>
+
+      <p id="cost-estimate" class="hint" style="margin:0"></p>
     </fieldset>
   </div>
   <div class="drawer-foot">

@@ -7,27 +7,63 @@
       "label": "Adzuna Brasil",
       "module": "adzuna.mjs",
       "enabled": true,
-      "requires_secret": ["ADZUNA_APP_ID", "ADZUNA_APP_KEY"],
-      "options": { "country": "br", "results_per_page": 50, "max_pages": 2, "max_days_old": 45 },
-      "scope": ["city"]
+      "requires_secret": [
+        "ADZUNA_APP_ID",
+        "ADZUNA_APP_KEY"
+      ],
+      "options": {
+        "country": "br",
+        "results_per_page": 50,
+        "max_pages": 1,
+        "max_days_old": 45,
+        "max_queries": 8
+      },
+      "scope": [
+        "city"
+      ],
+      "note": "Cada consulta = 1 chamada. 8 cargos x 2 cidades = ~16 chamadas por busca. O plano gratuito da Adzuna e de ~1.000 chamadas/mes."
     },
     {
       "id": "adzuna_intl",
       "label": "Adzuna internacional (US/GB/CA)",
       "module": "adzuna.mjs",
       "enabled": true,
-      "requires_secret": ["ADZUNA_APP_ID", "ADZUNA_APP_KEY"],
-      "options": { "country": ["us", "gb", "ca"], "results_per_page": 50, "max_pages": 1, "max_days_old": 30, "remote_only": true },
-      "scope": ["remote_international"]
+      "requires_secret": [
+        "ADZUNA_APP_ID",
+        "ADZUNA_APP_KEY"
+      ],
+      "options": {
+        "country": [
+          "us",
+          "gb",
+          "ca"
+        ],
+        "results_per_page": 50,
+        "max_pages": 1,
+        "max_days_old": 30,
+        "remote_only": true,
+        "max_queries": 5
+      },
+      "scope": [
+        "remote_international"
+      ],
+      "note": "5 cargos x 3 paises = ~15 chamadas por busca."
     },
     {
       "id": "jooble_br",
       "label": "Jooble Brasil",
       "module": "jooble.mjs",
       "enabled": true,
-      "requires_secret": ["JOOBLE_API_KEY"],
-      "options": { "host": "br.jooble.org", "pages": 2 },
-      "scope": ["city"]
+      "requires_secret": [
+        "JOOBLE_API_KEY"
+      ],
+      "options": {
+        "host": "br.jooble.org",
+        "pages": 2
+      },
+      "scope": [
+        "city"
+      ]
     },
     {
       "id": "remotive",
@@ -35,8 +71,13 @@
       "module": "remotive.mjs",
       "enabled": true,
       "requires_secret": [],
-      "options": { "limit": 200 },
-      "scope": ["remote_international"]
+      "options": {
+        "limit": 50,
+        "max_queries": 6
+      },
+      "scope": [
+        "remote_international"
+      ]
     },
     {
       "id": "remoteok",
@@ -45,7 +86,9 @@
       "enabled": true,
       "requires_secret": [],
       "options": {},
-      "scope": ["remote_international"]
+      "scope": [
+        "remote_international"
+      ]
     },
     {
       "id": "arbeitnow",
@@ -53,8 +96,13 @@
       "module": "arbeitnow.mjs",
       "enabled": true,
       "requires_secret": [],
-      "options": { "max_pages": 3 },
-      "scope": ["remote_international"]
+      "options": {
+        "max_pages": 3,
+        "remote_only": true
+      },
+      "scope": [
+        "remote_international"
+      ]
     },
     {
       "id": "himalayas",
@@ -62,8 +110,12 @@
       "module": "himalayas.mjs",
       "enabled": true,
       "requires_secret": [],
-      "options": { "limit": 100 },
-      "scope": ["remote_international"]
+      "options": {
+        "limit": 100
+      },
+      "scope": [
+        "remote_international"
+      ]
     },
     {
       "id": "gupy",
@@ -71,8 +123,13 @@
       "module": "gupy.mjs",
       "enabled": true,
       "requires_secret": [],
-      "options": { "limit": 60 },
-      "scope": ["city"],
+      "options": {
+        "limit": 60,
+        "max_queries": 8
+      },
+      "scope": [
+        "city"
+      ],
       "note": "Endpoint publico nao documentado. Se a Gupy mudar a API, a fonte falha sozinha e o resto da rodada continua."
     },
     {
@@ -81,8 +138,15 @@
       "module": "ats.mjs",
       "enabled": true,
       "requires_secret": [],
-      "options": { "greenhouse": [], "lever": [], "ashby": [] },
-      "scope": ["city", "remote_international"],
+      "options": {
+        "greenhouse": [],
+        "lever": [],
+        "ashby": []
+      },
+      "scope": [
+        "city",
+        "remote_international"
+      ],
       "note": "Adicione o slug das empresas-alvo. Ex.: greenhouse: [\"nubank\"], lever: [\"loft\"]. Cobre vagas que nao aparecem em agregadores."
     },
     {
@@ -91,8 +155,13 @@
       "module": "rss.mjs",
       "enabled": true,
       "requires_secret": [],
-      "options": { "feeds": [] },
-      "scope": ["city", "remote_international"],
+      "options": {
+        "feeds": []
+      },
+      "scope": [
+        "city",
+        "remote_international"
+      ],
       "note": "Cole URLs de RSS (alertas de emprego, boards de nicho). Ex.: https://weworkremotely.com/categories/remote-management-and-finance-jobs.rss"
     }
   ]
