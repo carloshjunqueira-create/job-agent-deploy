@@ -122,8 +122,8 @@
         }
       ],
       "salary": {
-        "min_brl_monthly": 15000,
-        "target_brl_monthly": 18000,
+        "min_brl_monthly": 14000,
+        "target_brl_monthly": 16000,
         "employment_type_preferred": "CLT",
         "unknown_salary_is_rejection": false,
         "unknown_salary_penalty": 6,
