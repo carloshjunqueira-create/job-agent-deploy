@@ -16,7 +16,7 @@
         "results_per_page": 50,
         "max_pages": 1,
         "max_days_old": 45,
-        "max_queries": 8
+        "max_queries": 12
       },
       "scope": [
         "city"
@@ -42,7 +42,7 @@
         "max_pages": 1,
         "max_days_old": 30,
         "remote_only": true,
-        "max_queries": 5
+        "max_queries": 6
       },
       "scope": [
         "remote_international"
@@ -59,7 +59,8 @@
       ],
       "options": {
         "host": "br.jooble.org",
-        "pages": 2
+        "pages": 2,
+        "max_queries": 12
       },
       "scope": [
         "city"
@@ -73,7 +74,7 @@
       "requires_secret": [],
       "options": {
         "limit": 50,
-        "max_queries": 6
+        "max_queries": 8
       },
       "scope": [
         "remote_international"
@@ -125,7 +126,7 @@
       "requires_secret": [],
       "options": {
         "limit": 60,
-        "max_queries": 8
+        "max_queries": 16
       },
       "scope": [
         "city"

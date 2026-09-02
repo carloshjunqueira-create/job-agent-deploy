@@ -14,23 +14,40 @@
       "label": "Consultoria e gestao",
       "enabled": true,
       "queries": [
-        "consultor de negocios",
-        "consultor de gestao",
         "gerente de operacoes",
-        "gerente de projetos",
         "coordenador de operacoes",
+        "gerente administrativo",
+        "coordenador administrativo",
+        "gerente de projetos",
+        "coordenador de projetos",
+        "pmo",
+        "controller",
         "coordenador de planejamento",
-        "business consultant",
-        "operations manager",
-        "management consultant",
-        "process excellence manager"
+        "consultor de negocios",
+        "coordenador de processos",
+        "gerente de unidade",
+        "supervisor administrativo",
+        "coordenador de melhoria continua",
+        "especialista em processos",
+        "coordenador de logistica",
+        "gerente de supply chain",
+        "analista de negocios senior",
+        "business partner",
+        "coordenador de qualidade"
       ],
       "queries_international": [
+        "management consultant",
         "business consultant",
-        "operations manager",
-        "process improvement manager",
-        "business operations manager",
-        "strategy manager"
+        "operations consultant",
+        "business transformation consultant",
+        "process improvement consultant",
+        "strategy consultant",
+        "implementation consultant",
+        "pmo consultant",
+        "sap consultant",
+        "erp consultant",
+        "business process analyst",
+        "project manager consulting"
       ],
       "locations": [
         {
@@ -41,12 +58,21 @@
             "sao jose do rio preto",
             "s. j. do rio preto",
             "sjrp",
-            "rio preto"
+            "rio preto",
+            "mirassol",
+            "bady bassitt",
+            "cedral",
+            "guapiacu",
+            "ipigua",
+            "potirendaba",
+            "onda verde",
+            "uchoa"
           ],
           "adzuna_where": "Sao Jose do Rio Preto",
           "weight": 1,
           "quota": 0.55,
-          "enabled": true
+          "enabled": true,
+          "note": "Inclui cidades da regiao com deslocamento diario viavel (Mirassol, Bady Bassitt, Cedral, Guapiacu e outras)."
         },
         {
           "id": "remote_intl",
@@ -108,11 +134,22 @@
         "prefer": [
           "pleno",
           "senior",
+          "sênior",
           "especialista",
+          "specialist",
           "coordenador",
+          "coordinator",
           "gerente",
           "manager",
-          "lead"
+          "lead",
+          "head",
+          "controller",
+          "consultor",
+          "consultant",
+          "supervisor",
+          "business partner",
+          "principal",
+          "expert"
         ],
         "exclude_titles": [
           "estagio",
@@ -124,7 +161,22 @@
           "assistente",
           "auxiliar",
           "operador",
-          "atendente"
+          "atendente",
+          "assistant",
+          "intern",
+          "internship",
+          "entry level",
+          "entry-level",
+          "apprentice",
+          "graduate program",
+          "clerk",
+          "recepcionista",
+          "receptionist",
+          "housekeeping",
+          "vendedor",
+          "caixa",
+          "motorista",
+          "tecnico de campo"
         ]
       },
       "industries": {
@@ -141,19 +193,38 @@
           "fintech",
           "seguros",
           "pagamentos",
-          "credito"
-        ],
-        "neutral": [
+          "credito",
+          "cooperativa de credito",
+          "sicredi",
+          "sicoob",
+          "unimed",
+          "saude",
+          "healthcare",
+          "hospital",
+          "hospitalar",
+          "clinica",
+          "operadora de saude",
+          "medicina diagnostica",
+          "distribuicao",
+          "distribuidora",
+          "atacado",
           "supply chain",
           "logistica",
-          "varejo",
-          "saude",
-          "educacao",
-          "tecnologia",
-          "energia",
           "consultoria",
+          "consulting"
+        ],
+        "neutral": [
+          "varejo",
+          "retail",
+          "educacao",
+          "education",
+          "tecnologia",
+          "technology",
+          "energia",
           "agro",
-          "industria"
+          "agronegocio",
+          "industria",
+          "servicos"
         ],
         "avoid": []
       },
@@ -165,6 +236,7 @@
         "manager",
         "coordenador",
         "coordinator",
+        "supervisor",
         "operacoes",
         "operations",
         "processos",
@@ -176,29 +248,62 @@
         "pmo",
         "projetos",
         "projects",
+        "portfolio",
         "transformacao",
         "transformation",
-        "melhoria continua"
+        "melhoria continua",
+        "administrativo",
+        "administration",
+        "controladoria",
+        "controller",
+        "orcamento",
+        "budget",
+        "custos",
+        "governanca",
+        "governance",
+        "indicadores",
+        "kpi",
+        "reporting",
+        "business case",
+        "eficiencia",
+        "supply chain",
+        "logistica",
+        "demanda",
+        "s&op",
+        "qualidade",
+        "compliance",
+        "automacao"
       ],
       "deal_breakers": {
         "title_terms": [
+          "vendas",
+          "sales",
           "representante comercial",
           "executivo de vendas",
           "vendedor",
           "promotor",
           "sdr",
+          "bdr",
           "hunter",
-          "consultor de vendas",
           "account executive",
           "sales representative",
-          "corretor"
+          "corretor",
+          "franchise",
+          "franqueado",
+          "revenda",
+          "telemarketing",
+          "call center",
+          "pre-vendas",
+          "pos-vendas"
         ],
         "description_terms": [
           "prospeccao ativa",
           "cold call",
           "porta a porta",
           "meta de vendas individual",
-          "carteira de clientes propria"
+          "carteira de clientes propria",
+          "bater meta de vendas",
+          "comissao sobre vendas"
         ],
         "keep_when_present": [
           "operacoes",
@@ -211,7 +316,19 @@
           "estrategia",
           "pmo"
         ],
-        "companies_blocked": []
+        "companies_blocked": [],
+        "title_rescue_when_present": [
+          "planejamento",
+          "s&op",
+          "operacoes",
+          "operations",
+          "processos",
+          "supply chain",
+          "logistica",
+          "pcp",
+          "demanda",
+          "trade marketing"
+        ]
       },
       "skills_boost": {
         "high": [

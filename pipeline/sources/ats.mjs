@@ -3,14 +3,20 @@ import { toCanonicalJob } from "../lib/normalize.mjs";
 
 export const id = "ats";
 
+const roleTerms = (profile) => [
+  ...(profile.queries_international || []),
+  ...(profile.queries || [])
+].map(norm).filter((t) => t.length > 5);
+
+
 /**
  * Paginas de carreira publicas: Greenhouse, Lever e Ashby.
  * Cobre vagas que muitas vezes nao chegam a agregadores. Configure os slugs em config/sources.json.
  */
 export async function collect({ options = {}, profile, log }) {
   const jobs = [];
-  const terms = (profile.must_have_any || []).map(norm);
-  const matches = (title) => !terms.length || terms.some((t) => t.length > 3 && norm(title).includes(t));
+  const terms = roleTerms(profile);
+  const matches = (title) => !terms.length || terms.some((t) => norm(title).includes(t));
 
   for (const slug of options.greenhouse || []) {
     const data = await httpJson(`https://boards-api.greenhouse.io/v1/boards/${slug}/jobs?content=true`);

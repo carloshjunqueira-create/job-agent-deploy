@@ -72,8 +72,14 @@ export async function collect({ options = {}, profile, log }) {
           for (const r of results) {
             const locationRaw = r.location?.display_name || "";
             if (remoteOnly) {
-              const hay = norm(`${r.title} ${locationRaw} ${(r.description || "").slice(0, 800)}`);
-              if (!/(remote|remoto|anywhere|work from home|home office)/.test(hay)) continue;
+              // So titulo e local. A descricao menciona "remote" de passagem em
+              // vagas presenciais e foi o que trouxe um franchise consultant
+              // presencial em Phoenix para o balde de remoto internacional.
+              const hay = norm(`${r.title} ${locationRaw}`);
+              const strong = norm(r.description || "").slice(0, 1500);
+              const ok = /(remote|remoto|anywhere|work from home|home office)/.test(hay)
+                || /(fully remote|100% remote|remote-first|work from anywhere)/.test(strong);
+              if (!ok) continue;
             }
             jobs.push(toCanonicalJob({
               title: r.title,

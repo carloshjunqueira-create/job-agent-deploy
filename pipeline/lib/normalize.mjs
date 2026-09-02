@@ -1,6 +1,12 @@
 import { norm, stripHtml, hashId, daysSince, unique } from "./util.mjs";
 
-const REMOTE_TERMS = ["remoto", "remote", "home office", "teletrabalho", "anywhere", "work from home", "fully remote", "100% remoto", "telecommute", "distributed"];
+// Sinais fracos: bastam quando aparecem no titulo, no local ou no campo de
+// modalidade da fonte — lugares onde a palavra so aparece se for verdade.
+const REMOTE_TERMS = ["remoto", "remote", "home office", "teletrabalho", "anywhere", "work from home", "telecommute", "distributed"];
+// Sinais fortes: os unicos que valem quando aparecem soltos na descricao.
+// Um anuncio presencial em Phoenix menciona "remote" de passagem o tempo todo;
+// "fully remote" e "100% remoto" ninguem escreve por acidente.
+const STRONG_REMOTE_TERMS = ["fully remote", "100% remote", "100% remoto", "totalmente remoto", "remote-first", "remote first", "work from anywhere", "trabalho remoto", "integralmente remoto"];
 const HYBRID_TERMS = ["hibrido", "hybrid"];
 const ONSITE_TERMS = ["presencial", "on-site", "onsite", "no local"];
 
@@ -8,13 +14,16 @@ const BR_HINTS = ["brasil", "brazil", ", sp", ", rj", ", mg", ", pr", ", rs", ",
 
 /** Detecta modelo de trabalho a partir de titulo, local e descricao. */
 export function detectWorkModel(job) {
-  const haystack = norm([job.title, job.location_raw, job.work_model_raw, (job.description || "").slice(0, 1500)].join(" "));
-  if (REMOTE_TERMS.some((t) => haystack.includes(t))) {
-    if (HYBRID_TERMS.some((t) => haystack.includes(t))) return "hybrid";
-    return "remote";
-  }
-  if (HYBRID_TERMS.some((t) => haystack.includes(t))) return "hybrid";
-  if (ONSITE_TERMS.some((t) => haystack.includes(t))) return "onsite";
+  const strongField = norm([job.title, job.location_raw, job.work_model_raw].join(" "));
+  const description = norm((job.description || "").slice(0, 2500));
+  const all = `${strongField} ${description}`;
+
+  const remote = REMOTE_TERMS.some((t) => strongField.includes(t))
+    || STRONG_REMOTE_TERMS.some((t) => description.includes(t));
+
+  if (remote) return HYBRID_TERMS.some((t) => all.includes(t)) ? "hybrid" : "remote";
+  if (HYBRID_TERMS.some((t) => all.includes(t))) return "hybrid";
+  if (ONSITE_TERMS.some((t) => all.includes(t))) return "onsite";
   return "unknown";
 }
 

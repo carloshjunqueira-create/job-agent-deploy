@@ -3,6 +3,12 @@ import { toCanonicalJob } from "../lib/normalize.mjs";
 
 export const id = "rss";
 
+const roleTerms = (profile) => [
+  ...(profile.queries_international || []),
+  ...(profile.queries || [])
+].map(norm).filter((t) => t.length > 5);
+
+
 const pick = (block, tag) => {
   const m = block.match(new RegExp(`<${tag}[^>]*>([\\s\\S]*?)</${tag}>`, "i"));
   if (!m) return "";
@@ -12,14 +18,14 @@ const pick = (block, tag) => {
 /** Conector generico de RSS/Atom. Serve para alertas de emprego e boards de nicho. */
 export async function collect({ options = {}, profile, log }) {
   const feeds = options.feeds || [];
-  const terms = (profile.must_have_any || []).map(norm);
+  const terms = roleTerms(profile);
   const jobs = [];
   for (const feed of feeds) {
     const xml = await httpText(feed, { headers: { Accept: "application/rss+xml, application/xml, text/xml, */*" } });
     const items = xml.match(/<(item|entry)[\s\S]*?<\/(item|entry)>/gi) || [];
     for (const block of items) {
       const title = stripHtml(pick(block, "title"));
-      if (terms.length && !terms.some((t) => t.length > 3 && norm(title).includes(t))) continue;
+      if (terms.length && !terms.some((t) => norm(title).includes(t))) continue;
       const linkTag = pick(block, "link") || (block.match(/<link[^>]*href="([^"]+)"/i)?.[1] || "");
       jobs.push(toCanonicalJob({
         title,

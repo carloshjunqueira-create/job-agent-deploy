@@ -3,11 +3,17 @@ import { toCanonicalJob } from "../lib/normalize.mjs";
 
 export const id = "remoteok";
 
+const roleTerms = (profile) => [
+  ...(profile.queries_international || []),
+  ...(profile.queries || [])
+].map(norm).filter((t) => t.length > 5);
+
+
 /** RemoteOK: feed JSON publico. O primeiro item do array e metadado legal e deve ser descartado. */
 export async function collect({ profile, log }) {
   const data = await httpJson("https://remoteok.com/api");
   const rows = Array.isArray(data) ? data.slice(1) : [];
-  const terms = [...(profile.queries_international || []), ...(profile.must_have_any || [])].map(norm);
+  const terms = roleTerms(profile);
   const jobs = [];
   for (const r of rows) {
     const hay = norm(`${r.position || r.title} ${(r.tags || []).join(" ")}`);

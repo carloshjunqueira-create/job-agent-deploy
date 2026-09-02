@@ -1,0 +1,210 @@
+{
+  "schema_version": "0.2.0",
+  "profile_id": "carlos-henrique-junqueira",
+  "last_updated": "2026-09-01",
+  "status": "PHASE_2_FEED_READY",
+  "preference_policy": {
+    "explicit_preferences_have_priority": true,
+    "learned_preferences_cannot_replace_explicit_preferences_silently": true,
+    "structural_changes_require_user_approval": true,
+    "unknown_preferences_are_not_filters": true
+  },
+  "must_have": [
+    {
+      "preference_id": "MUST001",
+      "label": "Aderência a consultoria de negócios ou posições de gerência/coordenação",
+      "value": ["Consultor de Negócios", "Gerente", "Coordenador", "Business Consultant", "Manager", "Coordinator"],
+      "classification": "EXPLICIT_USER_INPUT",
+      "source_ids": ["SRC_USER_INPUT_2026_09_01"]
+    },
+    {
+      "preference_id": "MUST002",
+      "label": "Remuneração mínima de referência",
+      "value": 15000,
+      "currency": "BRL",
+      "period": "monthly",
+      "employment_type": "CLT",
+      "classification": "EXPLICIT_USER_INPUT",
+      "source_ids": ["SRC_USER_INPUT_2026_09_01"],
+      "unknown_salary_handling": "Do not discard automatically; flag for review because many vacancies do not publish salary."
+    },
+    {
+      "preference_id": "MUST003",
+      "label": "Remuneração-alvo para priorização",
+      "value": 18000,
+      "currency": "BRL",
+      "period": "monthly",
+      "employment_type": "CLT",
+      "classification": "EXPLICIT_USER_INPUT",
+      "source_ids": ["SRC_USER_INPUT_2026_09_01"],
+      "note": "R$ 18 mil é o alvo; R$ 15 mil é o piso de referência."
+    }
+  ],
+  "nice_to_have": [
+    {
+      "preference_id": "NICE001",
+      "label": "Uso relevante de tecnologia, dados, IA ou automação",
+      "value": true,
+      "classification": "DERIVED_POSITIONING",
+      "source_ids": ["SRC_CV_PT_2026_08_04"],
+      "note": "Tratar como diferencial transversal, não como requisito eliminatório."
+    },
+    {
+      "preference_id": "NICE002",
+      "label": "Atuação com estratégia, transformação, operações, supply chain, finanças ou M&A",
+      "value": ["estratégia", "transformação", "operações", "supply chain", "finanças", "M&A"],
+      "classification": "DERIVED",
+      "source_ids": ["SRC_CV_PT_2026_08_04"],
+      "note": "São áreas de experiência, não necessariamente preferências pessoais; confirmar antes de usar como filtro positivo forte."
+    }
+  ],
+  "deal_breakers": [
+    {
+      "preference_id": "DB001",
+      "label": "Funções predominantemente comerciais, de prospecção ou vendas",
+      "value": ["prospecção", "hunter", "vendas", "sales", "executivo de vendas", "representante comercial"],
+      "classification": "EXPLICIT_USER_INPUT",
+      "source_ids": ["SRC_USER_FEEDBACK_FEED_2026_09_01"],
+      "note": "Excluir do feed principal; não confundir com operações comerciais sem foco primário em venda."
+    },
+    {
+      "preference_id": "DB002",
+      "label": "Localização fora das duas cidades-alvo",
+      "value": ["São José do Rio Preto, SP", "São Paulo, SP"],
+      "classification": "EXPLICIT_USER_INPUT",
+      "source_ids": ["SRC_USER_FEEDBACK_FEED_2026_09_01"],
+      "note": "Não exibir Hortolândia, Ribeirão Preto, Rio de Janeiro ou outras cidades."
+    }
+  ],
+  "explicit_preferences": [
+    {
+      "preference_id": "EXP001",
+      "label": "Cargos prioritários",
+      "value": ["Consultor de Negócios", "Gerente", "Coordenador"],
+      "classification": "EXPLICIT_USER_INPUT",
+      "source_ids": ["SRC_USER_INPUT_2026_09_01"]
+    },
+    {
+      "preference_id": "EXP002",
+      "label": "Indústrias prioritárias",
+      "value": ["Alimentos", "Serviços financeiros", "Bancos"],
+      "classification": "EXPLICIT_USER_INPUT",
+      "source_ids": ["SRC_USER_INPUT_2026_09_01"]
+    },
+    {
+      "preference_id": "EXP003",
+      "label": "São José do Rio Preto como mercado principal",
+      "value": "São José do Rio Preto, SP",
+      "classification": "EXPLICIT_USER_INPUT",
+      "source_ids": ["SRC_USER_INPUT_2026_09_01"],
+      "market_rule": "Expand role and industry breadth because local vacancy supply is expected to be lower."
+    },
+    {
+      "preference_id": "EXP004",
+      "label": "São Paulo somente quando a oportunidade for claramente superior à atual",
+      "value": "São Paulo, SP",
+      "classification": "EXPLICIT_USER_INPUT",
+      "source_ids": ["SRC_USER_INPUT_2026_09_01"]
+    },
+    {
+      "preference_id": "EXP005",
+      "label": "Sem preferência fixa de modalidade de trabalho",
+      "value": "NO_FIXED_PREFERENCE",
+      "classification": "EXPLICIT_USER_INPUT",
+      "source_ids": ["SRC_USER_INPUT_2026_09_01"]
+    },
+    {
+      "preference_id": "EXP006",
+      "label": "O sistema deve priorizar boas decisões de aderência antes de automatizar candidaturas",
+      "value": true,
+      "classification": "EXPLICIT",
+      "source_ids": ["SRC_USER_INPUT_2026_09_01"]
+    },
+    {
+      "preference_id": "EXP007",
+      "label": "Manter checkpoint humano quando LinkedIn ou ATS exigirem confirmação",
+      "value": true,
+      "classification": "EXPLICIT",
+      "source_ids": ["SRC_USER_INPUT_2026_09_01"]
+    },
+    {
+      "preference_id": "EXP008",
+      "label": "Não automatizar ações proibidas nem armazenar credenciais ou cookies do LinkedIn",
+      "value": true,
+      "classification": "EXPLICIT_OPERATIONAL_CONSTRAINT",
+      "source_ids": ["SRC_DESIGN_SPEC_2026_09_01"]
+    },
+    {
+      "preference_id": "EXP009",
+      "label": "Mix geográfico do feed",
+      "value": {"São José do Rio Preto, SP": 0.8, "São Paulo, SP": 0.2},
+      "classification": "EXPLICIT_USER_INPUT",
+      "source_ids": ["SRC_USER_FEEDBACK_FEED_2026_09_01"],
+      "note": "São José do Rio Preto é a preferência atual; São Paulo entra quando a oportunidade for melhor que a posição atual."
+    },
+    {
+      "preference_id": "EXP010",
+      "label": "Estados da candidatura",
+      "value": ["applied", "interested", "saved", "rejected", "closed", "company_page", "invalid_link"],
+      "classification": "EXPLICIT_OPERATIONAL_PREFERENCE",
+      "source_ids": ["SRC_USER_FEEDBACK_FEED_2026_09_02"],
+      "note": "Registrar candidatura e impedimentos no histórico sem executar a ação no LinkedIn."
+    }
+  ],
+  "learned_preferences": [
+    {
+      "preference_id": "LEARN001",
+      "label": "Coordenador de operações com escopo de processos e indicadores",
+      "value": "positive_signal",
+      "classification": "LEARNED_FROM_APPROVED_APPLICATION",
+      "source_ids": ["SRC_USER_FEEDBACK_FEED_2026_09_01"],
+      "confidence": "HIGH",
+      "note": "A vaga da MoveEdu fez sentido e já recebeu candidatura."
+    }
+  ],
+  "unknown_preferences_requiring_user_input": [
+    {
+      "preference_id": "UNK001",
+      "label": "Senioridade mínima e máxima dentro das posições escolhidas",
+      "question": "Dentro de Consultor, Coordenador e Gerente, há níveis que devemos excluir ou priorizar?"
+    },
+    {
+      "preference_id": "UNK003",
+      "label": "Países de autorização de trabalho",
+      "question": "Em quais países você possui autorização de trabalho sem patrocínio?"
+    },
+    {
+      "preference_id": "UNK004",
+      "label": "Disponibilidade e aviso prévio",
+      "question": "Qual sua disponibilidade para início e qual seu aviso prévio atual?"
+    },
+    {
+      "preference_id": "UNK005",
+      "label": "Viagens",
+      "question": "Qual disponibilidade para viagens a trabalho?"
+    },
+    {
+      "preference_id": "UNK006",
+      "label": "Restrições de candidatura",
+      "question": "Há empresas, setores, tipos de contrato ou situações que são deal breakers para você?"
+    }
+  ],
+  "source_priority": [
+    "LinkedIn Job Alerts",
+    "Gmail job alerts",
+    "Public searches",
+    "Company career pages",
+    "Public ATS pages",
+    "Greenhouse",
+    "Lever",
+    "Workday",
+    "Gupy",
+    "Other relevant sources"
+  ],
+  "learning_loop": {
+    "record_decisions": ["applied", "interested", "approved", "rejected", "saved", "closed", "company_page", "invalid_link"],
+    "suggest_preference_changes": true,
+    "apply_changes_without_approval": false,
+    "human_checkpoint": "required_before_any_external_application"
+  }
+}

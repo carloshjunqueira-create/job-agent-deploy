@@ -3,6 +3,12 @@ import { toCanonicalJob } from "../lib/normalize.mjs";
 
 export const id = "arbeitnow";
 
+const roleTerms = (profile) => [
+  ...(profile.queries_international || []),
+  ...(profile.queries || [])
+].map(norm).filter((t) => t.length > 5);
+
+
 /**
  * Arbeitnow: board publico com forte presenca na Europa, sem chave.
  * So aproveitamos as vagas marcadas como remotas: as presenciais em Berlim ou
@@ -10,7 +16,7 @@ export const id = "arbeitnow";
  */
 export async function collect({ options = {}, profile, log }) {
   const maxPages = options.max_pages || 3;
-  const terms = [...(profile.queries_international || []), ...(profile.must_have_any || [])].map(norm);
+  const terms = roleTerms(profile);
   const jobs = [];
   let scanned = 0;
 
@@ -19,7 +25,10 @@ export async function collect({ options = {}, profile, log }) {
     const rows = data?.data || [];
     scanned += rows.length;
     for (const r of rows) {
-      if (options.remote_only !== false && !r.remote) continue;
+      // A flag `remote` da Arbeitnow e pouco preenchida; aceitamos tambem quando
+      // titulo ou local dizem remoto.
+      const saysRemote = Boolean(r.remote) || /remote|remotiv|home\s?office/i.test(`${r.title} ${r.location || ""}`);
+      if (options.remote_only !== false && !saysRemote) continue;
       const hay = norm(`${r.title} ${(r.tags || []).join(" ")}`);
       if (terms.length && !terms.some((t) => t.length > 3 && hay.includes(t))) continue;
       jobs.push(toCanonicalJob({

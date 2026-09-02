@@ -69,6 +69,70 @@ check("aceita remoto internacional", (() => {
 })());
 check("remoto brasileiro fica fora enquanto o bucket esta desligado", scoreJob(make({ title: "Gerente de Operacoes", location_raw: "Remoto - Brasil", description: "Trabalho remoto em todo o Brasil, processos e indicadores." }), profile, { fx }).blocked === true);
 
+console.log("\n3b. Ruido real visto no primeiro diagnostico");
+check("bloqueia 'Assistant Housekeeping Manager' (RemoteOK)", (() => {
+  const r = scoreJob(make({ title: "Assistant Housekeeping Manager", company: "Marriott International", location_raw: "Remote - Goa", description: "Housekeeping operations for the property." }), profile, { fx });
+  return r.blocked === true;
+})(), JSON.stringify(scoreJob(make({ title: "Assistant Housekeeping Manager", company: "Marriott International", location_raw: "Remote - Goa", description: "Housekeeping operations." }), profile, { fx }).block_reason));
+check("bloqueia 'Consultor(A) De Vendas' apesar do (A) no meio (Jooble)", (() => {
+  const r = scoreJob(make({ title: "Consultor(A) De Vendas - Expansao De Negocios", location_raw: "Sao Jose do Rio Preto, SP" }), profile, { fx });
+  return r.block_reason?.startsWith("FOCO_COMERCIAL_NO_TITULO");
+})());
+check("bloqueia 'Franchise Business Consultant' (Adzuna internacional)", (() => {
+  const r = scoreJob(make({ title: "Franchise Business Consultant-Senior Care", company: "Amada franchise inc", location_raw: "Remote - USA", description: "Support franchisees." }), profile, { fx });
+  return r.blocked === true;
+})());
+check("vaga presencial com 'remote' solto na descricao nao vira remoto internacional", (() => {
+  const job = toCanonicalJob({
+    title: "Business Consultant", company: "Amada", location_raw: "Phoenix, Maricopa County",
+    description: "We offer remote support to our franchise network in the region.",
+    url: "https://ex.com/z", posted_at: new Date().toISOString()
+  }, "adzuna_us");
+  return job.work_model !== "remote" && scoreJob(job, profile, { fx }).blocked === true;
+})());
+check("vaga de operacoes claramente remota continua entrando", (() => {
+  const job = toCanonicalJob({
+    title: "Operations Manager", company: "Acme Global", location_raw: "Remote - Worldwide",
+    description: "Process improvement, KPIs, SQL and Power BI. English required.",
+    url: "https://ex.com/y", posted_at: new Date().toISOString()
+  }, "remotive");
+  const r = scoreJob(job, profile, { fx });
+  return r.blocked === false && r.location_bucket === "remote_intl";
+})());
+
+console.log("\n3c. Cargos e resgates da nova estrategia de busca");
+check("PMO esta entre os cargos buscados", (profile.queries || []).some((q) => /\bpmo\b/i.test(q)), (profile.queries || []).length + " cargos");
+check("cargos do exterior sao de consultoria", (() => {
+  const intl = profile.queries_international || [];
+  const consult = intl.filter((q) => /consultant|consulting/i.test(q)).length;
+  return intl.length >= 8 && consult / intl.length >= 0.6;
+})(), (profile.queries_international || []).join(" | "));
+check("Mirassol entra no balde de Rio Preto", (() => {
+  const r = scoreJob(make({ title: "Gerente Administrativo", location_raw: "Mirassol, SP" }), profile, { fx });
+  return r.blocked === false && r.location_bucket === "sjrp";
+})());
+check("Ribeirao Preto continua fora", scoreJob(make({ title: "Gerente Administrativo", location_raw: "Ribeirao Preto, SP" }), profile, { fx }).blocked === true);
+check("'Coordenador de Planejamento de Vendas (S&OP)' NAO e bloqueado", (() => {
+  const r = scoreJob(make({ title: "Coordenador de Planejamento de Vendas S&OP", location_raw: "Sao Jose do Rio Preto, SP", description: "Planejamento de demanda, S&OP, processos e indicadores com a operacao." }), profile, { fx });
+  return r.blocked === false && r.flags.some((f) => f.includes("confirmar se o foco"));
+})(), JSON.stringify(scoreJob(make({ title: "Coordenador de Planejamento de Vendas S&OP", location_raw: "Sao Jose do Rio Preto, SP" }), profile, { fx }).block_reason));
+check("'Executivo de Vendas' continua bloqueado (nao tem termo de operacao)", scoreJob(make({ title: "Executivo de Vendas" }), profile, { fx }).block_reason?.startsWith("FOCO_COMERCIAL_NO_TITULO"));
+check("'Gerente Administrativo' em hospital pontua bem", (() => {
+  const r = scoreJob(make({ title: "Gerente Administrativo", company: "Hospital de Base", location_raw: "Sao Jose do Rio Preto, SP", description: "Gestao administrativa, processos, indicadores e projetos da operacao hospitalar. Power BI." }), profile, { fx });
+  return r.blocked === false && r.score >= 70;
+})(), String(scoreJob(make({ title: "Gerente Administrativo", company: "Hospital de Base", location_raw: "Sao Jose do Rio Preto, SP", description: "Gestao administrativa, processos, indicadores e projetos da operacao hospitalar. Power BI." }), profile, { fx }).score));
+check("saude e industria prioritaria", (profile.industries.priority || []).includes("saude"));
+check("cargo do exterior pontua pelo titulo igual aos do Brasil", (() => {
+  const job = toCanonicalJob({
+    title: "Management Consultant", company: "Globant", location_raw: "Remote - LATAM",
+    description: "Fully remote across LATAM. Business transformation, process improvement, stakeholder management, KPIs. English required.",
+    url: "https://ex.com/mc", posted_at: new Date().toISOString()
+  }, "remotive");
+  const r = scoreJob(job, profile, { fx });
+  return r.blocked === false && r.components.role === profile.weights.role && r.score >= profile.filters.min_final_score_to_show;
+})(), JSON.stringify((() => { const job = toCanonicalJob({ title: "Management Consultant", company: "Globant", location_raw: "Remote - LATAM", description: "Fully remote across LATAM. Business transformation, process improvement, KPIs. English required.", url: "https://ex.com/mc2", posted_at: new Date().toISOString() }, "remotive"); const r = scoreJob(job, profile, { fx }); return { score: r.score, role: r.components.role }; })()));
+check("prompt da IA leva autorizacao de trabalho", (await fs.readFile(path.join(ROOT, "pipeline/lib/ai.mjs"), "utf8")).includes("work_authorization: profile.identity?.work_authorization"));
+
 console.log("\n4. Score e hierarquia geografica");
 const sSjrp = scoreJob(make({}), profile, { fx });
 const sSp = scoreJob(make({ location_raw: "Sao Paulo, SP" }), profile, { fx });

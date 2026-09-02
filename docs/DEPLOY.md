@@ -10,31 +10,41 @@ Ordem importa: **1 → 2 → 3** já deixa o site no ar. O **4** liga a IA. O **
 
 ## 1. Subir o código para o GitHub
 
-Os arquivos novos estão em `C:\Documentos\job-research-agent`. Essa pasta **não é um clone do repositório**, então o caminho mais seguro é clonar o repositório em outro lugar, copiar os arquivos por cima e dar push.
+Os arquivos já estão prontos e testados em `C:\Documentos\job-research-agent`. Falta levá-los ao repositório.
 
-No **PowerShell** (Windows):
+### Caminho recomendado: GitHub Desktop (sem terminal)
+
+Subir arquivo por arquivo pelo navegador funciona, mas tem duas armadilhas: a pasta `.github` **não sobe por arrastar** (o navegador ignora pastas que começam com ponto), e é fácil esquecer um arquivo e deixar o repositório num estado meio-atualizado que quebra de um jeito confuso. O GitHub Desktop resolve os dois: ele compara as pastas e mostra exatamente o que mudou antes de você confirmar.
+
+1. Baixe em <https://desktop.github.com/> e entre com sua conta.
+2. **File → Clone repository → GitHub.com →** `job-application-agent`. Escolha uma pasta nova, por exemplo `C:\Documentos\job-agent-repo`.
+3. Copie **todo o conteúdo** de `C:\Documentos\job-research-agent` para dentro de `C:\Documentos\job-agent-repo`, substituindo o que já existir. No Explorer: Ctrl+A, Ctrl+C na origem, Ctrl+V no destino, "Substituir os arquivos no destino".
+4. Volte ao GitHub Desktop. A aba **Changes** lista tudo o que mudou — dá para clicar em cada arquivo e ver a diferença.
+5. Escreva o resumo do commit e clique em **Commit to main**, depois em **Push origin**.
+
+A partir da segunda vez, só os passos 3 a 5.
+
+### Alternativa: PowerShell
+
+Se o git já estiver instalado (teste com `git --version`):
 
 ```powershell
-# 1. clone o repositório em uma pasta nova
 cd C:\Documentos
-git clone https://github.com/carloshjunqueira-create/job-application-agent.git job-agent-deploy
-cd job-agent-deploy
-
-# 2. copie os arquivos novos por cima
+git clone https://github.com/carloshjunqueira-create/job-application-agent.git job-agent-repo
+cd job-agent-repo
 robocopy C:\Documentos\job-research-agent . /E /XD .git
-
-# 3. confira o que mudou
-git status
-
-# 4. commit e push
 git add -A
-git commit -m "v3: pipeline no GitHub Actions sob demanda, feed com IA e criterios editaveis"
+git commit -m "v3.3: cargos ampliados, filtros ajustados"
 git push
 ```
 
-> `robocopy` termina com código 1 ou 3 quando copia arquivos — isso é sucesso, não erro. Só códigos 8 ou acima são problema.
+> `robocopy` termina com código 1 ou 3 quando copia arquivos — isso é sucesso. Só 8 ou acima é problema.
 
-Se preferir não usar terminal: abra o repositório no GitHub, use **Add file → Upload files** e arraste as pastas `app`, `config`, `pipeline`, `data`, `docs` e os arquivos `index.html`, `package.json`, `README.md`, `.nojekyll`. A pasta `.github` **não sobe por arrastar** no navegador (o GitHub esconde pastas que começam com ponto) — para ela, use o `git push` acima ou crie os workflows pelo botão **Actions → New workflow → set up a workflow yourself**, colando o conteúdo de cada arquivo.
+### Se for mesmo subir pelo navegador
+
+Dá para fazer, mas siga esta ordem para não quebrar nada: suba primeiro `config/`, `pipeline/`, `app/`, `data/`, `docs/` e os arquivos da raiz num único commit (**Add file → Upload files**, arrastando as pastas juntas). Depois, para cada arquivo em `.github/workflows/`, use **Actions → New workflow → set up a workflow yourself** e cole o conteúdo. São três arquivos: `collect.yml`, `tailor.yml`, `diagnose.yml`.
+
+Um detalhe que passa despercebido: o arquivo `.nojekyll` na raiz é vazio e o navegador às vezes se recusa a enviá-lo. Ele existe para o GitHub Pages não processar o site como blog. Se sumir, o site continua funcionando — só recrie pelo **Add file → Create new file** com o nome `.nojekyll` e conteúdo vazio se algo parecer estranho.
 
 ## 2. Ligar o GitHub Pages
 
@@ -174,5 +184,6 @@ Quanto mais específico esse arquivo, melhor tudo o que sai do outro lado. É o 
 | Rodada gasta mais token que o esperado | muitas vagas indo para a IA | **Critérios → Vagas enviadas à IA por rodada**, reduza de 60 para 30, ou troque o modelo do ranking para Haiku |
 | Adzuna com `HTTP 400` | parâmetro recusado pela API | Já corrigido nesta versão (`content_type` e `what_phrase` saíram). Se voltar, a mensagem de erro agora diz qual parâmetro é |
 | Gupy retorna 0 vagas | formato da resposta mudou | O relatório mostra as chaves que a API devolveu; ajuste `pipeline/sources/gupy.mjs` ou desligue a fonte |
+| Feed com vaga claramente errada | filtro deixou passar | Marque **Não** no card (ela some e não volta) e, se for um padrão, acrescente o termo em **Critérios → Exclusões** |
 
-O comando `npm run check` roda 55 verificações offline da lógica de triagem e é executado pelo próprio workflow antes de qualquer coleta — se ele falhar, a rodada para antes de gastar chamada de API.
+O comando `npm run check` roda 70 verificações offline da lógica de triagem e é executado pelo próprio workflow antes de qualquer coleta — se ele falhar, a rodada para antes de gastar chamada de API.

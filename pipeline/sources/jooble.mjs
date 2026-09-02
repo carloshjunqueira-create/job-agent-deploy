@@ -15,7 +15,7 @@ export async function collect({ options = {}, profile, log }) {
     .map((l) => l.label);
 
   const jobs = [];
-  for (const query of (profile.queries || []).slice(0, 8)) {
+  for (const query of (profile.queries || []).slice(0, options.max_queries || 8)) {
     for (const location of cities) {
       for (let page = 1; page <= pages; page += 1) {
         const data = await httpJson(`https://${host}/api/${key}`, {

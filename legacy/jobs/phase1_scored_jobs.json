@@ -1,0 +1,1510 @@
+{
+  "schema_version": "0.1.0",
+  "scoring_rules_version": "0.1.0",
+  "scored_at": "2026-09-01T22:27:02.619Z",
+  "jobs": [
+    {
+      "job_id": "J002",
+      "title": "GERENTE DE NEGOCIOS",
+      "company": "Rodobens",
+      "location": "São José do Rio Preto, SP",
+      "work_model": "UNKNOWN",
+      "seniority": "Pleno-sênior",
+      "source": "LinkedIn public job page",
+      "source_url": "https://br.linkedin.com/jobs/view/gerente-de-negocios-at-rodobens-4457084061",
+      "publication_age_days": 7,
+      "candidate_count": null,
+      "salary": null,
+      "description": "Posição de gerente de negócios da Rodobens em São José do Rio Preto.",
+      "requirements": [
+        "gestão de negócios",
+        "relacionamento comercial",
+        "indicadores"
+      ],
+      "preferred_requirements": [],
+      "extracted_skills": [
+        "business",
+        "commercial",
+        "kpi"
+      ],
+      "scoring": {
+        "fit_score": 86,
+        "opportunity_score": 87,
+        "fit_band": "Forte aderência",
+        "recommendation": "SHOW_FIRST",
+        "components": {
+          "function": 25,
+          "required_experience": 13,
+          "skills": 15,
+          "seniority": 10,
+          "sector": 10,
+          "remuneration": 5,
+          "company": 3,
+          "location": 5
+        },
+        "matched_signals": [
+          "gerente",
+          "negócios",
+          "business",
+          "relacionamento comercial",
+          "indicadores",
+          "commercial",
+          "kpi",
+          "rodobens",
+          "Rodobens",
+          "São José do Rio Preto"
+        ],
+        "gaps": [
+          "gestão de negócios",
+          "Remuneração não divulgada; confirmar antes da candidatura.",
+          "Não há preferência explícita de empresa configurada; componente neutro."
+        ],
+        "urgency_score": 90,
+        "urgency_flags": [],
+        "confidence": "MEDIUM - salary unknown",
+        "salary_confirmation_required": true,
+        "application_eligibility": "REVIEW_REQUIRED",
+        "suggested_cv": "management_coordination",
+        "generated_at": "2026-09-01T22:27:02.627Z"
+      }
+    },
+    {
+      "job_id": "J003",
+      "title": "Coordenador de Operações Comerciais",
+      "company": "MoveEdu",
+      "location": "São José do Rio Preto, SP",
+      "work_model": "UNKNOWN",
+      "seniority": "Pleno-sênior",
+      "source": "LinkedIn public job page",
+      "source_url": "https://br.linkedin.com/jobs/view/coordenador-de-opera%C3%A7%C3%B5es-comerciais-at-moveedu-4442435694",
+      "publication_age_days": null,
+      "candidate_count": null,
+      "salary": null,
+      "description": "Coordenação de operações comerciais em empresa do setor educacional, com escopo de gerenciamento e manufatura informado na página pública.",
+      "requirements": [
+        "operações",
+        "processos comerciais",
+        "gestão",
+        "indicadores"
+      ],
+      "preferred_requirements": [
+        "gestão de pessoas"
+      ],
+      "extracted_skills": [
+        "operations",
+        "process management",
+        "management",
+        "kpi"
+      ],
+      "scoring": {
+        "fit_score": 85,
+        "opportunity_score": 87,
+        "fit_band": "Forte aderência",
+        "recommendation": "SHOW_FIRST",
+        "components": {
+          "function": 25,
+          "required_experience": 20,
+          "skills": 12,
+          "seniority": 10,
+          "sector": 5,
+          "remuneration": 5,
+          "company": 3,
+          "location": 5
+        },
+        "matched_signals": [
+          "coordenador",
+          "operações",
+          "operations",
+          "processos comerciais",
+          "gestão",
+          "indicadores",
+          "process management",
+          "management",
+          "kpi",
+          "MoveEdu",
+          "São José do Rio Preto"
+        ],
+        "gaps": [
+          "gestão de pessoas",
+          "Setor não identificado com segurança.",
+          "Remuneração não divulgada; confirmar antes da candidatura.",
+          "Não há preferência explícita de empresa configurada; componente neutro."
+        ],
+        "urgency_score": 100,
+        "urgency_flags": [],
+        "confidence": "MEDIUM - salary unknown",
+        "salary_confirmation_required": true,
+        "application_eligibility": "REVIEW_REQUIRED",
+        "suggested_cv": "management_coordination",
+        "generated_at": "2026-09-01T22:27:02.628Z"
+      }
+    },
+    {
+      "job_id": "J015",
+      "title": "Gerente de Negócios e Operações Principal",
+      "company": "Bradesco",
+      "location": "São Paulo, SP",
+      "work_model": "UNKNOWN",
+      "seniority": "Pleno-sênior",
+      "source": "LinkedIn public job page",
+      "source_url": "https://br.linkedin.com/jobs/view/gerente-de-neg%C3%B3cios-e-opera%C3%A7%C3%B5es-principal-at-banco-bradesco-4443950763",
+      "publication_age_days": 1,
+      "candidate_count": null,
+      "salary": null,
+      "description": "Gerência principal de negócios e operações no Bradesco em São Paulo.",
+      "requirements": [
+        "gestão de negócios",
+        "operações",
+        "serviços financeiros",
+        "liderança",
+        "indicadores"
+      ],
+      "preferred_requirements": [
+        "bancos",
+        "gestão de equipes"
+      ],
+      "extracted_skills": [
+        "business",
+        "operations",
+        "financial services",
+        "leadership",
+        "kpi"
+      ],
+      "scoring": {
+        "fit_score": 83,
+        "opportunity_score": 86,
+        "fit_band": "Forte aderência",
+        "recommendation": "SHOW_FIRST",
+        "components": {
+          "function": 25,
+          "required_experience": 16,
+          "skills": 9,
+          "seniority": 10,
+          "sector": 10,
+          "remuneration": 5,
+          "company": 3,
+          "location": 5
+        },
+        "matched_signals": [
+          "gerente",
+          "negócios",
+          "business",
+          "operações",
+          "operations",
+          "serviços financeiros",
+          "liderança",
+          "indicadores",
+          "financial services",
+          "kpi",
+          "bradesco",
+          "Bradesco",
+          "São Paulo com sinal de oportunidade superior"
+        ],
+        "gaps": [
+          "gestão de negócios",
+          "leadership",
+          "bancos",
+          "gestão de equipes",
+          "Remuneração não divulgada; confirmar antes da candidatura.",
+          "Não há preferência explícita de empresa configurada; componente neutro."
+        ],
+        "urgency_score": 100,
+        "urgency_flags": [],
+        "confidence": "MEDIUM - salary unknown",
+        "salary_confirmation_required": true,
+        "application_eligibility": "REVIEW_REQUIRED",
+        "suggested_cv": "management_coordination",
+        "generated_at": "2026-09-01T22:27:02.642Z"
+      }
+    },
+    {
+      "job_id": "J013",
+      "title": "Consultor/a Sênior em Transformação de Negócios - Bancos",
+      "company": "EY",
+      "location": "São Paulo, SP",
+      "work_model": "UNKNOWN",
+      "seniority": "Sênior",
+      "source": "LinkedIn public job page",
+      "source_url": "https://br.linkedin.com/jobs/view/consultor-a-s%C3%AAnior-em-transforma%C3%A7%C3%A3o-de-neg%C3%B3cios-bancos-s%C3%A3o-paulo-at-ey-4456967399",
+      "publication_age_days": 3,
+      "candidate_count": null,
+      "salary": null,
+      "description": "Consultoria sênior em transformação de negócios para o setor bancário na EY em São Paulo.",
+      "requirements": [
+        "consultoria",
+        "transformação de negócios",
+        "bancos",
+        "gestão de projetos",
+        "stakeholders"
+      ],
+      "preferred_requirements": [
+        "estratégia",
+        "inglês"
+      ],
+      "extracted_skills": [
+        "consulting",
+        "transformation",
+        "banking",
+        "project management",
+        "stakeholder management"
+      ],
+      "scoring": {
+        "fit_score": 78,
+        "opportunity_score": 81,
+        "fit_band": "Interessante",
+        "recommendation": "SHOW_IF_QUEUE_AVAILABLE",
+        "components": {
+          "function": 25,
+          "required_experience": 12,
+          "skills": 11,
+          "seniority": 10,
+          "sector": 10,
+          "remuneration": 5,
+          "company": 3,
+          "location": 2
+        },
+        "matched_signals": [
+          "consultor",
+          "negócios",
+          "estratégia",
+          "transformação",
+          "transformation",
+          "consultoria",
+          "gestão de projetos",
+          "stakeholders",
+          "project management",
+          "stakeholder management",
+          "inglês",
+          "bancário",
+          "banking",
+          "EY",
+          "São Paulo"
+        ],
+        "gaps": [
+          "transformação de negócios",
+          "bancos",
+          "consulting",
+          "banking",
+          "Remuneração não divulgada; confirmar antes da candidatura.",
+          "Não há preferência explícita de empresa configurada; componente neutro.",
+          "São Paulo só deve avançar se superar claramente a posição atual."
+        ],
+        "urgency_score": 100,
+        "urgency_flags": [],
+        "confidence": "MEDIUM - salary unknown",
+        "salary_confirmation_required": true,
+        "application_eligibility": "REVIEW_REQUIRED",
+        "suggested_cv": "financial_services_banking",
+        "generated_at": "2026-09-01T22:27:02.640Z"
+      }
+    },
+    {
+      "job_id": "J020",
+      "title": "Coordenador Comercial (Lácteos)",
+      "company": "Maxsoy Alimentos",
+      "location": "Hortolândia, SP",
+      "work_model": "UNKNOWN",
+      "seniority": "Coordenador",
+      "source": "LinkedIn public job page",
+      "source_url": "https://br.linkedin.com/jobs/view/coordenador-comercial-lacteos-at-maxsoy-alimentos-ltda-4454107936",
+      "publication_age_days": null,
+      "candidate_count": null,
+      "salary": null,
+      "description": "Coordenação comercial B2B no mercado de lácteos, com venda de insumos, ingredientes ou soluções para a indústria de alimentos e disponibilidade para viagens.",
+      "requirements": [
+        "indústria de alimentos",
+        "lácteos",
+        "vendas B2B",
+        "gestão de equipe comercial",
+        "negociação",
+        "viagens"
+      ],
+      "preferred_requirements": [
+        "Engenharia de Alimentos",
+        "prospecção"
+      ],
+      "extracted_skills": [
+        "food",
+        "b2b sales",
+        "commercial management",
+        "negotiation",
+        "stakeholder management"
+      ],
+      "scoring": {
+        "fit_score": 75,
+        "opportunity_score": 79,
+        "fit_band": "Interessante",
+        "recommendation": "SHOW_IF_QUEUE_AVAILABLE",
+        "components": {
+          "function": 22,
+          "required_experience": 13,
+          "skills": 9,
+          "seniority": 10,
+          "sector": 10,
+          "remuneration": 5,
+          "company": 3,
+          "location": 3
+        },
+        "matched_signals": [
+          "coordenador",
+          "indústria de alimentos",
+          "gestão de equipe comercial",
+          "negociação",
+          "viagens",
+          "commercial management",
+          "negotiation",
+          "stakeholder management",
+          "Engenharia de Alimentos",
+          "alimentos",
+          "food",
+          "lácteos",
+          "lacteos",
+          "maxsoy",
+          "Maxsoy Alimentos",
+          "Hortolândia, SP"
+        ],
+        "gaps": [
+          "Escopo de negócios/estratégia não está totalmente claro no título público.",
+          "lácteos",
+          "vendas B2B",
+          "food",
+          "b2b sales",
+          "prospecção",
+          "Remuneração não divulgada; confirmar antes da candidatura.",
+          "Não há preferência explícita de empresa configurada; componente neutro.",
+          "Localidade paulista fora dos dois mercados principais."
+        ],
+        "urgency_score": 100,
+        "urgency_flags": [],
+        "confidence": "MEDIUM - salary unknown",
+        "salary_confirmation_required": true,
+        "application_eligibility": "REVIEW_REQUIRED",
+        "suggested_cv": "food_industry_business",
+        "generated_at": "2026-09-01T22:27:02.648Z"
+      }
+    },
+    {
+      "job_id": "J006",
+      "title": "Coordenador Regional de Operações - São José do Rio Preto",
+      "company": "Shopee",
+      "location": "São José do Rio Preto, SP",
+      "work_model": "UNKNOWN",
+      "seniority": "UNKNOWN",
+      "source": "LinkedIn public job page",
+      "source_url": "https://br.linkedin.com/jobs/view/coordenador-regional-de-opera%C3%A7%C3%B5es-s%C3%A3o-jose-do-rio-preto-at-shopee-4434669542",
+      "publication_age_days": 30,
+      "candidate_count": 98,
+      "salary": null,
+      "description": "Coordenação regional de operações da Shopee em São José do Rio Preto, com escopo operacional e logístico.",
+      "requirements": [
+        "operações",
+        "logística",
+        "processos",
+        "indicadores",
+        "gestão regional"
+      ],
+      "preferred_requirements": [
+        "melhoria contínua"
+      ],
+      "extracted_skills": [
+        "operations",
+        "logistics",
+        "process improvement",
+        "kpi"
+      ],
+      "scoring": {
+        "fit_score": 85,
+        "opportunity_score": 78,
+        "fit_band": "Forte aderência",
+        "recommendation": "SHOW_FIRST",
+        "components": {
+          "function": 25,
+          "required_experience": 16,
+          "skills": 15,
+          "seniority": 10,
+          "sector": 6,
+          "remuneration": 5,
+          "company": 3,
+          "location": 5
+        },
+        "matched_signals": [
+          "coordenador",
+          "operações",
+          "operations",
+          "logística",
+          "processos",
+          "indicadores",
+          "logistics",
+          "process improvement",
+          "kpi",
+          "melhoria contínua",
+          "Shopee",
+          "São José do Rio Preto"
+        ],
+        "gaps": [
+          "gestão regional",
+          "Setor é relevante/transferível, mas não está entre as três prioridades principais.",
+          "Remuneração não divulgada; confirmar antes da candidatura.",
+          "Não há preferência explícita de empresa configurada; componente neutro."
+        ],
+        "urgency_score": 36,
+        "urgency_flags": [],
+        "confidence": "MEDIUM - salary unknown",
+        "salary_confirmation_required": true,
+        "application_eligibility": "REVIEW_REQUIRED",
+        "suggested_cv": "management_coordination",
+        "generated_at": "2026-09-01T22:27:02.632Z"
+      }
+    },
+    {
+      "job_id": "J014",
+      "title": "Business Development Manager - Cross Border e International Payments",
+      "company": "Banco BS2",
+      "location": "São Paulo, SP",
+      "work_model": "UNKNOWN",
+      "seniority": "Sênior",
+      "source": "LinkedIn public job page",
+      "source_url": "https://br.linkedin.com/jobs/view/business-development-manager-%E2%80%93-cross-border-e-international-payments-at-banco-bs2-4446523267",
+      "publication_age_days": 7,
+      "candidate_count": 114,
+      "salary": null,
+      "description": "Business Development Manager para cross-border e pagamentos internacionais no Banco BS2 em São Paulo.",
+      "requirements": [
+        "desenvolvimento de negócios",
+        "pagamentos",
+        "serviços financeiros",
+        "estratégia comercial",
+        "inglês"
+      ],
+      "preferred_requirements": [
+        "cross-border",
+        "relacionamento B2B"
+      ],
+      "extracted_skills": [
+        "business development",
+        "payments",
+        "financial services",
+        "commercial strategy"
+      ],
+      "scoring": {
+        "fit_score": 75,
+        "opportunity_score": 77,
+        "fit_band": "Interessante",
+        "recommendation": "SHOW_IF_QUEUE_AVAILABLE",
+        "components": {
+          "function": 25,
+          "required_experience": 12,
+          "skills": 5,
+          "seniority": 10,
+          "sector": 10,
+          "remuneration": 5,
+          "company": 3,
+          "location": 5
+        },
+        "matched_signals": [
+          "manager",
+          "negócios",
+          "business",
+          "estratégia",
+          "strategy",
+          "serviços financeiros",
+          "estratégia comercial",
+          "inglês",
+          "financial services",
+          "commercial strategy",
+          "banco",
+          "pagamentos",
+          "payments",
+          "bs2",
+          "Banco BS2",
+          "São Paulo com sinal de oportunidade superior"
+        ],
+        "gaps": [
+          "desenvolvimento de negócios",
+          "pagamentos",
+          "business development",
+          "payments",
+          "cross-border",
+          "relacionamento B2B",
+          "Remuneração não divulgada; confirmar antes da candidatura.",
+          "Não há preferência explícita de empresa configurada; componente neutro."
+        ],
+        "urgency_score": 90,
+        "urgency_flags": [],
+        "confidence": "MEDIUM - salary unknown",
+        "salary_confirmation_required": true,
+        "application_eligibility": "REVIEW_REQUIRED",
+        "suggested_cv": "financial_services_banking",
+        "generated_at": "2026-09-01T22:27:02.641Z"
+      }
+    },
+    {
+      "job_id": "J007",
+      "title": "Gerente de Relacionamento de Veículos | São José do Rio Preto",
+      "company": "banco BV",
+      "location": "São José do Rio Preto, SP",
+      "work_model": "UNKNOWN",
+      "seniority": "UNKNOWN",
+      "source": "LinkedIn public job page",
+      "source_url": "https://br.linkedin.com/jobs/view/gerente-de-relacionamento-de-ve%C3%ADculos-s%C3%A3o-jos%C3%A9-do-rio-preto-sp-at-banco-bv-4458260990",
+      "publication_age_days": 5,
+      "candidate_count": null,
+      "salary": null,
+      "description": "A vaga foi identificada em resultado público do LinkedIn como gerente de relacionamento de veículos do banco BV em São José do Rio Preto.",
+      "requirements": [
+        "relacionamento com clientes",
+        "serviços financeiros",
+        "veículos",
+        "negócios"
+      ],
+      "preferred_requirements": [],
+      "extracted_skills": [
+        "customer relationship",
+        "financial services",
+        "business"
+      ],
+      "scoring": {
+        "fit_score": 73,
+        "opportunity_score": 76,
+        "fit_band": "Interessante",
+        "recommendation": "SHOW_IF_QUEUE_AVAILABLE",
+        "components": {
+          "function": 25,
+          "required_experience": 5,
+          "skills": 10,
+          "seniority": 10,
+          "sector": 10,
+          "remuneration": 5,
+          "company": 3,
+          "location": 5
+        },
+        "matched_signals": [
+          "gerente",
+          "negócios",
+          "business",
+          "serviços financeiros",
+          "financial services",
+          "banco",
+          "bv",
+          "banco BV",
+          "São José do Rio Preto"
+        ],
+        "gaps": [
+          "relacionamento com clientes",
+          "veículos",
+          "negócios",
+          "customer relationship",
+          "Remuneração não divulgada; confirmar antes da candidatura.",
+          "Não há preferência explícita de empresa configurada; componente neutro."
+        ],
+        "urgency_score": 95,
+        "urgency_flags": [],
+        "confidence": "MEDIUM - salary unknown",
+        "salary_confirmation_required": true,
+        "application_eligibility": "REVIEW_REQUIRED",
+        "suggested_cv": "management_coordination",
+        "generated_at": "2026-09-01T22:27:02.633Z"
+      }
+    },
+    {
+      "job_id": "J018",
+      "title": "Category Finance Jr. Manager",
+      "company": "Kraft Heinz",
+      "location": "São Paulo, SP",
+      "work_model": "UNKNOWN",
+      "seniority": "Gerente Júnior",
+      "source": "LinkedIn public job page",
+      "source_url": "https://br.linkedin.com/jobs/view/category-finance-jr-manager-at-kraft-heinz-4404494222",
+      "publication_age_days": null,
+      "candidate_count": null,
+      "salary": null,
+      "description": "Gerência júnior de finanças de categoria na Kraft Heinz, com foco em crescimento rentável, análise financeira e suporte ao marketing.",
+      "requirements": [
+        "finanças",
+        "análise financeira",
+        "bens de consumo",
+        "business partnering",
+        "estratégia"
+      ],
+      "preferred_requirements": [
+        "category finance",
+        "CPG"
+      ],
+      "extracted_skills": [
+        "finance",
+        "financial analysis",
+        "fmcg",
+        "business partnering",
+        "strategy"
+      ],
+      "scoring": {
+        "fit_score": 71,
+        "opportunity_score": 75,
+        "fit_band": "Interessante",
+        "recommendation": "SHOW_IF_QUEUE_AVAILABLE",
+        "components": {
+          "function": 25,
+          "required_experience": 12,
+          "skills": 9,
+          "seniority": 2,
+          "sector": 10,
+          "remuneration": 5,
+          "company": 3,
+          "location": 5
+        },
+        "matched_signals": [
+          "manager",
+          "business",
+          "estratégia",
+          "strategy",
+          "finanças",
+          "análise financeira",
+          "finance",
+          "financial analysis",
+          "category finance",
+          "fmcg",
+          "bens de consumo",
+          "kraft heinz",
+          "Kraft Heinz",
+          "São Paulo com sinal de oportunidade superior"
+        ],
+        "gaps": [
+          "bens de consumo",
+          "business partnering",
+          "fmcg",
+          "CPG",
+          "Senioridade ou nível indicado como júnior, junior.",
+          "Remuneração não divulgada; confirmar antes da candidatura.",
+          "Não há preferência explícita de empresa configurada; componente neutro."
+        ],
+        "urgency_score": 100,
+        "urgency_flags": [],
+        "confidence": "MEDIUM - salary unknown",
+        "salary_confirmation_required": true,
+        "application_eligibility": "REVIEW_REQUIRED",
+        "suggested_cv": "food_industry_business",
+        "generated_at": "2026-09-01T22:27:02.645Z"
+      }
+    },
+    {
+      "job_id": "J016",
+      "title": "Pessoa Coordenadora de Processos (Melhoria Contínua)",
+      "company": "Shopee",
+      "location": "São Paulo, SP",
+      "work_model": "UNKNOWN",
+      "seniority": "Pleno-sênior",
+      "source": "LinkedIn public job page",
+      "source_url": "https://br.linkedin.com/jobs/view/pessoa-coordenadora-de-processos-melhoria-cont%C3%ADnua-s%C3%A3o-paulo-sp-at-shopee-4449739533",
+      "publication_age_days": 21,
+      "candidate_count": 200,
+      "salary": null,
+      "description": "Coordenação de processos e melhoria contínua da Shopee em São Paulo.",
+      "requirements": [
+        "melhoria contínua",
+        "processos",
+        "operações",
+        "indicadores",
+        "gestão de projetos"
+      ],
+      "preferred_requirements": [
+        "logística",
+        "analytics"
+      ],
+      "extracted_skills": [
+        "continuous improvement",
+        "processes",
+        "operations",
+        "kpi",
+        "project management"
+      ],
+      "scoring": {
+        "fit_score": 77,
+        "opportunity_score": 73,
+        "fit_band": "Interessante",
+        "recommendation": "SHOW_IF_QUEUE_AVAILABLE",
+        "components": {
+          "function": 18,
+          "required_experience": 20,
+          "skills": 13,
+          "seniority": 10,
+          "sector": 6,
+          "remuneration": 5,
+          "company": 3,
+          "location": 2
+        },
+        "matched_signals": [
+          "melhoria contínua",
+          "processos",
+          "operações",
+          "indicadores",
+          "gestão de projetos",
+          "continuous improvement",
+          "operations",
+          "kpi",
+          "project management",
+          "logística",
+          "analytics",
+          "Shopee",
+          "São Paulo"
+        ],
+        "gaps": [
+          "Cargo é adjacente às trilhas principais.",
+          "processes",
+          "Setor é relevante/transferível, mas não está entre as três prioridades principais.",
+          "Remuneração não divulgada; confirmar antes da candidatura.",
+          "Não há preferência explícita de empresa configurada; componente neutro.",
+          "São Paulo só deve avançar se superar claramente a posição atual."
+        ],
+        "urgency_score": 47,
+        "urgency_flags": [
+          "volume de candidatos elevado"
+        ],
+        "confidence": "MEDIUM - salary unknown",
+        "salary_confirmation_required": true,
+        "application_eligibility": "REVIEW_REQUIRED",
+        "suggested_cv": "management_coordination",
+        "generated_at": "2026-09-01T22:27:02.643Z"
+      }
+    },
+    {
+      "job_id": "J009",
+      "title": "Consultor Interno - Business Partner | Operações de Farmácia",
+      "company": "RD Saúde",
+      "location": "São José do Rio Preto, SP",
+      "work_model": "UNKNOWN",
+      "seniority": "UNKNOWN",
+      "source": "LinkedIn public job page",
+      "source_url": "https://br.linkedin.com/jobs/view/consultor-interno-business-partner-opera%C3%A7%C3%B5es-de-farm%C3%A1cia-rio-preto-at-rd-sa%C3%BAde-4450841092",
+      "publication_age_days": 14,
+      "candidate_count": null,
+      "salary": null,
+      "description": "Consultoria interna e atuação como business partner em operações de farmácia da RD Saúde.",
+      "requirements": [
+        "operações",
+        "business partner",
+        "processos",
+        "stakeholders"
+      ],
+      "preferred_requirements": [
+        "varejo",
+        "saúde"
+      ],
+      "extracted_skills": [
+        "operations",
+        "stakeholder management",
+        "retail",
+        "healthcare"
+      ],
+      "scoring": {
+        "fit_score": 72,
+        "opportunity_score": 72,
+        "fit_band": "Interessante",
+        "recommendation": "SHOW_IF_QUEUE_AVAILABLE",
+        "components": {
+          "function": 25,
+          "required_experience": 15,
+          "skills": 8,
+          "seniority": 5,
+          "sector": 6,
+          "remuneration": 5,
+          "company": 3,
+          "location": 5
+        },
+        "matched_signals": [
+          "consultor",
+          "business",
+          "operações",
+          "operations",
+          "processos",
+          "stakeholders",
+          "stakeholder management",
+          "retail",
+          "varejo",
+          "saúde",
+          "healthcare",
+          "RD Saúde",
+          "São José do Rio Preto"
+        ],
+        "gaps": [
+          "business partner",
+          "healthcare",
+          "varejo",
+          "saúde",
+          "Senioridade não publicada ou não identificada.",
+          "Setor é relevante/transferível, mas não está entre as três prioridades principais.",
+          "Remuneração não divulgada; confirmar antes da candidatura.",
+          "Não há preferência explícita de empresa configurada; componente neutro."
+        ],
+        "urgency_score": 74,
+        "urgency_flags": [],
+        "confidence": "MEDIUM - salary unknown",
+        "salary_confirmation_required": true,
+        "application_eligibility": "REVIEW_REQUIRED",
+        "suggested_cv": "management_coordination",
+        "generated_at": "2026-09-01T22:27:02.636Z"
+      }
+    },
+    {
+      "job_id": "J001",
+      "title": "Gerente de Negócios Veículos | São José do Rio Preto",
+      "company": "C6 Bank",
+      "location": "São José do Rio Preto, SP",
+      "work_model": "UNKNOWN",
+      "seniority": "UNKNOWN",
+      "source": "LinkedIn public job page",
+      "source_url": "https://br.linkedin.com/jobs/view/gerente-de-neg%C3%B3cios-ve%C3%ADculos-s%C3%A3o-jos%C3%A9-do-rio-preto-s%C3%A3o-paulo-at-c6-bank-4406082876",
+      "publication_age_days": 14,
+      "candidate_count": 200,
+      "salary": null,
+      "description": "Posição de gerente de negócios em veículos no C6 Bank, com atuação em São José do Rio Preto e contexto de serviços financeiros.",
+      "requirements": [
+        "negócios",
+        "relacionamento com clientes",
+        "serviços financeiros",
+        "vendas",
+        "veículos"
+      ],
+      "preferred_requirements": [],
+      "extracted_skills": [
+        "business",
+        "financial services",
+        "customer relationship",
+        "sales"
+      ],
+      "scoring": {
+        "fit_score": 70,
+        "opportunity_score": 69,
+        "fit_band": "Interessante",
+        "recommendation": "SHOW_IF_QUEUE_AVAILABLE",
+        "components": {
+          "function": 25,
+          "required_experience": 4,
+          "skills": 8,
+          "seniority": 10,
+          "sector": 10,
+          "remuneration": 5,
+          "company": 3,
+          "location": 5
+        },
+        "matched_signals": [
+          "gerente",
+          "negócios",
+          "business",
+          "serviços financeiros",
+          "financial services",
+          "bank",
+          "c6",
+          "C6 Bank",
+          "São José do Rio Preto"
+        ],
+        "gaps": [
+          "negócios",
+          "relacionamento com clientes",
+          "vendas",
+          "veículos",
+          "customer relationship",
+          "sales",
+          "Remuneração não divulgada; confirmar antes da candidatura.",
+          "Não há preferência explícita de empresa configurada; componente neutro."
+        ],
+        "urgency_score": 64,
+        "urgency_flags": [
+          "volume de candidatos elevado"
+        ],
+        "confidence": "MEDIUM - salary unknown",
+        "salary_confirmation_required": true,
+        "application_eligibility": "REVIEW_REQUIRED",
+        "suggested_cv": "management_coordination",
+        "generated_at": "2026-09-01T22:27:02.625Z"
+      }
+    },
+    {
+      "job_id": "J005",
+      "title": "Gerente de Negócios Júnior | São José do Rio Preto",
+      "company": "Cielo",
+      "location": "São José do Rio Preto, SP",
+      "work_model": "UNKNOWN",
+      "seniority": "Assistente",
+      "source": "LinkedIn public job page",
+      "source_url": "https://br.linkedin.com/jobs/view/gerente-de-neg%C3%B3cios-j%C3%BAnior-s%C3%A3o-jose-do-rio-preto-sp-at-cielo-4419634425",
+      "publication_age_days": null,
+      "candidate_count": null,
+      "salary": null,
+      "description": "Gerente de negócios júnior da Cielo em serviços financeiros, com função pública classificada como vendas e desenvolvimento de negócios.",
+      "requirements": [
+        "desenvolvimento de negócios",
+        "vendas",
+        "serviços financeiros"
+      ],
+      "preferred_requirements": [],
+      "extracted_skills": [
+        "business development",
+        "sales",
+        "financial services"
+      ],
+      "scoring": {
+        "fit_score": 62,
+        "opportunity_score": 68,
+        "fit_band": "Baixa prioridade",
+        "recommendation": "SHOW_IF_REVIEW_REQUESTED",
+        "components": {
+          "function": 25,
+          "required_experience": 7,
+          "skills": 5,
+          "seniority": 2,
+          "sector": 10,
+          "remuneration": 5,
+          "company": 3,
+          "location": 5
+        },
+        "matched_signals": [
+          "gerente",
+          "negócios",
+          "business",
+          "serviços financeiros",
+          "financial services",
+          "cielo",
+          "Cielo",
+          "São José do Rio Preto"
+        ],
+        "gaps": [
+          "desenvolvimento de negócios",
+          "vendas",
+          "business development",
+          "sales",
+          "Senioridade ou nível indicado como júnior, junior, assistente.",
+          "Remuneração não divulgada; confirmar antes da candidatura.",
+          "Não há preferência explícita de empresa configurada; componente neutro."
+        ],
+        "urgency_score": 100,
+        "urgency_flags": [],
+        "confidence": "MEDIUM - salary unknown",
+        "salary_confirmation_required": true,
+        "application_eligibility": "REVIEW_REQUIRED",
+        "suggested_cv": "management_coordination",
+        "generated_at": "2026-09-01T22:27:02.630Z"
+      }
+    },
+    {
+      "job_id": "J019",
+      "title": "Coordenador(a) Trade Marketing",
+      "company": "Santa Helena Indústria de Alimentos S/A",
+      "location": "Ribeirão Preto, SP",
+      "work_model": "UNKNOWN",
+      "seniority": "Coordenador",
+      "source": "LinkedIn public job page",
+      "source_url": "https://br.linkedin.com/jobs/view/coordenador-a-trade-marketing-at-santa-helena-ind%C3%BAstria-de-alimentos-s-a-4440614378",
+      "publication_age_days": 30,
+      "candidate_count": 200,
+      "salary": null,
+      "description": "Coordenação de trade marketing na Santa Helena Indústria de Alimentos em Ribeirão Preto.",
+      "requirements": [
+        "trade marketing",
+        "alimentos",
+        "planejamento",
+        "indicadores",
+        "gestão de stakeholders"
+      ],
+      "preferred_requirements": [
+        "bens de consumo",
+        "vendas"
+      ],
+      "extracted_skills": [
+        "food",
+        "planning",
+        "kpi",
+        "stakeholder management",
+        "sales"
+      ],
+      "scoring": {
+        "fit_score": 74,
+        "opportunity_score": 67,
+        "fit_band": "Interessante",
+        "recommendation": "SHOW_IF_QUEUE_AVAILABLE",
+        "components": {
+          "function": 25,
+          "required_experience": 12,
+          "skills": 6,
+          "seniority": 10,
+          "sector": 10,
+          "remuneration": 5,
+          "company": 3,
+          "location": 3
+        },
+        "matched_signals": [
+          "coordenador",
+          "planejamento",
+          "planning",
+          "indicadores",
+          "gestão de stakeholders",
+          "kpi",
+          "stakeholder management",
+          "alimentos",
+          "food",
+          "bens de consumo",
+          "santa helena",
+          "Santa Helena Indústria de Alimentos S/A",
+          "Ribeirão Preto, SP"
+        ],
+        "gaps": [
+          "trade marketing",
+          "alimentos",
+          "food",
+          "sales",
+          "bens de consumo",
+          "vendas",
+          "Remuneração não divulgada; confirmar antes da candidatura.",
+          "Não há preferência explícita de empresa configurada; componente neutro.",
+          "Localidade paulista fora dos dois mercados principais."
+        ],
+        "urgency_score": 26,
+        "urgency_flags": [
+          "volume de candidatos elevado"
+        ],
+        "confidence": "MEDIUM - salary unknown",
+        "salary_confirmation_required": true,
+        "application_eligibility": "REVIEW_REQUIRED",
+        "suggested_cv": "food_industry_business",
+        "generated_at": "2026-09-01T22:27:02.646Z"
+      }
+    },
+    {
+      "job_id": "J010",
+      "title": "Analista de Negócios Pleno (integrações)",
+      "company": "Shift",
+      "location": "São José do Rio Preto, SP",
+      "work_model": "UNKNOWN",
+      "seniority": "Pleno",
+      "source": "LinkedIn public job page",
+      "source_url": "https://br.linkedin.com/jobs/view/analista-de-neg%C3%B3cios-pleno-integra%C3%A7%C3%B5es-at-shift-4449236441",
+      "publication_age_days": 21,
+      "candidate_count": null,
+      "salary": null,
+      "description": "Analista de negócios pleno com foco em integrações, identificado em resultado público para São José do Rio Preto.",
+      "requirements": [
+        "análise de negócios",
+        "integrações",
+        "processos",
+        "stakeholders"
+      ],
+      "preferred_requirements": [
+        "tecnologia"
+      ],
+      "extracted_skills": [
+        "business analysis",
+        "processes",
+        "stakeholder management",
+        "technology"
+      ],
+      "scoring": {
+        "fit_score": 66,
+        "opportunity_score": 65,
+        "fit_band": "Baixa prioridade",
+        "recommendation": "SHOW_IF_REVIEW_REQUESTED",
+        "components": {
+          "function": 18,
+          "required_experience": 10,
+          "skills": 12,
+          "seniority": 7,
+          "sector": 6,
+          "remuneration": 5,
+          "company": 3,
+          "location": 5
+        },
+        "matched_signals": [
+          "analista de negócios",
+          "processos",
+          "stakeholders",
+          "business analysis",
+          "stakeholder management",
+          "technology",
+          "tecnologia",
+          "pleno",
+          "Shift",
+          "São José do Rio Preto"
+        ],
+        "gaps": [
+          "Cargo é adjacente às trilhas principais.",
+          "análise de negócios",
+          "integrações",
+          "processes",
+          "Confirmar escopo de liderança e autonomia.",
+          "Setor é relevante/transferível, mas não está entre as três prioridades principais.",
+          "Remuneração não divulgada; confirmar antes da candidatura.",
+          "Não há preferência explícita de empresa configurada; componente neutro."
+        ],
+        "urgency_score": 57,
+        "urgency_flags": [],
+        "confidence": "MEDIUM - salary unknown",
+        "salary_confirmation_required": true,
+        "application_eligibility": "REVIEW_REQUIRED",
+        "suggested_cv": "business_consulting",
+        "generated_at": "2026-09-01T22:27:02.637Z"
+      }
+    },
+    {
+      "job_id": "J004",
+      "title": "Consultor de Negócios | RE - São José do Rio Preto",
+      "company": "Porto",
+      "location": "São José do Rio Preto, SP",
+      "work_model": "UNKNOWN",
+      "seniority": "Assistente",
+      "source": "LinkedIn public job page",
+      "source_url": "https://br.linkedin.com/jobs/view/consultor-de-neg%C3%B3cios-re-s%C3%A3o-jos%C3%A9-do-rio-preto-at-porto-4416445458",
+      "publication_age_days": null,
+      "candidate_count": null,
+      "salary": null,
+      "description": "Consultoria de negócios da Porto em São José do Rio Preto, associada às áreas de consultoria, tecnologia e vendas.",
+      "requirements": [
+        "consultoria",
+        "negócios",
+        "vendas",
+        "relacionamento"
+      ],
+      "preferred_requirements": [
+        "seguros"
+      ],
+      "extracted_skills": [
+        "consulting",
+        "business",
+        "sales",
+        "customer relationship"
+      ],
+      "scoring": {
+        "fit_score": 58,
+        "opportunity_score": 64,
+        "fit_band": "Não mostrar normalmente",
+        "recommendation": "HIDE_BY_DEFAULT",
+        "components": {
+          "function": 25,
+          "required_experience": 5,
+          "skills": 3,
+          "seniority": 2,
+          "sector": 10,
+          "remuneration": 5,
+          "company": 3,
+          "location": 5
+        },
+        "matched_signals": [
+          "consultor de negócios",
+          "consultor",
+          "negócios",
+          "business",
+          "consultoria",
+          "seguros",
+          "porto",
+          "Porto",
+          "São José do Rio Preto"
+        ],
+        "gaps": [
+          "negócios",
+          "vendas",
+          "relacionamento",
+          "consulting",
+          "sales",
+          "customer relationship",
+          "seguros",
+          "Senioridade ou nível indicado como assistente.",
+          "Remuneração não divulgada; confirmar antes da candidatura.",
+          "Não há preferência explícita de empresa configurada; componente neutro."
+        ],
+        "urgency_score": 100,
+        "urgency_flags": [],
+        "confidence": "MEDIUM - salary unknown",
+        "salary_confirmation_required": true,
+        "application_eligibility": "REVIEW_REQUIRED",
+        "suggested_cv": "financial_services_banking",
+        "generated_at": "2026-09-01T22:27:02.629Z"
+      }
+    },
+    {
+      "job_id": "J017",
+      "title": "Analista de Inteligência Estratégica de Negócios Sênior",
+      "company": "Banco Daycoval",
+      "location": "São Paulo, SP",
+      "work_model": "UNKNOWN",
+      "seniority": "Sênior",
+      "source": "LinkedIn public job page",
+      "source_url": "https://br.linkedin.com/jobs/view/analista-de-intelig%C3%AAncia-estrat%C3%A9gica-de-neg%C3%B3cios-s%C3%AAnior-at-banco-daycoval-4455030342",
+      "publication_age_days": 7,
+      "candidate_count": 26,
+      "salary": null,
+      "description": "Inteligência estratégica de negócios sênior no Banco Daycoval em São Paulo.",
+      "requirements": [
+        "inteligência de negócios",
+        "estratégia",
+        "análise de dados",
+        "serviços financeiros",
+        "indicadores"
+      ],
+      "preferred_requirements": [
+        "Power BI",
+        "SQL"
+      ],
+      "extracted_skills": [
+        "business intelligence",
+        "strategy",
+        "analytics",
+        "financial services",
+        "kpi"
+      ],
+      "scoring": {
+        "fit_score": 59,
+        "opportunity_score": 64,
+        "fit_band": "Não mostrar normalmente",
+        "recommendation": "HIDE_BY_DEFAULT",
+        "components": {
+          "function": 0,
+          "required_experience": 16,
+          "skills": 13,
+          "seniority": 10,
+          "sector": 10,
+          "remuneration": 5,
+          "company": 3,
+          "location": 2
+        },
+        "matched_signals": [
+          "inteligência de negócios",
+          "estratégia",
+          "serviços financeiros",
+          "indicadores",
+          "strategy",
+          "analytics",
+          "financial services",
+          "kpi",
+          "Power BI",
+          "SQL",
+          "banco",
+          "daycoval",
+          "Banco Daycoval",
+          "São Paulo"
+        ],
+        "gaps": [
+          "Título não corresponde às famílias prioritárias.",
+          "análise de dados",
+          "business intelligence",
+          "Remuneração não divulgada; confirmar antes da candidatura.",
+          "Não há preferência explícita de empresa configurada; componente neutro.",
+          "São Paulo só deve avançar se superar claramente a posição atual."
+        ],
+        "urgency_score": 90,
+        "urgency_flags": [],
+        "confidence": "MEDIUM - salary unknown",
+        "salary_confirmation_required": true,
+        "application_eligibility": "REVIEW_REQUIRED",
+        "suggested_cv": "financial_services_banking",
+        "generated_at": "2026-09-01T22:27:02.644Z"
+      }
+    },
+    {
+      "job_id": "J012",
+      "title": "Consultor(a) Técnico(a) Comercial - SJ Rio Preto",
+      "company": "TIMAC Agro Brasil",
+      "location": "São José do Rio Preto, SP",
+      "work_model": "UNKNOWN",
+      "seniority": "UNKNOWN",
+      "source": "LinkedIn public job page",
+      "source_url": "https://br.linkedin.com/jobs/view/consultor-a-t%C3%A9cnico-a-comercial-sj-rio-preto-sp-at-timac-agro-brasil-4456536406",
+      "publication_age_days": 5,
+      "candidate_count": null,
+      "salary": null,
+      "description": "Consultoria técnica e comercial da TIMAC Agro Brasil em São José do Rio Preto.",
+      "requirements": [
+        "vendas consultivas",
+        "relacionamento com clientes",
+        "agro"
+      ],
+      "preferred_requirements": [
+        "formação técnica"
+      ],
+      "extracted_skills": [
+        "consultative sales",
+        "customer relationship"
+      ],
+      "scoring": {
+        "fit_score": 45,
+        "opportunity_score": 53,
+        "fit_band": "Não mostrar normalmente",
+        "recommendation": "HIDE_BY_DEFAULT",
+        "components": {
+          "function": 22,
+          "required_experience": 0,
+          "skills": 0,
+          "seniority": 5,
+          "sector": 5,
+          "remuneration": 5,
+          "company": 3,
+          "location": 5
+        },
+        "matched_signals": [
+          "consultor",
+          "TIMAC Agro Brasil",
+          "São José do Rio Preto"
+        ],
+        "gaps": [
+          "Escopo de negócios/estratégia não está totalmente claro no título público.",
+          "vendas consultivas",
+          "relacionamento com clientes",
+          "agro",
+          "consultative sales",
+          "customer relationship",
+          "formação técnica",
+          "Senioridade não publicada ou não identificada.",
+          "Setor não identificado com segurança.",
+          "Remuneração não divulgada; confirmar antes da candidatura.",
+          "Não há preferência explícita de empresa configurada; componente neutro."
+        ],
+        "urgency_score": 95,
+        "urgency_flags": [],
+        "confidence": "MEDIUM - salary unknown",
+        "salary_confirmation_required": true,
+        "application_eligibility": "REVIEW_REQUIRED",
+        "suggested_cv": "business_consulting",
+        "generated_at": "2026-09-01T22:27:02.638Z"
+      }
+    },
+    {
+      "job_id": "J008",
+      "title": "Pessoa Consultora Comercial II - Estabelecimentos Comerciais",
+      "company": "Alelo Brasil",
+      "location": "São José do Rio Preto, SP",
+      "work_model": "UNKNOWN",
+      "seniority": "Pleno",
+      "source": "LinkedIn public job page",
+      "source_url": "https://br.linkedin.com/jobs/view/pessoa-consultora-comercial-ii-estabelecimentos-comerciai-s%C3%A3o-jos%C3%A9-do-rio-preto-e-regi%C3%A3o-at-alelo-brasil-4461548202",
+      "publication_age_days": 1,
+      "candidate_count": null,
+      "salary": null,
+      "description": "Consultoria comercial para estabelecimentos comerciais da Alelo Brasil em São José do Rio Preto.",
+      "requirements": [
+        "vendas consultivas",
+        "desenvolvimento de negócios",
+        "relacionamento comercial"
+      ],
+      "preferred_requirements": [
+        "pagamentos"
+      ],
+      "extracted_skills": [
+        "consultative sales",
+        "business development",
+        "payments"
+      ],
+      "scoring": {
+        "fit_score": 37,
+        "opportunity_score": 46,
+        "fit_band": "Não mostrar normalmente",
+        "recommendation": "HIDE_BY_DEFAULT",
+        "components": {
+          "function": 0,
+          "required_experience": 7,
+          "skills": 0,
+          "seniority": 7,
+          "sector": 10,
+          "remuneration": 5,
+          "company": 3,
+          "location": 5
+        },
+        "matched_signals": [
+          "relacionamento comercial",
+          "pleno",
+          "pagamentos",
+          "payments",
+          "alelo",
+          "Alelo Brasil",
+          "São José do Rio Preto"
+        ],
+        "gaps": [
+          "Título não corresponde às famílias prioritárias.",
+          "vendas consultivas",
+          "desenvolvimento de negócios",
+          "consultative sales",
+          "business development",
+          "payments",
+          "pagamentos",
+          "Confirmar escopo de liderança e autonomia.",
+          "Remuneração não divulgada; confirmar antes da candidatura.",
+          "Não há preferência explícita de empresa configurada; componente neutro."
+        ],
+        "urgency_score": 100,
+        "urgency_flags": [],
+        "confidence": "MEDIUM - salary unknown",
+        "salary_confirmation_required": true,
+        "application_eligibility": "REVIEW_REQUIRED",
+        "suggested_cv": "financial_services_banking",
+        "generated_at": "2026-09-01T22:27:02.634Z"
+      }
+    },
+    {
+      "job_id": "J011",
+      "title": "Executivo de Vendas Pl. | São José do Rio Preto",
+      "company": "PagBank",
+      "location": "São José do Rio Preto, SP",
+      "work_model": "UNKNOWN",
+      "seniority": "Pleno",
+      "source": "LinkedIn public job page",
+      "source_url": "https://br.linkedin.com/jobs/view/executivo-de-vendas-pl-s%C3%A3o-jos%C3%A9-do-rio-preto-sp-at-pagbank-4381839445",
+      "publication_age_days": 1,
+      "candidate_count": null,
+      "salary": null,
+      "description": "Executivo de vendas pleno do PagBank em São José do Rio Preto.",
+      "requirements": [
+        "vendas",
+        "desenvolvimento de negócios",
+        "relacionamento com clientes",
+        "pagamentos"
+      ],
+      "preferred_requirements": [],
+      "extracted_skills": [
+        "sales",
+        "business development",
+        "customer relationship",
+        "payments"
+      ],
+      "scoring": {
+        "fit_score": 30,
+        "opportunity_score": 41,
+        "fit_band": "Não mostrar normalmente",
+        "recommendation": "HIDE_BY_DEFAULT",
+        "components": {
+          "function": 0,
+          "required_experience": 0,
+          "skills": 0,
+          "seniority": 7,
+          "sector": 10,
+          "remuneration": 5,
+          "company": 3,
+          "location": 5
+        },
+        "matched_signals": [
+          "pleno",
+          "pagamentos",
+          "payments",
+          "pagbank",
+          "PagBank",
+          "São José do Rio Preto"
+        ],
+        "gaps": [
+          "Título não corresponde às famílias prioritárias.",
+          "vendas",
+          "desenvolvimento de negócios",
+          "relacionamento com clientes",
+          "pagamentos",
+          "sales",
+          "business development",
+          "customer relationship",
+          "payments",
+          "Confirmar escopo de liderança e autonomia.",
+          "Remuneração não divulgada; confirmar antes da candidatura.",
+          "Não há preferência explícita de empresa configurada; componente neutro."
+        ],
+        "urgency_score": 100,
+        "urgency_flags": [],
+        "confidence": "MEDIUM - salary unknown",
+        "salary_confirmation_required": true,
+        "application_eligibility": "REVIEW_REQUIRED",
+        "suggested_cv": "financial_services_banking",
+        "generated_at": "2026-09-01T22:27:02.638Z"
+      }
+    }
+  ]
+}

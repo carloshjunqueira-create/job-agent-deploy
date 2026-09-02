@@ -3,12 +3,18 @@ import { toCanonicalJob } from "../lib/normalize.mjs";
 
 export const id = "himalayas";
 
+const roleTerms = (profile) => [
+  ...(profile.queries_international || []),
+  ...(profile.queries || [])
+].map(norm).filter((t) => t.length > 5);
+
+
 /** Himalayas: API publica de vagas remotas internacionais. */
 export async function collect({ options = {}, profile, log }) {
   const limit = options.limit || 100;
   const data = await httpJson(`https://himalayas.app/jobs/api?limit=${limit}`);
   const rows = data?.jobs || data?.data || [];
-  const terms = [...(profile.queries_international || []), ...(profile.must_have_any || [])].map(norm);
+  const terms = roleTerms(profile);
   const jobs = [];
   for (const r of rows) {
     const hay = norm(`${r.title} ${(r.categories || []).join(" ")}`);

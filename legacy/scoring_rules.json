@@ -1,0 +1,122 @@
+{
+  "schema_version": "0.1.0",
+  "last_updated": "2026-09-02",
+  "status": "PHASE_2_FEED_RULES",
+  "fit_weights": {
+    "function": 25,
+    "required_experience": 20,
+    "skills": 15,
+    "seniority": 10,
+    "sector": 10,
+    "remuneration": 10,
+    "company": 5,
+    "location": 5
+  },
+  "score_validation": {
+    "fit_score_min": 0,
+    "fit_score_max": 100,
+    "opportunity_score_min": 0,
+    "opportunity_score_max": 100,
+    "opportunity_formula": "round(fit_score * 0.85 + urgency_score * 0.15)",
+    "unknown_salary_is_not_automatic_rejection": true,
+    "unknown_requirements_reduce_confidence_but_do_not_create_false_gaps": true
+  },
+  "fit_bands": [
+    {"minimum": 90, "maximum": 100, "label": "Excelente oportunidade", "default_action": "SHOW_FIRST"},
+    {"minimum": 80, "maximum": 89, "label": "Forte aderência", "default_action": "SHOW_FIRST"},
+    {"minimum": 70, "maximum": 79, "label": "Interessante", "default_action": "SHOW_IF_QUEUE_AVAILABLE"},
+    {"minimum": 60, "maximum": 69, "label": "Baixa prioridade", "default_action": "SHOW_IF_REVIEW_REQUESTED"},
+    {"minimum": 0, "maximum": 59, "label": "Não mostrar normalmente", "default_action": "HIDE_BY_DEFAULT"}
+  ],
+  "target_roles": {
+    "primary": ["consultor de negócios", "business consultant", "consultor", "gerente", "manager", "coordenador", "coordinator"],
+    "strong_business_context": ["negócios", "business", "estratégia", "strategy", "transformação", "transformation", "operações", "operations", "planejamento", "planning", "pmо", "pmo"],
+    "adjacent": ["business development", "desenvolvimento de negócios", "analista de negócios", "business analyst", "melhoria contínua", "continuous improvement", "inteligência de negócios", "business intelligence"],
+    "negative_title_signals": ["vendedor", "sales representative", "assistente", "estágio", "intern", "júnior", "junior", "promotor", "representante comercial"],
+    "direct_management_signals": ["gerente", "manager", "coordenador", "coordinator", "head", "lead", "líder", "leader"]
+  },
+  "target_industries": {
+    "food": ["alimentos", "food", "bebidas", "beverage", "food service", "lácteos", "lacteos", "fmcg", "bens de consumo", "seara", "kraft heinz", "santa helena", "maxsoy", "kerry", "unilever"],
+    "financial_services": ["banco", "bank", "bancário", "banking", "serviços financeiros", "financial services", "fintech", "seguros", "insurance", "pagamentos", "payments", "crédito", "credit", "investimentos", "investments", "cielo", "c6", "bradesco", "porto", "pagbank", "alelo", "rodobens", "daycoval", "bs2", "bv"],
+    "other_relevant": ["supply chain", "logística", "logistics", "varejo", "retail", "saúde", "healthcare", "educação", "education", "tecnologia", "technology", "energia", "energy", "reciclagem", "recycling"]
+  },
+  "skill_aliases": {
+    "pmо": ["pmo", "project management office", "governança de portfólio", "portfolio governance"],
+    "project_management": ["gestão de projetos", "project management", "program management", "programa", "projetos"],
+    "business_case": ["business case", "modelagem financeira", "financial modeling", "roi", "business model"],
+    "stakeholder_management": ["stakeholder", "stakeholders", "gestão de partes interessadas", "cross-functional", "multifuncional"],
+    "operations": ["operações", "operations", "processos", "process improvement", "melhoria contínua", "continuous improvement"],
+    "supply_chain": ["supply chain", "cadeia de suprimentos", "logística", "logistics", "s&op", "sop"],
+    "finance": ["finanças", "finance", "dre", "dfc", "orçamento", "budget", "valuation", "wacc", "roic", "ebitda", "category finance"],
+    "analytics": ["power bi", "excel", "vba", "python", "sql", "analytics", "data analysis", "indicadores", "kpi", "inteligência de mercado"],
+    "ai_automation": ["inteligência artificial", "artificial intelligence", "ia", "ai", "automação", "automation", "agentes", "agents"]
+  },
+  "salary": {
+    "currency": "BRL",
+    "period": "monthly",
+    "employment_type": "CLT",
+    "minimum": 15000,
+    "target": 18000,
+    "unknown_score": 5,
+    "below_minimum_score": 0,
+    "at_or_above_minimum_score": 7,
+    "at_or_above_target_score": 10
+  },
+  "hard_filters": {
+    "known_salary_below_minimum": "BLOCK_FROM_APPLICATION",
+    "unknown_salary": "ALLOW_TO_REVIEW",
+    "salary_not_published_must_be_visible": true,
+    "location_not_in_allowed_cities": "EXCLUDE_FROM_FEED",
+    "commercial_prospecting_heavy": "EXCLUDE_FROM_FEED",
+    "closed_application": "EXCLUDE_FROM_FEED",
+    "non_clt_contract": "FLAG_AND_DEPRIORITIZE"
+  },
+  "location": {
+    "primary_city": "São José do Rio Preto",
+    "primary_score": 5,
+    "secondary_city": "São Paulo",
+    "secondary_base_score": 2,
+    "secondary_max_score": 5,
+    "secondary_superiority_salary_threshold": 18000,
+    "secondary_superiority_title_signals": ["gerente", "manager", "coordenador", "coordenadora", "principal", "lead", "head", "diretor", "director"],
+    "other_sp_score": 3,
+    "unknown_score": 2,
+    "allowed_cities_exact": ["São José do Rio Preto, SP", "São Paulo, SP"],
+    "feed_mix": {"primary_city_ratio": 0.8, "secondary_city_ratio": 0.2}
+  },
+  "exclusion_signals": {
+    "commercial_prospecting_heavy": ["prospecção", "prospecting", "hunter", "vendas", "sales", "executivo de vendas", "representante comercial", "meta de vendas", "pipeline comercial", "fechamento de vendas", "business development", "desenvolvimento de negócios", "relacionamento comercial", "estratégia comercial", "gerente comercial", "commercial manager", "account executive", "sales manager"],
+    "keep_when_operations_is_primary": ["operações", "operations", "processos", "melhoria contínua", "indicadores", "governança", "planejamento", "transformação", "estratégia"]
+  },
+  "urgency": {
+    "age_days_max_for_full_score": 3,
+    "age_days_for_zero_score": 45,
+    "unknown_age_score": 50,
+    "candidate_volume_high_threshold": 200,
+    "candidate_volume_high_penalty": 10,
+    "deadline_near_days": 7,
+    "deadline_near_bonus": 10
+  },
+  "cv_selection": [
+    {
+      "cv_version": "business_consulting",
+      "when": ["consultor de negócios", "business consultant", "consultoria", "consulting", "strategy", "estratégia", "PMO", "business case", "transformação", "transformation"],
+      "priority": 1
+    },
+    {
+      "cv_version": "management_coordination",
+      "when": ["gerente", "manager", "coordenador", "coordinator", "operations", "operações", "planejamento"],
+      "priority": 2
+    },
+    {
+      "cv_version": "food_industry_business",
+      "when": ["alimentos", "food", "bebidas", "lácteos", "fmcg", "supply chain"],
+      "priority": 3
+    },
+    {
+      "cv_version": "financial_services_banking",
+      "when": ["banco", "bank", "bancário", "banking", "pagamentos", "payments", "crédito", "seguros", "investimentos"],
+      "priority": 3
+    }
+  ]
+}

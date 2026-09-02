@@ -77,6 +77,11 @@ nem experiencias que o perfil nao tem. Responda SEMPRE e SOMENTE com JSON valido
 export async function rankBatch({ jobs, profile, searchProfile, model, maxDescriptionChars = 4000 }) {
   const compactProfile = {
     positioning: profile.positioning,
+    // Onde ele mora e onde pode trabalhar sem patrocinio. Sem isso a IA ranqueia
+    // alto uma vaga "remota" que na verdade exige autorizacao de trabalho nos EUA.
+    based_in: profile.identity?.city,
+    work_authorization: profile.identity?.work_authorization,
+    open_to_relocate_to: profile.identity?.willing_to_relocate_to,
     languages: profile.identity?.languages,
     experience: (profile.experience || []).map((e) => ({
       company: e.company, role: e.role, period: `${e.start || "?"} a ${e.end || "atual"}`,
@@ -108,6 +113,21 @@ CRITERIOS DECLARADOS PELO CANDIDATO:
 - Piso salarial: R$ ${searchProfile.salary?.min_brl_monthly} por mes (alvo R$ ${searchProfile.salary?.target_brl_monthly})
 - Prioridade geografica, do mais para o menos desejado: ${(searchProfile.locations || []).filter((l) => l.enabled !== false).sort((a, b) => (b.weight || 0) - (a.weight || 0)).map((l) => l.label).join(" > ")}
 - Deal breakers: funcoes predominantemente comerciais, de prospeccao ou de vendas
+
+REGRAS DE JULGAMENTO:
+1. O candidato mora no Brasil e so tem autorizacao de trabalho no Brasil. Para vagas
+   fora do Brasil, verifique se o anuncio exige autorizacao local, presenca no pais,
+   fuso horario incompativel ou contratacao apenas via CLT local de outro pais. Quando
+   exigir, isso e um gap explicito e o risco e "alto", por melhor que seja a vaga.
+   Vagas que contratam globalmente (EOR, "remote worldwide", "remote LATAM",
+   contractor internacional) nao tem esse problema.
+2. Titulos iguais escondem senioridades diferentes. Em empresas de medio porte,
+   "Supervisor" e "Gerente Administrativo" costumam ser cargos de coordenacao reais;
+   em multinacionais, "Coordenador" pode ser mais junior do que parece. Julgue pelo
+   escopo descrito, nao pelo rotulo.
+3. Desconfie de vaga de "consultor" que na pratica e venda: se a descricao fala em
+   carteira, meta, comissao ou prospeccao, o risco e "alto" mesmo que o titulo seja
+   "Consultor de Negocios".
 
 VAGAS PARA AVALIAR (JSON):
 ${JSON.stringify(compactJobs, null, 1)}

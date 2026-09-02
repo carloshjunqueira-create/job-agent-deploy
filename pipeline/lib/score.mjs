@@ -32,9 +32,15 @@ export function scoreJob(job, profile, options = {}) {
   const dealDesc = hit(text, profile.deal_breakers?.description_terms || []);
   const rescue = hit(text, profile.deal_breakers?.keep_when_present || []);
 
-  // Titulo explicitamente comercial bloqueia sem chance de resgate: o cargo e o sinal mais forte.
-  if (dealTitle.length) {
+  // Titulo comercial bloqueia, com uma excecao: quando o proprio titulo tambem
+  // carrega um termo de planejamento ou operacao. "Coordenador de Planejamento
+  // de Vendas (S&OP)" e uma vaga de operacoes, nao de vender.
+  const titleRescue = hit(title, profile.deal_breakers?.title_rescue_when_present || []);
+  if (dealTitle.length && !titleRescue.length) {
     return { blocked: true, block_reason: `FOCO_COMERCIAL_NO_TITULO:${dealTitle[0]}`, score: 0, components, reasons, flags, location_bucket: bucket.id };
+  }
+  if (dealTitle.length) {
+    flags.push(`Titulo cita ${dealTitle[0]}, mas tambem ${titleRescue[0]} - confirmar se o foco e operacao ou venda`);
   }
   // Sinais comerciais so na descricao podem ser resgatados quando a vaga e claramente de operacoes.
   if (dealDesc.length >= 2 && rescue.length < 2) {
@@ -53,7 +59,10 @@ export function scoreJob(job, profile, options = {}) {
   }
 
   // --- Cargo ---------------------------------------------------------------
-  const roleHits = hit(title, profile.queries || []);
+  // Os cargos do exterior contam tanto quanto os do Brasil. Antes so a lista
+  // brasileira valia, e "Management Consultant" perdia pontos por isso.
+  const allQueries = [...(profile.queries || []), ...(profile.queries_international || [])];
+  const roleHits = hit(title, allQueries);
   const mustHits = hit(title, profile.must_have_any || []);
   let roleRatio = 0;
   if (roleHits.length) roleRatio = 1;
