@@ -1,19 +1,19 @@
 name: Diagnostico das fontes
 
+# Tambem sem agendamento: rode quando quiser conferir se as fontes continuam de pe.
+# Este workflow nao usa a API da Anthropic, entao nao custa nada.
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "0 11 * * 1"
 
 jobs:
   diagnose:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
         with:
-          node-version: "20"
+          node-version: "22"
       - name: Auto-teste da logica
         run: node pipeline/check.mjs
       - name: Testar cada fonte
