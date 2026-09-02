@@ -2,7 +2,12 @@
   "schema_version": "3.0.0",
   "updated_at": "2026-09-02",
   "active_profile": "consultoria-gestao",
-  "fx_to_brl": { "BRL": 1, "USD": 5.4, "EUR": 5.9, "GBP": 6.9 },
+  "fx_to_brl": {
+    "BRL": 1,
+    "USD": 5.4,
+    "EUR": 5.9,
+    "GBP": 6.9
+  },
   "profiles": [
     {
       "id": "consultoria-gestao",
@@ -32,10 +37,15 @@
           "id": "sjrp",
           "label": "Sao Jose do Rio Preto, SP",
           "kind": "city",
-          "match": ["sao jose do rio preto", "s. j. do rio preto", "sjrp", "rio preto"],
+          "match": [
+            "sao jose do rio preto",
+            "s. j. do rio preto",
+            "sjrp",
+            "rio preto"
+          ],
           "adzuna_where": "Sao Jose do Rio Preto",
-          "weight": 1.0,
-          "quota": 0.55,
+          "weight": 1,
+          "quota": 1,
           "enabled": true
         },
         {
@@ -45,22 +55,33 @@
           "match": [],
           "weight": 0.85,
           "quota": 0.3,
-          "enabled": true,
+          "enabled": false,
           "note": "Vagas 100% remotas fora do Brasil. Exige ingles ou frances; Carlos e fluente nos dois."
         },
         {
           "id": "sao_paulo",
           "label": "Sao Paulo, SP",
           "kind": "city",
-          "match": ["sao paulo"],
+          "match": [
+            "sao paulo"
+          ],
           "adzuna_where": "Sao Paulo",
           "weight": 0.7,
           "quota": 0.15,
-          "enabled": true,
+          "enabled": false,
           "superiority_rule": {
             "enabled": true,
             "min_salary_brl": 18000,
-            "title_signals": ["gerente", "manager", "head", "diretor", "director", "principal", "lead", "senior manager"],
+            "title_signals": [
+              "gerente",
+              "manager",
+              "head",
+              "diretor",
+              "director",
+              "principal",
+              "lead",
+              "senior manager"
+            ],
             "note": "Sao Paulo so entra quando a oportunidade for claramente superior a atual."
           }
         },
@@ -70,7 +91,7 @@
           "kind": "remote_national",
           "match": [],
           "weight": 0.8,
-          "quota": 0.0,
+          "quota": 0,
           "enabled": false
         }
       ],
@@ -84,29 +105,153 @@
         "international_min_usd_annual": 60000
       },
       "seniority": {
-        "prefer": ["pleno", "senior", "especialista", "coordenador", "gerente", "manager", "lead"],
-        "exclude_titles": ["estagio", "estagiario", "aprendiz", "trainee", "junior", "jr.", "assistente", "auxiliar", "operador", "atendente"]
+        "prefer": [
+          "pleno",
+          "senior",
+          "especialista",
+          "coordenador",
+          "gerente",
+          "manager",
+          "lead"
+        ],
+        "exclude_titles": [
+          "estagio",
+          "estagiario",
+          "aprendiz",
+          "trainee",
+          "junior",
+          "jr.",
+          "assistente",
+          "auxiliar",
+          "operador",
+          "atendente"
+        ]
       },
       "industries": {
-        "priority": ["alimentos", "bebidas", "food", "fmcg", "bens de consumo", "banco", "bancario", "servicos financeiros", "financial services", "fintech", "seguros", "pagamentos", "credito"],
-        "neutral": ["supply chain", "logistica", "varejo", "saude", "educacao", "tecnologia", "energia", "consultoria", "agro", "industria"],
+        "priority": [
+          "alimentos",
+          "bebidas",
+          "food",
+          "fmcg",
+          "bens de consumo",
+          "banco",
+          "bancario",
+          "servicos financeiros",
+          "financial services",
+          "fintech",
+          "seguros",
+          "pagamentos",
+          "credito"
+        ],
+        "neutral": [
+          "supply chain",
+          "logistica",
+          "varejo",
+          "saude",
+          "educacao",
+          "tecnologia",
+          "energia",
+          "consultoria",
+          "agro",
+          "industria"
+        ],
         "avoid": []
       },
       "must_have_any": [
-        "consultor", "consultoria", "consultant", "gerente", "manager", "coordenador", "coordinator",
-        "operacoes", "operations", "processos", "process", "estrategia", "strategy", "planejamento",
-        "planning", "pmo", "projetos", "projects", "transformacao", "transformation", "melhoria continua"
+        "consultor",
+        "consultoria",
+        "consultant",
+        "gerente",
+        "manager",
+        "coordenador",
+        "coordinator",
+        "operacoes",
+        "operations",
+        "processos",
+        "process",
+        "estrategia",
+        "strategy",
+        "planejamento",
+        "planning",
+        "pmo",
+        "projetos",
+        "projects",
+        "transformacao",
+        "transformation",
+        "melhoria continua"
       ],
       "deal_breakers": {
-        "title_terms": ["representante comercial", "executivo de vendas", "vendedor", "promotor", "sdr", "hunter", "consultor de vendas", "account executive", "sales representative", "corretor"],
-        "description_terms": ["prospeccao ativa", "cold call", "porta a porta", "meta de vendas individual", "carteira de clientes propria"],
-        "keep_when_present": ["operacoes", "operations", "processos", "indicadores", "governanca", "planejamento", "transformacao", "estrategia", "pmo"],
+        "title_terms": [
+          "representante comercial",
+          "executivo de vendas",
+          "vendedor",
+          "promotor",
+          "sdr",
+          "hunter",
+          "consultor de vendas",
+          "account executive",
+          "sales representative",
+          "corretor"
+        ],
+        "description_terms": [
+          "prospeccao ativa",
+          "cold call",
+          "porta a porta",
+          "meta de vendas individual",
+          "carteira de clientes propria"
+        ],
+        "keep_when_present": [
+          "operacoes",
+          "operations",
+          "processos",
+          "indicadores",
+          "governanca",
+          "planejamento",
+          "transformacao",
+          "estrategia",
+          "pmo"
+        ],
         "companies_blocked": []
       },
       "skills_boost": {
-        "high": ["power bi", "sql", "python", "automacao", "automation", "power automate", "dados", "data", "analytics", "inteligencia artificial", "ia", "ai", "sap", "s/4hana", "erp"],
-        "medium": ["excel", "kpi", "indicadores", "okr", "lean", "six sigma", "agil", "agile", "scrum", "servicenow", "compliance", "grc"],
-        "languages": ["ingles", "english", "frances", "french", "anglais"]
+        "high": [
+          "power bi",
+          "sql",
+          "python",
+          "automacao",
+          "automation",
+          "power automate",
+          "dados",
+          "data",
+          "analytics",
+          "inteligencia artificial",
+          "ia",
+          "ai",
+          "sap",
+          "s/4hana",
+          "erp"
+        ],
+        "medium": [
+          "excel",
+          "kpi",
+          "indicadores",
+          "okr",
+          "lean",
+          "six sigma",
+          "agil",
+          "agile",
+          "scrum",
+          "servicenow",
+          "compliance",
+          "grc"
+        ],
+        "languages": [
+          "ingles",
+          "english",
+          "frances",
+          "french",
+          "anglais"
+        ]
       },
       "weights": {
         "role": 25,
@@ -134,7 +279,10 @@
         ],
         "candidates_sent_to_ai": 60,
         "batch_size": 12,
-        "blend": { "rules": 0.35, "ai": 0.65 },
+        "blend": {
+          "rules": 0.35,
+          "ai": 0.65
+        },
         "max_description_chars": 4000
       },
       "ai_tailoring": {
