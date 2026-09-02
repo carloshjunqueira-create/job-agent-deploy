@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Job Application Agent</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%235b8cff'/%3E%3Ctext x='16' y='22' font-family='Arial' font-size='15' font-weight='bold' fill='white' text-anchor='middle'%3EJA%3C/text%3E%3C/svg%3E">
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="style.css?v=3.0.0">
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-main">
+    <div class="brand">
+      <span class="brand-mark">JA</span>
+      <div>
+        <h1>Job Application Agent</h1>
+        <p id="run-status" class="run-status">Carregando o feed…</p>
+      </div>
+    </div>
+    <div class="topbar-actions">
+      <button id="btn-search" class="btn btn-primary">Nova busca</button>
+      <button id="btn-criteria" class="btn">Critérios</button>
+      <button id="btn-connect" class="btn">Conectar</button>
+    </div>
+  </div>
+  <nav class="tabs">
+    <button class="tab is-active" data-tab="feed">Feed <span id="count-feed" class="pill">0</span></button>
+    <button class="tab" data-tab="materiais">Materiais <span id="count-materiais" class="pill">0</span></button>
+    <button class="tab" data-tab="historico">Histórico <span id="count-historico" class="pill">0</span></button>
+    <button class="tab" data-tab="rodadas">Rodadas</button>
+  </nav>
+</header>
+
+<main>
+  <section id="tab-feed" class="tab-panel is-active">
+    <div class="filterbar">
+      <input id="filter-text" type="search" placeholder="Filtrar por cargo, empresa ou palavra…" autocomplete="off">
+      <select id="filter-bucket"><option value="">Todas as regiões</option></select>
+      <label class="range">Score mínimo <b id="filter-score-value">0</b>
+        <input id="filter-score" type="range" min="0" max="100" step="5" value="0">
+      </label>
+      <label class="checkbox"><input id="filter-salary" type="checkbox"> Só com salário publicado</label>
+      <select id="sort-by">
+        <option value="final">Ordenar por score</option>
+        <option value="recent">Mais recentes</option>
+        <option value="salary">Maior salário</option>
+      </select>
+    </div>
+    <div id="feed" class="cards"></div>
+    <div id="feed-empty" class="empty" hidden></div>
+  </section>
+
+  <section id="tab-materiais" class="tab-panel">
+    <div id="materiais" class="cards"></div>
+    <div id="materiais-empty" class="empty">
+      Nenhum material gerado ainda. No feed, clique em <b>Gerar CV + carta</b> em uma vaga que valha a pena.
+    </div>
+  </section>
+
+  <section id="tab-historico" class="tab-panel">
+    <div class="filterbar">
+      <select id="filter-status"><option value="">Todas as decisões</option></select>
+      <button id="btn-export-decisions" class="btn btn-small">Exportar decisões</button>
+      <button id="btn-import-decisions" class="btn btn-small">Importar</button>
+      <input id="import-file" type="file" accept="application/json" hidden>
+    </div>
+    <div id="historico" class="cards"></div>
+    <div id="historico-empty" class="empty">Nenhuma decisão registrada ainda.</div>
+  </section>
+
+  <section id="tab-rodadas" class="tab-panel">
+    <div id="rodadas"></div>
+  </section>
+</main>
+
+<aside id="drawer-criteria" class="drawer" hidden>
+  <div class="drawer-head">
+    <h2>Critérios de seleção</h2>
+    <button class="btn btn-ghost" data-close-drawer>Fechar</button>
+  </div>
+  <div class="drawer-body">
+    <p class="hint">Tudo aqui alimenta a próxima busca. Se você estiver conectado ao GitHub, <b>Salvar</b> grava direto no repositório e a próxima rodada já usa estes critérios.</p>
+
+    <fieldset>
+      <legend>Cargos buscados no Brasil</legend>
+      <textarea id="cfg-queries" rows="5" placeholder="um cargo por linha"></textarea>
+    </fieldset>
+
+    <fieldset>
+      <legend>Cargos buscados no exterior (remoto)</legend>
+      <textarea id="cfg-queries-intl" rows="4" placeholder="um cargo por linha"></textarea>
+    </fieldset>
+
+    <fieldset>
+      <legend>Prioridade geográfica</legend>
+      <p class="hint">O <b>peso</b> define a preferência (1,00 é o topo). A <b>cota</b> define quanto do feed cada região ocupa — a soma não deve passar de 1,00.</p>
+      <div id="cfg-locations" class="locations"></div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Remuneração</legend>
+      <div class="grid-2">
+        <label>Piso mensal (R$) <input id="cfg-salary-min" type="number" step="500"></label>
+        <label>Alvo mensal (R$) <input id="cfg-salary-target" type="number" step="500"></label>
+      </div>
+      <label class="checkbox"><input id="cfg-salary-block" type="checkbox"> Descartar vagas com salário publicado abaixo do piso</label>
+      <label>Mínimo anual no exterior (US$) <input id="cfg-salary-intl" type="number" step="5000"></label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Exclusões</legend>
+      <label>Títulos que eliminam a vaga
+        <textarea id="cfg-deal-titles" rows="3" placeholder="um por linha"></textarea>
+      </label>
+      <label>Senioridades excluídas
+        <textarea id="cfg-seniority-exclude" rows="2" placeholder="um por linha"></textarea>
+      </label>
+      <label>Empresas bloqueadas
+        <textarea id="cfg-companies-blocked" rows="2" placeholder="um por linha"></textarea>
+      </label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Indústrias prioritárias</legend>
+      <textarea id="cfg-industries" rows="3" placeholder="uma por linha"></textarea>
+    </fieldset>
+
+    <fieldset>
+      <legend>Feed</legend>
+      <div class="grid-2">
+        <label>Tamanho do feed <input id="cfg-feed-size" type="number" min="10" max="120"></label>
+        <label>Score mínimo exibido <input id="cfg-min-score" type="number" min="0" max="100"></label>
+        <label>Idade máxima da vaga (dias) <input id="cfg-recency" type="number" min="5" max="180"></label>
+        <label>Máximo por empresa <input id="cfg-max-company" type="number" min="1" max="10"></label>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Inteligência artificial</legend>
+      <label class="checkbox"><input id="cfg-ai-enabled" type="checkbox"> Usar a Claude para reordenar e explicar as vagas</label>
+      <div class="grid-2">
+        <label>Modelo
+          <select id="cfg-ai-model">
+            <option value="claude-sonnet-5">claude-sonnet-5 — melhor julgamento</option>
+            <option value="claude-haiku-4-5-20251001">claude-haiku-4-5 — mais barato</option>
+          </select>
+        </label>
+        <label>Vagas enviadas à IA por rodada <input id="cfg-ai-candidates" type="number" min="10" max="150"></label>
+      </div>
+    </fieldset>
+  </div>
+  <div class="drawer-foot">
+    <button id="btn-save-criteria" class="btn btn-primary">Salvar critérios</button>
+    <button id="btn-download-criteria" class="btn">Baixar JSON</button>
+  </div>
+</aside>
+
+<div id="modal-search" class="modal" hidden>
+  <div class="modal-card">
+    <h2>Nova busca</h2>
+    <p class="hint">A busca roda no GitHub Actions: consulta as fontes, pontua tudo, passa pela Claude e publica o feed. Leva de 1 a 3 minutos.</p>
+    <label>Termos extras só para esta rodada (opcional)
+      <input id="search-extra" type="text" placeholder="ex.: gerente de supply chain; head de operações">
+    </label>
+    <label class="checkbox"><input id="search-skip-ai" type="checkbox"> Rodar sem IA (mais rápido e sem custo)</label>
+    <div id="search-progress" class="progress" hidden></div>
+    <div class="modal-actions">
+      <button id="btn-run-search" class="btn btn-primary">Buscar agora</button>
+      <button class="btn" data-close-modal>Cancelar</button>
+    </div>
+  </div>
+</div>
+
+<div id="modal-connect" class="modal" hidden>
+  <div class="modal-card">
+    <h2>Conectar ao seu repositório</h2>
+    <p class="hint">
+      O site é estático: para disparar buscas e salvar critérios e decisões no repositório, ele precisa de um
+      <b>token fine-grained</b> do GitHub com acesso só a este repositório e permissões de
+      <b>Actions: Read and write</b> e <b>Contents: Read and write</b>.
+      O token fica apenas neste navegador e nunca é enviado para outro lugar.
+    </p>
+    <label>Repositório <input id="connect-repo" type="text" placeholder="carloshjunqueira-create/job-application-agent"></label>
+    <label>Token <input id="connect-token" type="password" placeholder="github_pat_…" autocomplete="off"></label>
+    <div id="connect-status" class="connect-status"></div>
+    <div class="modal-actions">
+      <button id="btn-save-token" class="btn btn-primary">Salvar e testar</button>
+      <button id="btn-clear-token" class="btn btn-danger">Remover token</button>
+      <button class="btn" data-close-modal>Fechar</button>
+    </div>
+  </div>
+</div>
+
+<div id="modal-material" class="modal" hidden>
+  <div class="modal-card modal-wide">
+    <div class="modal-head">
+      <h2 id="material-title">Materiais da vaga</h2>
+      <button class="btn btn-ghost" data-close-modal>Fechar</button>
+    </div>
+    <div id="material-body" class="material-body"></div>
+  </div>
+</div>
+
+<div id="toast" class="toast" hidden></div>
+<script src="app.js?v=3.0.0"></script>
+</body>
+</html>

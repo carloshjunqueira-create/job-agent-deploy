@@ -1,0 +1,107 @@
+{
+  "schema_version": "1.0.0",
+  "updated_at": "2026-09-02",
+  "review_status": "RASCUNHO_GERADO_AUTOMATICAMENTE_REVISAR",
+  "review_note": "Este arquivo alimenta o score semantico, o CV adaptado e a carta. Quanto mais preciso, melhor o resultado. Revise datas, cargos e resultados antes da primeira rodada com IA. Campos vazios sao ignorados; nada e inventado.",
+  "identity": {
+    "full_name": "Carlos Henrique Junqueira",
+    "headline": "Consultor de negocios | Operacoes, processos e dados",
+    "email": "carlos.hjunqueira@gmail.com",
+    "linkedin": "",
+    "city": "Sao Paulo, SP",
+    "willing_to_relocate_to": ["Sao Jose do Rio Preto, SP"],
+    "work_authorization": ["Brasil"],
+    "languages": [
+      { "language": "Portugues", "level": "Nativo" },
+      { "language": "Ingles", "level": "Fluente" },
+      { "language": "Frances", "level": "Fluente" }
+    ]
+  },
+  "positioning": {
+    "summary": "Consultor de negocios com atuacao em PMO, eficiencia de processos, migracao de dados e reporting executivo. Formado em Engenharia de Alimentos com duplo diploma na Franca. Combina visao de operacao com uso intensivo de dados e automacao (Power BI, SQL, Python, Power Automate) para destravar decisao executiva.",
+    "target_roles": ["Consultor de Negocios", "Coordenador de Operacoes", "Gerente de Operacoes", "Gerente de Projetos", "Business Consultant", "Operations Manager"],
+    "target_industries": ["Alimentos e bebidas", "Servicos financeiros e bancos", "Consultoria", "Supply chain"],
+    "seniority": "Pleno-senior / coordenacao"
+  },
+  "experience": [
+    {
+      "company": "Peers Consulting + Technology",
+      "role": "Consultor",
+      "start": "2025-01",
+      "end": null,
+      "location": "Sao Paulo, SP",
+      "context": "Consultoria de negocios e tecnologia, atuando em multiplas linhas de servico.",
+      "highlights": [
+        "PMO de programa de implementacao SAP S/4HANA, incluindo go-live e hypercare",
+        "Desenho de perfis de acesso e compliance GRC",
+        "Migracao de dados e governanca de qualidade de dados",
+        "Business case de otimizacao de ganho fiscal via posicionamento estrategico de centros de distribuicao",
+        "Projetos de People Analytics e diagnostico de sistemas educacionais",
+        "Automacao de rotinas com Power Automate e gestao de incidentes em ServiceNow",
+        "Reporting executivo em Power BI para comites de direcao"
+      ],
+      "keywords": ["PMO", "SAP S/4HANA", "GRC", "migracao de dados", "Power BI", "Power Automate", "ServiceNow", "business case", "governanca"]
+    },
+    {
+      "company": "Instituto Sonho Grande",
+      "role": "Coordenador / Analista senior",
+      "start": "",
+      "end": "2024",
+      "location": "Brasil",
+      "context": "Organizacao de impacto social em educacao publica, com projetos de escala nacional.",
+      "highlights": [
+        "Gestao de orcamentos relevantes e de projetos de abrangencia nacional",
+        "Coordenacao de times e de stakeholders em multiplos estados",
+        "Acompanhamento por indicadores e reporting para lideranca"
+      ],
+      "keywords": ["coordenacao", "orcamento", "gestao de projetos", "indicadores", "stakeholders"]
+    },
+    {
+      "company": "Burger King Brasil",
+      "role": "",
+      "start": "",
+      "end": "",
+      "location": "Brasil",
+      "context": "Operacao de food service em larga escala.",
+      "highlights": [],
+      "keywords": ["food service", "operacoes", "alimentos"]
+    },
+    {
+      "company": "Unilever",
+      "role": "",
+      "start": "",
+      "end": "",
+      "location": "Franca",
+      "context": "Bens de consumo, experiencia internacional.",
+      "highlights": [],
+      "keywords": ["FMCG", "bens de consumo", "internacional"]
+    }
+  ],
+  "education": [
+    { "institution": "Universidade Federal de Vicosa", "degree": "Engenharia de Alimentos", "year": "" },
+    { "institution": "ENSAIA / Universite de Lorraine (Franca)", "degree": "Duplo diploma em engenharia", "year": "" }
+  ],
+  "skills": {
+    "expert": ["Excel", "Power BI", "PMO e governanca de projetos", "Reporting executivo"],
+    "proficient": ["SQL", "Python", "Power Automate", "ServiceNow", "GRC e perfis de acesso", "Migracao de dados", "Business case"],
+    "familiar": ["SAP S/4HANA", "Lean", "People Analytics", "IA aplicada a negocios"]
+  },
+  "achievements_bank": [
+    "Sustentou PMO de programa SAP S/4HANA do desenho ao hypercare, com controle de riscos e reporting para a direcao",
+    "Construiu business case de ganho fiscal por reposicionamento de centros de distribuicao",
+    "Automatizou rotinas manuais de acompanhamento com Power Automate, reduzindo esforco recorrente do time",
+    "Coordenou projetos de escala nacional com orcamento relevante no terceiro setor"
+  ],
+  "cv_variants": {
+    "management_coordination": "Enfase em coordenacao de times, indicadores, governanca e entrega de projetos.",
+    "business_consulting": "Enfase em diagnostico, business case, estrategia e interlocucao executiva.",
+    "operations_process": "Enfase em processos, eficiencia operacional, melhoria continua e supply chain.",
+    "data_automation": "Enfase em dados, Power BI, SQL, automacao e IA aplicada."
+  },
+  "constraints": {
+    "min_salary_brl_monthly": 15000,
+    "notice_period": "",
+    "travel_availability": "",
+    "no_go": ["Funcoes predominantemente comerciais, de prospeccao ou vendas"]
+  }
+}

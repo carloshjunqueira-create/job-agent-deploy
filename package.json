@@ -1,0 +1,15 @@
+{
+  "name": "job-application-agent",
+  "version": "3.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Agente de busca e triagem de vagas: GitHub Pages como interface, GitHub Actions como backend.",
+  "scripts": {
+    "check": "node pipeline/check.mjs",
+    "collect": "node pipeline/collect.mjs",
+    "collect:dry": "node pipeline/collect.mjs --dry-run",
+    "diagnose": "node pipeline/diagnose.mjs",
+    "tailor": "node pipeline/tailor.mjs"
+  },
+  "engines": { "node": ">=20" }
+}
