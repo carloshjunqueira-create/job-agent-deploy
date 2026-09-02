@@ -1,22 +1,22 @@
 {
-  "run_id": "run_1788387161218",
-  "finished_at": "2026-09-02T22:12:41.218Z",
-  "duration_ms": 65673,
+  "run_id": "run_1788390918112",
+  "finished_at": "2026-09-02T23:15:18.112Z",
+  "duration_ms": 64778,
   "search_profile": "consultoria-gestao",
   "extra_queries": [],
   "counts": {
-    "raw": 2185,
-    "unique": 1577,
-    "passed_filters": 886,
-    "eligible": 304,
-    "published": 45
+    "raw": 2171,
+    "unique": 1558,
+    "passed_filters": 782,
+    "eligible": 98,
+    "published": 34
   },
   "blocked_reasons": {
-    "SALARIO_ABAIXO_DO_PISO": 77,
-    "SENIORIDADE_EXCLUIDA": 142,
-    "LOCALIZACAO_FORA_DOS_CRITERIOS": 347,
-    "FOCO_COMERCIAL_NO_TITULO": 43,
-    "VAGA_ANTIGA": 82
+    "SALARIO_ABAIXO_DO_PISO": 75,
+    "SENIORIDADE_EXCLUIDA": 131,
+    "LOCALIZACAO_FORA_DOS_CRITERIOS": 475,
+    "FOCO_COMERCIAL_NO_TITULO": 38,
+    "VAGA_ANTIGA": 57
   },
   "sources": [
     {
@@ -24,56 +24,56 @@
       "label": "Jooble Brasil",
       "status": "OK",
       "jobs": 924,
-      "ms": 6030
+      "ms": 6734
     },
     {
       "id": "adzuna_br",
       "label": "Adzuna Brasil",
       "status": "OK",
-      "jobs": 653,
-      "ms": 10128
+      "jobs": 637,
+      "ms": 11610
     },
     {
       "id": "gupy",
       "label": "Gupy (portal publico, best-effort)",
       "status": "OK",
       "jobs": 581,
-      "ms": 53922
+      "ms": 52618
     },
     {
       "id": "remotive",
       "label": "Remotive (remoto internacional)",
       "status": "OK",
       "jobs": 18,
-      "ms": 358
+      "ms": 520
     },
     {
       "id": "adzuna_intl",
       "label": "Adzuna internacional (US/GB/CA)",
       "status": "OK",
-      "jobs": 8,
-      "ms": 15029
+      "jobs": 9,
+      "ms": 16556
     },
     {
       "id": "arbeitnow",
       "label": "Arbeitnow (remoto Europa)",
       "status": "OK",
       "jobs": 1,
-      "ms": 242
+      "ms": 460
+    },
+    {
+      "id": "himalayas",
+      "label": "Himalayas (remoto internacional)",
+      "status": "OK",
+      "jobs": 1,
+      "ms": 197
     },
     {
       "id": "remoteok",
       "label": "RemoteOK (remoto internacional)",
       "status": "OK",
       "jobs": 0,
-      "ms": 679
-    },
-    {
-      "id": "himalayas",
-      "label": "Himalayas (remoto internacional)",
-      "status": "OK",
-      "jobs": 0,
-      "ms": 160
+      "ms": 626
     },
     {
       "id": "ats_boards",
@@ -87,7 +87,7 @@
       "label": "Feeds RSS personalizados",
       "status": "OK",
       "jobs": 0,
-      "ms": 1
+      "ms": 0
     }
   ],
   "ai": {
@@ -106,13 +106,21 @@
     "estimated_cost_usd": 0
   },
   "mix": {
-    "sao_paulo": 22,
-    "remote_intl": 14,
-    "sjrp": 9
+    "sao_paulo": 8,
+    "sjrp": 26
   },
   "quota_targets": {
-    "sjrp": 25,
-    "remote_intl": 14,
-    "sao_paulo": 7
+    "sjrp": 32,
+    "sao_paulo": 8
+  },
+  "quota_caps": {
+    "sjrp": 40,
+    "sao_paulo": 8
+  },
+  "min_score_by_region": {
+    "sjrp": 52,
+    "remote_intl": 65,
+    "sao_paulo": 70,
+    "remote_br": 62
   }
 }
