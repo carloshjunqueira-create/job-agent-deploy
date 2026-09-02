@@ -174,6 +174,15 @@ export function applyQuotas(jobs, profile) {
   const buckets = (profile.locations || []).filter((l) => l.enabled !== false);
   const targets = new Map(buckets.map((b) => [b.id, Math.round(size * (b.quota ?? 0))]));
 
+  // Teto absoluto por regiao. A cota diz o alvo; o teto impede que a segunda
+  // passada transforme uma regiao secundaria na maioria do feed quando a
+  // regiao principal tem pouca oferta. Sem teto, Sao Paulo ocupou 22 de 45
+  // vagas com cota de 7.
+  const caps = new Map(buckets.map((b) => [
+    b.id,
+    b.max_share != null ? Math.max(1, Math.round(size * b.max_share)) : size
+  ]));
+
   const sorted = [...jobs].sort((a, b) => b.score.final - a.score.final);
   const selected = [];
   const chosen = new Set();
@@ -183,8 +192,9 @@ export function applyQuotas(jobs, profile) {
   const canTake = (job, ignoreQuota) => {
     const companyCount = perCompany.get(norm(job.company)) || 0;
     if (companyCount >= maxPerCompany) return false;
-    if (ignoreQuota) return true;
     const used = perBucket.get(job.score.location_bucket) || 0;
+    if (used >= (caps.get(job.score.location_bucket) ?? size)) return false;
+    if (ignoreQuota) return true;
     return used < (targets.get(job.score.location_bucket) ?? size);
   };
 
@@ -209,6 +219,7 @@ export function applyQuotas(jobs, profile) {
   return {
     selected: selected.sort((a, b) => b.score.final - a.score.final),
     mix: Object.fromEntries(perBucket),
-    targets: Object.fromEntries(targets)
+    targets: Object.fromEntries(targets),
+    caps: Object.fromEntries(caps)
   };
 }

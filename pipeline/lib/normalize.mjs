@@ -37,14 +37,26 @@ export function looksBrazilian(job) {
  * Classifica a vaga em um dos buckets configurados em search-profiles.locations.
  * Retorna o bucket ou null quando a vaga nao cabe em nenhum bucket habilitado.
  */
+/**
+ * Isola a parte de CIDADE de um endereco no formato "Cidade, Estado" ou
+ * "Bairro, Cidade, Estado". Sem isso, "Barueri, Sao Paulo" e "Ribeirao Preto,
+ * Sao Paulo" casam com o balde de Sao Paulo pelo nome do ESTADO — foi o que
+ * encheu o feed de cidades onde nao da para trabalhar.
+ */
+export function cityPart(locationRaw = "") {
+  const segments = String(locationRaw).split(",").map((s) => s.trim()).filter(Boolean);
+  if (segments.length <= 1) return norm(locationRaw);
+  return norm(segments.slice(0, -1).join(" "));
+}
+
 export function classifyLocation(job, profile) {
   const enabled = (profile.locations || []).filter((l) => l.enabled !== false);
-  const haystack = norm([job.location_raw, job.city, job.state, job.country].join(" "));
+  const cityHay = cityPart(job.location_raw || [job.city, job.state].filter(Boolean).join(", "));
   const workModel = job.work_model || "unknown";
 
   for (const bucket of enabled) {
     if (bucket.kind === "city") {
-      if ((bucket.match || []).some((m) => haystack.includes(norm(m)))) return bucket;
+      if ((bucket.match || []).some((m) => cityHay.includes(norm(m)))) return bucket;
     }
   }
   if (workModel === "remote") {

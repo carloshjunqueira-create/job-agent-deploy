@@ -6,6 +6,14 @@ on:
       job_id:
         description: "ID da vaga (aparece no card do feed)"
         required: true
+      mode:
+        description: "O que gerar"
+        type: choice
+        required: false
+        default: "full"
+        options:
+          - full
+          - cv
 
 concurrency:
   group: tailor-${{ inputs.job_id }}
@@ -27,7 +35,9 @@ jobs:
       - name: Gerar materiais
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_WORKSPACE_ID: ${{ secrets.ANTHROPIC_WORKSPACE_ID }}
           JOB_ID: ${{ inputs.job_id }}
+          TAILOR_MODE: ${{ inputs.mode }}
         run: node pipeline/tailor.mjs
 
       - name: Publicar

@@ -1,107 +1,163 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.2.0",
   "updated_at": "2026-09-02",
-  "review_status": "RASCUNHO_GERADO_AUTOMATICAMENTE_REVISAR",
-  "review_note": "Este arquivo alimenta o score semantico, o CV adaptado e a carta. Quanto mais preciso, melhor o resultado. Revise datas, cargos e resultados antes da primeira rodada com IA. Campos vazios sao ignorados; nada e inventado.",
+  "review_status": "COMPLETO_A_PARTIR_DO_CV_OFICIAL",
+  "review_note": "Construido a partir do CV em PDF de Carlos (Carlos_Junqueira_CV_PT.pdf) mais o historico de projetos. Nenhum numero foi estimado.",
+  "conventions": {
+    "anonymize_clients": true,
+    "anonymize_note": "O CV de Carlos NAO nomeia clientes: usa 'empresa lider do setor de educacao', 'banco de desenvolvimento internacional' etc. Mantenha essa convencao em qualquer CV ou carta gerada. Os nomes reais aparecem aqui apenas em internal_client_names, para ajudar o julgamento de aderencia — nunca para sair no texto."
+  },
   "identity": {
     "full_name": "Carlos Henrique Junqueira",
-    "headline": "Consultor de negocios | Operacoes, processos e dados",
+    "headline": "Consultor | PMO, governanca de portfolio e projetos end-to-end",
     "email": "carlos.hjunqueira@gmail.com",
-    "linkedin": "",
+    "phone": "+55 16 98859-1994",
+    "linkedin": "linkedin.com/in/carloshjunqueira",
     "city": "Sao Paulo, SP",
     "willing_to_relocate_to": ["Sao Jose do Rio Preto, SP"],
     "work_authorization": ["Brasil"],
-    "languages": [
-      { "language": "Portugues", "level": "Nativo" },
-      { "language": "Ingles", "level": "Fluente" },
-      { "language": "Frances", "level": "Fluente" }
-    ]
+    "travel_availability": "Disponivel para viagens",
+    "remote_availability": "Disponivel para trabalho remoto",
+    "location_strategy": {
+      "note": "Em mercado de porte medio o recrutador filtra por cidade antes de ler o conteudo. Um cabecalho com 'Sao Paulo' faz a candidatura em Rio Preto ser descartada na triagem, mesmo com aderencia alta.",
+      "sjrp": "Sao Jose do Rio Preto, SP (mudanca em andamento) | Disponivel para viagens",
+      "sao_paulo": "Sao Paulo, SP | Disponivel para viagens",
+      "remote": "Brasil (remoto) | Disponivel para viagens",
+      "default": "Sao Paulo, SP | Disponivel para viagens e mudanca"
+    }
   },
   "positioning": {
-    "summary": "Consultor de negocios com atuacao em PMO, eficiencia de processos, migracao de dados e reporting executivo. Formado em Engenharia de Alimentos com duplo diploma na Franca. Combina visao de operacao com uso intensivo de dados e automacao (Power BI, SQL, Python, Power Automate) para destravar decisao executiva.",
-    "target_roles": ["Consultor de Negocios", "Coordenador de Operacoes", "Gerente de Operacoes", "Gerente de Projetos", "Business Consultant", "Operations Manager"],
-    "target_industries": ["Alimentos e bebidas", "Servicos financeiros e bancos", "Consultoria", "Supply chain"],
-    "seniority": "Pleno-senior / coordenacao"
+    "summary": "Consultor com historico de lideranca em PMO, governanca de portfolio e projetos end-to-end nas verticais de industria, financas, supply chain, M&A e estrategia. Conduz programas de alta complexidade de forma autonoma - com dominio de construcao de business case, analise de ROI e reporte executivo - e atua como ponte efetiva entre areas de negocio e tecnicas. Fluente em ingles e frances.",
+    "target_roles": [
+      "Consultor de Negocios", "Coordenador de Operacoes", "Gerente de Operacoes",
+      "Gerente Administrativo", "Coordenador/Gerente de Projetos", "PMO", "Controller",
+      "Business Consultant", "Operations Manager"
+    ],
+    "target_industries": ["Saude e operadoras", "Servicos financeiros e cooperativas de credito", "Alimentos e bebidas", "Distribuicao e supply chain", "Consultoria", "Industria"],
+    "seniority": "Consultor senior / coordenacao, buscando coordenacao e gerencia",
+    "differentiators": [
+      "Conduz programas complexos de forma autonoma, do diagnostico ao reporte executivo",
+      "Constroi a solucao, nao so o plano: Python, SQL, Power BI, VBA e automacoes de IA",
+      "Repertorio financeiro real - business case, ROI, valuation, DRE, DFC, EBITDA, EVA, WACC",
+      "Duplo diploma internacional; ingles e frances fluentes",
+      "Transita entre operacao, financas e tecnologia dentro do mesmo projeto"
+    ]
   },
   "experience": [
     {
       "company": "Peers Consulting + Technology",
-      "role": "Consultor",
+      "role": "Consultant (Abr 2026 - atual) e Senior Analyst (Jan 2025 - Mar 2026)",
       "start": "2025-01",
       "end": null,
       "location": "Sao Paulo, SP",
-      "context": "Consultoria de negocios e tecnologia, atuando em multiplas linhas de servico.",
+      "context": "Consultoria de negocios e tecnologia. Projetos em grandes industrias nas verticais de financas, supply chain, M&A, estrategia e eficiencia.",
       "highlights": [
-        "PMO de programa de implementacao SAP S/4HANA, incluindo go-live e hypercare",
-        "Desenho de perfis de acesso e compliance GRC",
-        "Migracao de dados e governanca de qualidade de dados",
-        "Business case de otimizacao de ganho fiscal via posicionamento estrategico de centros de distribuicao",
-        "Projetos de People Analytics e diagnostico de sistemas educacionais",
-        "Automacao de rotinas com Power Automate e gestao de incidentes em ServiceNow",
-        "Reporting executivo em Power BI para comites de direcao"
+        "Implementacao SAP S/4HANA (empresa lider do setor de educacao): respondi pelo PMO do programa, coordenando ~50 profissionais em 8 areas de negocio, incluindo apoio a migracao de dados (~100.000 SKUs) e go-live",
+        "Business case de Centro de Distribuicao (empresa do setor de saude): conduzi de forma autonoma a avaliacao de localidade para novo CD entre tres opcoes estrategicas, com modelagem financeira e analise de ROI com foco em beneficios fiscais",
+        "Diagnostico de sistemas educacionais (banco de desenvolvimento internacional): estruturei e conduzi o diagnostico end-to-end de gestao educacional em secretarias estaduais, entregando plano de fortalecimento e apresentacoes executivas; tornei-me referencia interna no tema e desenvolvi solucao de IA para escalar diagnosticos futuros",
+        "Integracao pos-fusao (PMI, setor de reciclagem): apoiei multiplas frentes da integracao entre duas companhias do grupo - comunicacao, PMO, S&OP, aquisicao de novos fornecedores e operacao de nova planta",
+        "People Analytics (setor de energia): conduzi diagnostico baseado em entrevistas com liderancas e stakeholders-chave, entregando plano de melhoria e roadmap de implementacao",
+        "Reestruturacao societaria (M&A): apoiei a estruturacao do processo de incorporacao de empresas e a entrega da documentacao exigida"
       ],
-      "keywords": ["PMO", "SAP S/4HANA", "GRC", "migracao de dados", "Power BI", "Power Automate", "ServiceNow", "business case", "governanca"]
+      "keywords": ["PMO", "governanca de portfolio", "SAP S/4HANA", "go-live", "migracao de dados", "business case", "ROI", "beneficios fiscais", "centro de distribuicao", "PMI", "S&OP", "People Analytics", "M&A", "reestruturacao societaria", "diagnostico", "reporte executivo", "IA aplicada"],
+      "internal_client_names": "Cogna (SAP S/4HANA Digital Finance II), Cirklo (PMI), Comgas (People Analytics), Farmax (war room), SIGED/BID (diagnostico educacional). NAO usar estes nomes no CV nem na carta."
     },
     {
       "company": "Instituto Sonho Grande",
-      "role": "Coordenador / Analista senior",
-      "start": "",
-      "end": "2024",
+      "role": "Coordenador de Gestao (Out 2022 - Dez 2024) e Analista de Projetos Pleno/Senior (Mai 2020 - Set 2022)",
+      "start": "2020-05",
+      "end": "2024-12",
       "location": "Brasil",
-      "context": "Organizacao de impacto social em educacao publica, com projetos de escala nacional.",
+      "context": "Organizacao de impacto social em educacao publica, atuando junto a secretarias estaduais em escala nacional.",
       "highlights": [
-        "Gestao de orcamentos relevantes e de projetos de abrangencia nacional",
-        "Coordenacao de times e de stakeholders em multiplos estados",
-        "Acompanhamento por indicadores e reporting para lideranca"
+        "Lideranca de equipe de 2 pessoas; conducao do planejamento e orcamento alinhados a missao e estrategia da organizacao, definindo e acompanhando KPIs organizacionais que atingiram 100% das metas globais e ~80% das metas das equipes",
+        "Lideranca de projetos estrategicos, incluindo transicao de plataformas de RH/DP e de gestao de viagens corporativas, com reducao de custos de ~20% do orcamento da area e melhoria da experiencia do usuario",
+        "Administracao de orcamento de R$ 3 milhoes para a area de Gestao Estrategica e Facilities",
+        "Gestao de projetos end-to-end com foco em otimizacao de orcamentos, expansao do Ensino Medio Integral e melhoria de processos internos, com R$ 5 milhoes sob gestao direta",
+        "Estruturacao e execucao de pesquisas aplicadas em 21 estados brasileiros, com analise de KPIs educacionais em Power BI e devolutivas detalhadas com planos de acao"
       ],
-      "keywords": ["coordenacao", "orcamento", "gestao de projetos", "indicadores", "stakeholders"]
+      "keywords": ["coordenacao", "lideranca de equipe", "orcamento", "KPIs", "reducao de custos", "gestao de projetos", "Power BI", "escala nacional", "educacao", "facilities"]
     },
     {
-      "company": "Burger King Brasil",
-      "role": "",
-      "start": "",
-      "end": "",
+      "company": "Burger King do Brasil",
+      "role": "Analista de Gestao da Manutencao",
+      "start": "2019-08",
+      "end": "2020-04",
       "location": "Brasil",
-      "context": "Operacao de food service em larga escala.",
-      "highlights": [],
-      "keywords": ["food service", "operacoes", "alimentos"]
+      "context": "Rede de food service com mais de 1.000 lojas no pais.",
+      "highlights": [
+        "Desenvolvimento de indicadores de manutencao para monitorar e otimizar a performance das operacoes em mais de 1.000 lojas no Brasil",
+        "Implementacao de projetos de melhoria de equipamentos em parceria com a AmBev em ~50% do parque, garantindo acoes preventivas e corretivas no dia a dia"
+      ],
+      "keywords": ["indicadores", "manutencao", "operacoes", "food service", "varejo", "melhoria continua", "escala"]
     },
     {
-      "company": "Unilever",
-      "role": "",
-      "start": "",
-      "end": "",
+      "company": "Unilever France",
+      "role": "Estagiario - Supply Chain",
+      "start": "2017-06",
+      "end": "2018-07",
       "location": "Franca",
-      "context": "Bens de consumo, experiencia internacional.",
-      "highlights": [],
-      "keywords": ["FMCG", "bens de consumo", "internacional"]
+      "context": "Bens de consumo, durante o periodo do duplo diploma na Franca.",
+      "highlights": [
+        "Reestruturacao da logistica interna com ferramentas Lean (3M, Kanban, PDCA), resultando em reducao de 15% dos custos operacionais",
+        "Implementacao de acoes de reducao de acidentes nas linhas de producao por meio de analise e tratamento de riscos"
+      ],
+      "keywords": ["supply chain", "Lean", "Kanban", "PDCA", "reducao de custos", "seguranca", "FMCG", "internacional"]
     }
   ],
   "education": [
-    { "institution": "Universidade Federal de Vicosa", "degree": "Engenharia de Alimentos", "year": "" },
-    { "institution": "ENSAIA / Universite de Lorraine (Franca)", "degree": "Duplo diploma em engenharia", "year": "" }
+    { "institution": "Universidade Federal de Vicosa (UFV)", "degree": "Engenharia de Alimentos", "country": "Brasil", "year": "" },
+    { "institution": "Universite de Lorraine / ENSAIA", "degree": "Engenharia de Alimentos (duplo diploma)", "country": "Franca", "year": "" },
+    { "institution": "Universite de Lorraine", "degree": "Especializacao em Logistica e Cadeia de Suprimentos", "country": "Franca", "year": "" },
+    { "institution": "Business Training Company", "degree": "General Business Program / Pricing Strategy Program", "country": "", "year": "" }
   ],
   "skills": {
-    "expert": ["Excel", "Power BI", "PMO e governanca de projetos", "Reporting executivo"],
-    "proficient": ["SQL", "Python", "Power Automate", "ServiceNow", "GRC e perfis de acesso", "Migracao de dados", "Business case"],
-    "familiar": ["SAP S/4HANA", "Lean", "People Analytics", "IA aplicada a negocios"]
+    "software": ["Power BI", "Excel avancado (VBA)", "Python", "SQL"],
+    "methodologies": ["Lean", "PDCA", "5 Forcas de Porter", "Matriz BCG", "VRIO"],
+    "finance": ["DRE", "DFC", "BP", "orcamento", "valuation", "EBITDA", "EBITA", "EVA", "MVA", "ROIC", "WACC"],
+    "ai": "Uso diario para analise e entregas; capacidade de criar agentes de IA e automacoes",
+    "expert": ["Governanca de PMO e reporte executivo", "Business case e analise de ROI", "Power BI", "Excel avancado"],
+    "proficient": ["Python", "SQL", "VBA", "Migracao e qualidade de dados", "Gestao de orcamento", "Diagnostico e planos de melhoria"],
+    "familiar": ["SAP S/4HANA", "GRC e perfis de acesso", "Power Automate", "ServiceNow", "S&OP"]
   },
   "achievements_bank": [
-    "Sustentou PMO de programa SAP S/4HANA do desenho ao hypercare, com controle de riscos e reporting para a direcao",
-    "Construiu business case de ganho fiscal por reposicionamento de centros de distribuicao",
-    "Automatizou rotinas manuais de acompanhamento com Power Automate, reduzindo esforco recorrente do time",
-    "Coordenou projetos de escala nacional com orcamento relevante no terceiro setor"
+    "PMO de programa SAP S/4HANA coordenando ~50 profissionais em 8 areas de negocio, do desenho ao go-live e hypercare",
+    "Migracao de dados de ~100.000 SKUs em programa de ERP, com motores proprios em Python para aprendizado de regras de preenchimento a partir de 132.006 linhas historicas validadas",
+    "Classificador de produtos sobre arquivo fiscal de 81.568 linhas com 99,5% de acuracia a 98% de cobertura",
+    "Plano de UAT com mais de 1.500 passos de teste em 8 areas de negocio, com dashboards executivos proprios",
+    "Perfis de acesso GRC em 8 modulos SAP com matriz de segregacao de funcoes e otimizacao de licenciamento (41 perfis compostos)",
+    "Automacao de gestao de incidentes ServiceNow para Power Automate e SharePoint, com escalonamento N1/N2/N3",
+    "Business case de novo centro de distribuicao com modelagem financeira, ROI e foco em beneficios fiscais",
+    "Orcamento de R$ 3 milhoes sob administracao e R$ 5 milhoes sob gestao direta de projetos no terceiro setor",
+    "Reducao de ~20% do orcamento da area via transicao de plataformas de RH/DP e viagens corporativas",
+    "Reducao de 15% dos custos operacionais em logistica interna com ferramentas Lean",
+    "Indicadores de manutencao para mais de 1.000 lojas de food service",
+    "Pesquisas aplicadas em 21 estados brasileiros com analise de KPIs em Power BI"
   ],
   "cv_variants": {
-    "management_coordination": "Enfase em coordenacao de times, indicadores, governanca e entrega de projetos.",
-    "business_consulting": "Enfase em diagnostico, business case, estrategia e interlocucao executiva.",
-    "operations_process": "Enfase em processos, eficiencia operacional, melhoria continua e supply chain.",
-    "data_automation": "Enfase em dados, Power BI, SQL, automacao e IA aplicada."
+    "management_coordination": "Enfase em lideranca de equipe, orcamento, KPIs e entrega de projetos. Puxar Sonho Grande e o PMO do programa SAP.",
+    "business_consulting": "Enfase em diagnostico, business case, ROI e interlocucao executiva. Puxar CD do setor de saude e diagnostico educacional.",
+    "operations_process": "Enfase em processos, supply chain, Lean e indicadores. Puxar Unilever, Burger King e a frente de S&OP do PMI.",
+    "data_automation": "Enfase em Python, SQL, Power BI, VBA e IA aplicada. Puxar migracao de dados e as solucoes de IA.",
+    "erp_transformation": "Enfase em SAP S/4HANA, PMO de ERP, migracao, UAT, cutover e go-live.",
+    "finance_controlling": "Enfase em orcamento, valuation, DRE/DFC, ROIC e beneficios fiscais. Puxar business case do CD e gestao orcamentaria."
   },
   "constraints": {
     "min_salary_brl_monthly": 15000,
-    "notice_period": "",
-    "travel_availability": "",
-    "no_go": ["Funcoes predominantemente comerciais, de prospeccao ou vendas"]
+    "target_salary_brl_monthly": 18000,
+    "notice_period": "PREENCHER",
+    "travel_availability": "Disponivel para viagens",
+    "remote": "Disponivel para trabalho remoto",
+    "preferred_location": "Sao Jose do Rio Preto, SP",
+    "no_go": [
+      "Funcoes predominantemente comerciais, de prospeccao ou vendas",
+      "Vagas presenciais fora de Sao Jose do Rio Preto e regiao",
+      "Vagas fora do Brasil que exijam autorizacao de trabalho local"
+    ]
+  },
+  "career_direction": {
+    "short_term": "Coordenacao ou gerencia em Sao Jose do Rio Preto, com escopo de operacoes, processos, projetos ou controladoria.",
+    "long_term": "Gerencia senior ou diretoria, com aprofundamento em financas para sustentar conversas executivas.",
+    "note": "Aberto a consultoria e a posicao em empresa; o criterio e crescimento profissional e financeiro, nao a rota."
   }
 }

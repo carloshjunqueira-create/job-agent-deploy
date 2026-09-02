@@ -70,9 +70,11 @@
           ],
           "adzuna_where": "Sao Jose do Rio Preto",
           "weight": 1,
-          "quota": 0.55,
+          "quota": 0.8,
           "enabled": true,
-          "note": "Inclui cidades da regiao com deslocamento diario viavel (Mirassol, Bady Bassitt, Cedral, Guapiacu e outras)."
+          "note": "Inclui cidades da regiao com deslocamento diario viavel (Mirassol, Bady Bassitt, Cedral, Guapiacu e outras).",
+          "max_share": 1,
+          "min_score": 52
         },
         {
           "id": "remote_intl",
@@ -80,9 +82,11 @@
           "kind": "remote_international",
           "match": [],
           "weight": 0.85,
-          "quota": 0.3,
-          "enabled": true,
-          "note": "Vagas 100% remotas fora do Brasil. Exige ingles ou frances; Carlos e fluente nos dois."
+          "quota": 0,
+          "enabled": false,
+          "note": "Vagas 100% remotas fora do Brasil. Exige ingles ou frances; Carlos e fluente nos dois.",
+          "max_share": 0.15,
+          "min_score": 65
         },
         {
           "id": "sao_paulo",
@@ -93,7 +97,7 @@
           ],
           "adzuna_where": "Sao Paulo",
           "weight": 0.7,
-          "quota": 0.15,
+          "quota": 0.2,
           "enabled": true,
           "superiority_rule": {
             "enabled": true,
@@ -109,7 +113,9 @@
               "senior manager"
             ],
             "note": "Sao Paulo so entra quando a oportunidade for claramente superior a atual."
-          }
+          },
+          "max_share": 0.2,
+          "min_score": 70
         },
         {
           "id": "remote_br",
@@ -118,12 +124,14 @@
           "match": [],
           "weight": 0.8,
           "quota": 0,
-          "enabled": false
+          "enabled": false,
+          "max_share": 0.2,
+          "min_score": 62
         }
       ],
       "salary": {
-        "min_brl_monthly": 14000,
-        "target_brl_monthly": 16000,
+        "min_brl_monthly": 15000,
+        "target_brl_monthly": 18000,
         "employment_type_preferred": "CLT",
         "unknown_salary_is_rejection": false,
         "unknown_salary_penalty": 6,
@@ -383,7 +391,7 @@
       "filters": {
         "recency_days_max": 45,
         "min_final_score_to_show": 60,
-        "feed_size": 45,
+        "feed_size": 40,
         "max_per_company": 3,
         "hide_decided": true
       },

@@ -6,7 +6,7 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { toCanonicalJob, dedupe, detectWorkModel, parseSalaryFromText, monthlyBrl } from "./lib/normalize.mjs";
+import { toCanonicalJob, dedupe, detectWorkModel, parseSalaryFromText, monthlyBrl, cityPart } from "./lib/normalize.mjs";
 import { scoreJob, applyQuotas } from "./lib/score.mjs";
 import { extractJson, estimateCost } from "./lib/ai.mjs";
 
@@ -24,7 +24,12 @@ const searchConfig = await readJson("config/search-profiles.json");
 const sourcesConfig = await readJson("config/sources.json");
 const profileCv = await readJson("config/profile.json");
 const profile = searchConfig.profiles.find((p) => p.id === searchConfig.active_profile);
+const aiSrcEager = await fs.readFile(path.join(ROOT, "pipeline/lib/ai.mjs"), "utf8");
 const fx = searchConfig.fx_to_brl;
+// Copia do perfil com o balde internacional ligado: ele esta desligado por opcao
+// do Carlos, mas a logica precisa continuar correta caso ele volte a liga-lo.
+const profileIntl = JSON.parse(JSON.stringify(profile));
+profileIntl.locations.find((l) => l.id === "remote_intl").enabled = true;
 
 console.log("\n1. Configuracao");
 check("perfil ativo existe", Boolean(profile), searchConfig.active_profile);
@@ -38,6 +43,14 @@ for (const source of sourcesConfig.sources) {
 }
 check("todos os modulos de fonte carregam", failures.length === 0);
 check("perfil de CV tem experiencias", (profileCv.experience || []).length > 0);
+check("perfil tem contato completo", Boolean(profileCv.identity?.phone && profileCv.identity?.linkedin && !String(profileCv.identity.linkedin).includes("PREENCHER")));
+check("perfil tem cabecalho de localidade por regiao", Boolean(profileCv.identity?.location_strategy?.sjrp && profileCv.identity?.location_strategy?.sao_paulo));
+check("todas as experiencias tem periodo preenchido", (profileCv.experience || []).every((e) => e.start && !String(e.start).includes("PREENCHER")));
+check("convencao de anonimizar clientes esta declarada", profileCv.conventions?.anonymize_clients === true);
+check("gerador respeita a anonimizacao e o cabecalho", (() => {
+  const src = aiSrcEager;
+  return src.includes("NAO nomeie clientes") && src.includes("location_strategy");
+})());
 
 console.log("\n2. Normalizacao");
 check("detecta remoto", detectWorkModel({ title: "Operations Manager", location_raw: "Remote - Anywhere", description: "" }) === "remote");
@@ -63,8 +76,9 @@ check("bloqueia vaga comercial pela descricao sem contexto de operacoes", scoreJ
 check("bloqueia vaga antiga", scoreJob(make({ posted_at: new Date(Date.now() - 90 * 86400000).toISOString() }), profile, { fx }).block_reason?.startsWith("VAGA_ANTIGA"));
 check("bloqueia salario abaixo do piso", scoreJob(make({ description: "Salario de R$ 6.000,00 mensais" }), profile, { fx }).block_reason?.startsWith("SALARIO_ABAIXO_DO_PISO"));
 check("NAO bloqueia vaga de operacoes que apenas menciona vendas", scoreJob(make({ description: "Coordenar operacoes, processos e indicadores da area, com interface com vendas e governanca de planejamento." }), profile, { fx }).blocked === false);
-check("aceita remoto internacional", (() => {
-  const r = scoreJob(make({ title: "Operations Manager", location_raw: "Remote - Europe", company: "Acme Inc", description: "Remote role. Process improvement, KPIs, SQL and Power BI. English required." }), profile, { fx });
+check("remoto internacional fica fora enquanto o balde esta desligado", scoreJob(make({ title: "Operations Manager", location_raw: "Remote - Europe", company: "Acme Inc", description: "Remote role. Process improvement, KPIs." }), profile, { fx }).blocked === true);
+check("...mas volta a funcionar se o balde for religado", (() => {
+  const r = scoreJob(make({ title: "Operations Manager", location_raw: "Remote - Europe", company: "Acme Inc", description: "Remote role. Process improvement, KPIs, SQL and Power BI. English required." }), profileIntl, { fx });
   return r.blocked === false && r.location_bucket === "remote_intl";
 })());
 check("remoto brasileiro fica fora enquanto o bucket esta desligado", scoreJob(make({ title: "Gerente de Operacoes", location_raw: "Remoto - Brasil", description: "Trabalho remoto em todo o Brasil, processos e indicadores." }), profile, { fx }).blocked === true);
@@ -90,13 +104,13 @@ check("vaga presencial com 'remote' solto na descricao nao vira remoto internaci
   }, "adzuna_us");
   return job.work_model !== "remote" && scoreJob(job, profile, { fx }).blocked === true;
 })());
-check("vaga de operacoes claramente remota continua entrando", (() => {
+check("vaga remota internacional legitima entra quando o balde esta ligado", (() => {
   const job = toCanonicalJob({
     title: "Operations Manager", company: "Acme Global", location_raw: "Remote - Worldwide",
     description: "Process improvement, KPIs, SQL and Power BI. English required.",
     url: "https://ex.com/y", posted_at: new Date().toISOString()
   }, "remotive");
-  const r = scoreJob(job, profile, { fx });
+  const r = scoreJob(job, profileIntl, { fx });
   return r.blocked === false && r.location_bucket === "remote_intl";
 })());
 
@@ -128,10 +142,49 @@ check("cargo do exterior pontua pelo titulo igual aos do Brasil", (() => {
     description: "Fully remote across LATAM. Business transformation, process improvement, stakeholder management, KPIs. English required.",
     url: "https://ex.com/mc", posted_at: new Date().toISOString()
   }, "remotive");
-  const r = scoreJob(job, profile, { fx });
-  return r.blocked === false && r.components.role === profile.weights.role && r.score >= profile.filters.min_final_score_to_show;
-})(), JSON.stringify((() => { const job = toCanonicalJob({ title: "Management Consultant", company: "Globant", location_raw: "Remote - LATAM", description: "Fully remote across LATAM. Business transformation, process improvement, KPIs. English required.", url: "https://ex.com/mc2", posted_at: new Date().toISOString() }, "remotive"); const r = scoreJob(job, profile, { fx }); return { score: r.score, role: r.components.role }; })()));
+  const r = scoreJob(job, profileIntl, { fx });
+  return r.blocked === false && r.components.role === profile.weights.role;
+})());
 check("prompt da IA leva autorizacao de trabalho", (await fs.readFile(path.join(ROOT, "pipeline/lib/ai.mjs"), "utf8")).includes("work_authorization: profile.identity?.work_authorization"));
+
+console.log("\n3d. Cidade vs estado (o bug que trouxe Barueri e Ribeirao Preto)");
+check("cityPart descarta o estado", cityPart("Barueri, Sao Paulo") === "barueri" && cityPart("Sao Paulo, Sao Paulo") === "sao paulo");
+check("cityPart aceita endereco de um segmento so", cityPart("Sao Paulo") === "sao paulo");
+check("cityPart lida com bairro + cidade + estado", cityPart("Vila Olimpia, Sao Paulo, Sao Paulo").includes("sao paulo"));
+check("Barueri NAO entra no balde de Sao Paulo", scoreJob(make({ title: "Gerente de Operacoes", location_raw: "Barueri, Sao Paulo" }), profile, { fx }).block_reason === "LOCALIZACAO_FORA_DOS_CRITERIOS");
+check("Ribeirao Preto NAO entra no balde de Sao Paulo", scoreJob(make({ title: "Gerente de Operacoes", location_raw: "Ribeirao Preto, Sao Paulo" }), profile, { fx }).block_reason === "LOCALIZACAO_FORA_DOS_CRITERIOS");
+check("a capital continua entrando", scoreJob(make({ title: "Gerente de Operacoes", location_raw: "Sao Paulo, Sao Paulo" }), profile, { fx }).location_bucket === "sao_paulo");
+check("Rio Preto com estado por extenso entra", scoreJob(make({ title: "Gerente de Operacoes", location_raw: "Sao Jose do Rio Preto, Estado de Sao Paulo" }), profile, { fx }).location_bucket === "sjrp");
+
+console.log("\n3e. Prioridade de Rio Preto");
+check("Rio Preto entra com nota mais baixa que Sao Paulo", (profile.locations.find((l) => l.id === "sjrp").min_score) < (profile.locations.find((l) => l.id === "sao_paulo").min_score));
+check("Sao Paulo tem teto de participacao no feed", profile.locations.find((l) => l.id === "sao_paulo").max_share <= 0.25);
+check("balde internacional esta desligado", profile.locations.find((l) => l.id === "remote_intl").enabled === false);
+check("Sao Paulo nao passa do teto mesmo com Rio Preto vazio", (() => {
+  const pool = Array.from({ length: 60 }, (_, i) => ({ company: `Empresa SP ${i}`, score: { final: 95 - (i % 20), location_bucket: "sao_paulo" } }));
+  const r = applyQuotas(pool, profile);
+  const teto = Math.round(profile.filters.feed_size * profile.locations.find((l) => l.id === "sao_paulo").max_share);
+  return (r.mix.sao_paulo || 0) <= teto;
+})(), JSON.stringify(applyQuotas(Array.from({ length: 60 }, (_, i) => ({ company: `E ${i}`, score: { final: 90, location_bucket: "sao_paulo" } })), profile).mix));
+check("feed encolhe em vez de encher de Sao Paulo", (() => {
+  const pool = [
+    ...Array.from({ length: 6 }, (_, i) => ({ company: `SJRP ${i}`, score: { final: 70, location_bucket: "sjrp" } })),
+    ...Array.from({ length: 60 }, (_, i) => ({ company: `SP ${i}`, score: { final: 95, location_bucket: "sao_paulo" } }))
+  ];
+  const r = applyQuotas(pool, profile);
+  return r.selected.length < profile.filters.feed_size && (r.mix.sjrp || 0) === 6;
+})());
+
+console.log("\n3f. Chave da Anthropic e modo so-CV");
+const aiSrc = await fs.readFile(path.join(ROOT, "pipeline/lib/ai.mjs"), "utf8");
+check("envia anthropic-workspace-id quando o secret existe", aiSrc.includes("anthropic-workspace-id") && aiSrc.includes("ANTHROPIC_WORKSPACE_ID"));
+check("gerador aceita modo somente CV", aiSrc.includes("includeCoverLetter"));
+const tailorSrc = await fs.readFile(path.join(ROOT, "pipeline/tailor.mjs"), "utf8");
+check("tailor.mjs le o modo de geracao", tailorSrc.includes("TAILOR_MODE"));
+const wfTailor = await fs.readFile(path.join(ROOT, ".github/workflows/tailor.yml"), "utf8");
+check("workflow do CV expoe o modo e o workspace id", wfTailor.includes("TAILOR_MODE") && wfTailor.includes("ANTHROPIC_WORKSPACE_ID"));
+const wfCollect = await fs.readFile(path.join(ROOT, ".github/workflows/collect.yml"), "utf8");
+check("workflow da busca passa o workspace id", wfCollect.includes("ANTHROPIC_WORKSPACE_ID"));
 
 console.log("\n4. Score e hierarquia geografica");
 const sSjrp = scoreJob(make({}), profile, { fx });

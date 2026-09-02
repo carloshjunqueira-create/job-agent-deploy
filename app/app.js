@@ -287,7 +287,9 @@ function jobCard(job) {
 
     <div class="actions">
       ${url ? `<a class="btn btn-primary btn-small" href="${esc(url)}" target="_blank" rel="noopener">Abrir vaga</a>` : ""}
-      <button class="btn btn-small" data-action="tailor">${hasMaterial ? "Ver CV + carta" : "Gerar CV + carta"}</button>
+      ${hasMaterial
+        ? '<button class="btn btn-small" data-action="tailor">Ver materiais</button>'
+        : '<button class="btn btn-small" data-action="tailor" data-mode="cv">Gerar só o CV</button><button class="btn btn-small" data-action="tailor" data-mode="full">CV + carta</button>'}
       <button class="btn btn-small" data-action="decide" data-status="applied">Me candidatei</button>
       <button class="btn btn-small" data-action="decide" data-status="interested">Tenho interesse</button>
       <button class="btn btn-small" data-action="decide" data-status="saved">Salvar</button>
@@ -586,13 +588,13 @@ async function waitForRun(workflow, startedAt, progress) {
   return run;
 }
 
-async function generateMaterial(jobId) {
+async function generateMaterial(jobId, mode = "full") {
   if (state.tailoredIndex.items?.[jobId]) return openMaterial(jobId);
-  if (!gh.connected) return toast("Conecte o token do GitHub para gerar CV e carta.");
-  toast("Gerando CV e carta… leva cerca de um minuto.");
+  if (!gh.connected) return toast("Conecte o token do GitHub para gerar os materiais.");
+  toast(mode === "cv" ? "Gerando o CV adaptado… leva cerca de um minuto." : "Gerando CV e carta… leva cerca de um minuto.");
   const startedAt = Date.now();
   try {
-    await gh.dispatch(WORKFLOW_TAILOR, { job_id: jobId });
+    await gh.dispatch(WORKFLOW_TAILOR, { job_id: jobId, mode });
     const deadline = Date.now() + 5 * 60 * 1000;
     while (Date.now() < deadline) {
       await sleep(8000);
@@ -614,7 +616,7 @@ async function generateMaterial(jobId) {
 async function openMaterial(jobId) {
   const data = await loadJson(`tailored/${jobId}.json`, null);
   if (!data) return toast("Material ainda não disponível. Tente novamente em instantes.");
-  $("#material-title").textContent = `${data.job?.title || ""} · ${data.job?.company || ""}`;
+  $("#material-title").textContent = `${data.job?.title || ""} · ${data.job?.company || ""}${data.mode === "so-cv" ? " · só CV" : ""}`;
   const block = (title, content) => content ? `
     <h3>${esc(title)}</h3>
     <div class="block">${esc(content)}</div>
@@ -773,7 +775,7 @@ function bind() {
     const jobId = card.dataset.job;
     if (action === "decide") decide(jobId, button.dataset.status);
     if (action === "undecide") undecide(jobId);
-    if (action === "tailor") generateMaterial(jobId);
+    if (action === "tailor") generateMaterial(jobId, button.dataset.mode || "full");
   });
 }
 

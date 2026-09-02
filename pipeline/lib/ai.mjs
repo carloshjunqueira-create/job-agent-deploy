@@ -29,7 +29,10 @@ export async function callClaude({ model, system, prompt, maxTokens = 4000, temp
     headers: {
       "x-api-key": key,
       "anthropic-version": API_VERSION,
-      "content-type": "application/json"
+      "content-type": "application/json",
+      // Chaves criadas dentro de um workspace ("identity-linked") exigem este
+      // cabecalho; sem ele a API recusa com HTTP 400. Chaves comuns ignoram.
+      ...(process.env.ANTHROPIC_WORKSPACE_ID ? { "anthropic-workspace-id": process.env.ANTHROPIC_WORKSPACE_ID } : {})
     },
     body: JSON.stringify({
       model,
@@ -160,7 +163,18 @@ Quando faltar um dado que fortaleceria a peca, sinalize em "assumptions_to_confi
 Tom: direto, executivo, sem jargao vazio e sem adjetivos de autoelogio. Responda SOMENTE com JSON valido.`;
 
 /** Gera CV adaptado + carta de apresentacao para uma vaga especifica. */
-export async function tailorForJob({ job, profile, model }) {
+export async function tailorForJob({ job, profile, model, includeCoverLetter = true, region = "default" }) {
+  // O cabecalho do CV muda conforme a regiao da vaga: em mercado de porte medio o
+  // recrutador filtra por cidade antes de ler o conteudo.
+  const strategy = profile.identity?.location_strategy || {};
+  const locationLine = strategy[region] || strategy.default || profile.identity?.city || "";
+  // Nem toda inscricao pede carta. Quando so o CV interessa, o pedido fica menor,
+  // mais rapido e mais barato.
+  const coverBlock = includeCoverLetter
+    ? `- "cover_letter": carta de apresentacao de 200 a 280 palavras, em portugues, endereçada a empresa, com um paragrafo de abertura especifico sobre a empresa/vaga, um de evidencia e um de fechamento com proximo passo. Sem cliche de "sempre fui apaixonado por".
+- "cover_letter_en": a mesma carta em ingles, apenas se a vaga for internacional ou pedir ingles; caso contrario string vazia`
+    : `- "cover_letter": string vazia (nao foi pedida nesta geracao)
+- "cover_letter_en": string vazia`;
   const prompt = `PERFIL COMPLETO (JSON):
 ${JSON.stringify(profile, null, 1)}
 
@@ -172,21 +186,26 @@ Link: ${job.url}
 Descricao:
 ${(job.description || "").slice(0, 8000)}
 
+REGRAS DE FORMA:
+- Linha de localidade do cabecalho, ja definida para esta vaga: "${locationLine}". Use exatamente isso.
+- NAO nomeie clientes. O CV dele descreve os projetos por setor ("empresa lider do setor de educacao", "banco de desenvolvimento internacional"). Mantenha essa convencao mesmo que o nome real apareça no perfil.
+- Nao repita o mesmo numero em dois bullets diferentes.
+
 Produza um JSON com estes campos:
 - "cv_variant": qual variante do CV usar
+- "location_line": exatamente a linha de localidade indicada acima
 - "headline": uma linha de titulo profissional otimizada para esta vaga (max 120 caracteres)
 - "summary": resumo profissional de 3 a 4 linhas, escrito para esta vaga, so com fatos do perfil
 - "bullets": array de 5 a 7 bullets de experiencia reescritos com a linguagem da vaga. Cada bullet: acao + contexto + resultado, comecando por verbo no passado. Use apenas fatos do perfil.
 - "keywords_to_include": array de ate 12 palavras-chave da vaga que o CV precisa conter para passar em ATS
 - "ats_gap": array de objetos { "keyword": "...", "how_to_cover": "como cobrir honestamente com o que ele ja fez, ou 'nao cobrir' se ele nao tem" }
-- "cover_letter": carta de apresentacao de 200 a 280 palavras, em portugues, endereçada a empresa, com um paragrafo de abertura especifico sobre a empresa/vaga, um de evidencia e um de fechamento com proximo passo. Sem cliche de "sempre fui apaixonado por".
-- "cover_letter_en": a mesma carta em ingles, apenas se a vaga for internacional ou pedir ingles; caso contrario string vazia
+${coverBlock}
 - "interview_angles": array de 3 perguntas provaveis desta vaga com um esboco de resposta baseado no perfil
 - "assumptions_to_confirm": array de dados que faltaram e que ele deveria preencher antes de enviar
 
 Somente JSON.`;
 
-  const { text, usage } = await callClaude({ model, system: TAILOR_SYSTEM, prompt, maxTokens: 6000, temperature: 0.3 });
+  const { text, usage } = await callClaude({ model, system: TAILOR_SYSTEM, prompt, maxTokens: includeCoverLetter ? 6000 : 4000, temperature: 0.3 });
   const parsed = extractJson(text);
   if (!parsed) throw new Error("resposta da IA nao veio como JSON valido");
   return { result: parsed, usage };

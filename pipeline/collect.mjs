@@ -176,9 +176,15 @@ async function main() {
   }
 
   // ---------- 6. Corte final e cotas ----------
-  const minScore = searchProfile.filters?.min_final_score_to_show ?? 60;
-  const eligible = scored.filter((j) => j.score.final >= minScore);
-  const { selected, mix, targets } = applyQuotas(eligible, searchProfile);
+  // Corte por regiao: Sao Jose do Rio Preto e a prioridade, entao entra com nota
+  // mais baixa. Sao Paulo so entra quando a vaga for claramente melhor, porque
+  // implica nao morar em Rio Preto.
+  const defaultMin = searchProfile.filters?.min_final_score_to_show ?? 60;
+  const minByBucket = new Map(
+    (searchProfile.locations || []).map((l) => [l.id, l.min_score ?? defaultMin])
+  );
+  const eligible = scored.filter((j) => j.score.final >= (minByBucket.get(j.score.location_bucket) ?? defaultMin));
+  const { selected, mix, targets, caps } = applyQuotas(eligible, searchProfile);
   log(`feed final: ${selected.length} vagas | mix por regiao: ${JSON.stringify(mix)}`);
 
   // ---------- 7. Saida ----------
@@ -199,7 +205,9 @@ async function main() {
     sources: sourceReport.sort((a, b) => b.jobs - a.jobs),
     ai: { enabled: aiOn, model: aiCfg.model, ...aiUsage },
     mix,
-    quota_targets: targets
+    quota_targets: targets,
+    quota_caps: caps,
+    min_score_by_region: Object.fromEntries(minByBucket)
   };
 
   if (DRY_RUN) {

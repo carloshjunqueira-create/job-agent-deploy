@@ -11,6 +11,9 @@ const readJson = async (rel, fallback = null) => {
 };
 
 const jobId = process.argv[2] || process.env.JOB_ID;
+// "cv" gera so o curriculo adaptado; qualquer outra coisa gera CV + carta.
+const mode = (process.argv[3] || process.env.TAILOR_MODE || "full").toLowerCase();
+const includeCoverLetter = mode !== "cv" && mode !== "cv-only" && mode !== "so-cv";
 if (!jobId) {
   console.error("uso: node pipeline/tailor.mjs <job_id>   (ou JOB_ID=<id>)");
   process.exit(1);
@@ -27,13 +30,17 @@ const descriptions = await readJson("data/descriptions.json", {});
 const feed = await readJson("data/feed.json", { jobs: [] });
 
 const job = descriptions[jobId] || feed.jobs.find((j) => j.id === jobId);
+// A regiao vem do feed e define qual cabecalho de localidade entra no CV.
+const feedEntry = feed.jobs.find((j) => j.id === jobId);
+const region = feedEntry?.location_bucket
+  || ((job?.work_model === "remote") ? "remote" : "default");
 if (!job) {
   console.error(`vaga ${jobId} nao encontrada em data/descriptions.json nem no feed atual.`);
   process.exit(1);
 }
 
 const model = searchProfile.ai_tailoring?.model || searchProfile.ai_ranking?.model || "claude-sonnet-5";
-console.log(`gerando CV adaptado e carta para: ${job.title} @ ${job.company}`);
+console.log(`gerando ${includeCoverLetter ? "CV adaptado e carta" : "apenas o CV adaptado"} para: ${job.title} @ ${job.company}`);
 
 const { result, usage } = await tailorForJob({
   job: {
@@ -45,7 +52,9 @@ const { result, usage } = await tailorForJob({
     description: job.description || job.description_excerpt || ""
   },
   profile,
-  model
+  model,
+  includeCoverLetter,
+  region
 });
 
 const cost = estimateCost({
@@ -61,6 +70,8 @@ const output = {
   job: { title: job.title, company: job.company, url: job.url },
   generated_at: nowIso(),
   model,
+  mode: includeCoverLetter ? "cv+carta" : "so-cv",
+  region,
   usage,
   estimated_cost_usd: cost != null ? Number(cost.toFixed(4)) : null,
   ...result
