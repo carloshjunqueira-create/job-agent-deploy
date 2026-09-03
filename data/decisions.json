@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "updated_at": "2026-09-03T00:40:19.116Z",
+  "updated_at": "2026-09-03T00:41:31.828Z",
   "decisions": {
     "87587df5845fa2ff": {
       "status": "closed",
@@ -201,6 +201,30 @@
       "company": "Plugarh",
       "url": "https://br.jooble.org/desc/-8299376303427022675?ckey=gerente+de+operacoes&rgn=5880&pos=14&elckey=6969519996073033047&p=1&aq=-1539935987970064191&cid=668&jobAge=141&relb=100&brelb=100&bscr=2451.8196&scr=2451.8196",
       "score": 56
+    },
+    "f845e568785fce89": {
+      "status": "rejected",
+      "at": "2026-09-03T00:40:42.463Z",
+      "title": "Supervisor Jurídico",
+      "company": "GVC SOLUÇÕES EM COBRANÇA",
+      "url": "https://br.jooble.org/away/6589097852391922706?p=2&pos=39&rgn=5880&cid=668&ckey=coordenador+de+projetos&jobAge=482&relb=111&brelb=100&scr=408.23748720000003&bscr=367.78152&aq=-5190788665750873279&elckey=-2894429821161794578",
+      "score": 53
+    },
+    "fdf20a546e77d15a": {
+      "status": "saved",
+      "at": "2026-09-03T00:41:03.974Z",
+      "title": "Gerente de Projetos PMO Especialista",
+      "company": "Grupo SysMap",
+      "url": "https://www.adzuna.com.br/details/5834735945?utm_medium=api&utm_source=f4cf42d6",
+      "score": 85
+    },
+    "d1b23cbed507203d": {
+      "status": "saved",
+      "at": "2026-09-03T00:41:30.322Z",
+      "title": "Program Manager - PMO - HÍBRIDO",
+      "company": "#sejaveriter",
+      "url": "https://www.adzuna.com.br/details/5819850112?utm_medium=api&utm_source=f4cf42d6",
+      "score": 82
     }
   }
 }
