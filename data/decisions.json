@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "updated_at": "2026-09-03T00:22:27.220Z",
+  "updated_at": "2026-09-03T00:23:37.500Z",
   "decisions": {
     "87587df5845fa2ff": {
       "status": "closed",
@@ -57,6 +57,22 @@
       "company": "Stefanini LATAM",
       "url": "https://br.jooble.org/away/-6063093727308565606?p=1&pos=9&rgn=5880&cid=668&ckey=coordenador+de+processos&jobAge=242&relb=123&brelb=100&scr=2718.460638&bscr=2210.1306&aq=4614669854312497272&elckey=4005466811602702749",
       "score": 54
+    },
+    "4fc0bfc0e2329759": {
+      "status": "rejected",
+      "at": "2026-09-03T00:23:12.115Z",
+      "title": "Gerente de loja",
+      "company": "Rhf talentos",
+      "url": "https://br.jooble.org/away/-2550787631962633485?p=1&pos=4&rgn=5880&cid=668&ckey=gerente+de+operacoes&jobAge=38&relb=126&brelb=115&scr=2976.5798452173917&bscr=2716.7197&aq=-1539935987970064191&elckey=6969519996073033047",
+      "score": 53
+    },
+    "48c4d199b818c575": {
+      "status": "rejected",
+      "at": "2026-09-03T00:23:35.984Z",
+      "title": "Coordenador(a) de Equipe de Saúde Mental - Psicólogo(a) (Espanhol Fluente)",
+      "company": "EnLite Health Solutions",
+      "url": "https://br.jooble.org/away/6810882591491783984?p=2&pos=29&rgn=5880&cid=668&ckey=coordenador+de+projetos&jobAge=8&relb=41&brelb=10&scr=782.07008&bscr=190.7488&aq=-5190788665750873279&elckey=-2894429821161794578",
+      "score": 53
     }
   }
 }
