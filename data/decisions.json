@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "updated_at": "2026-09-03T00:23:37.500Z",
+  "updated_at": "2026-09-03T00:29:54.045Z",
   "decisions": {
     "87587df5845fa2ff": {
       "status": "closed",
@@ -72,6 +72,14 @@
       "title": "Coordenador(a) de Equipe de Saúde Mental - Psicólogo(a) (Espanhol Fluente)",
       "company": "EnLite Health Solutions",
       "url": "https://br.jooble.org/away/6810882591491783984?p=2&pos=29&rgn=5880&cid=668&ckey=coordenador+de+projetos&jobAge=8&relb=41&brelb=10&scr=782.07008&bscr=190.7488&aq=-5190788665750873279&elckey=-2894429821161794578",
+      "score": 53
+    },
+    "3cf6fb3e3a015066": {
+      "status": "applied",
+      "at": "2026-09-03T00:29:52.539Z",
+      "title": "CONSULTOR DE NEGÓCIOS",
+      "company": "Confidencial",
+      "url": "https://br.jooble.org/desc/-5759716306214187222?ckey=consultor+de+negocios&rgn=5880&pos=5&elckey=-3265268795791634578&p=1&aq=456703651320291867&cid=668&jobAge=45&relb=100&brelb=100&bscr=4875.797&scr=4875.797",
       "score": 53
     }
   }
