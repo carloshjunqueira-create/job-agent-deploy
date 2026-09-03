@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "updated_at": "2026-09-02T23:50:56.595Z",
+  "updated_at": "2026-09-03T00:15:22.716Z",
   "decisions": {
     "87587df5845fa2ff": {
       "status": "closed",
@@ -9,6 +9,22 @@
       "company": "RD Saúde",
       "url": "https://www.adzuna.com.br/details/5843217668?utm_medium=api&utm_source=f4cf42d6",
       "score": 61
+    },
+    "adffe94c969682c9": {
+      "status": "invalid_link",
+      "at": "2026-09-02T23:51:44.061Z",
+      "title": "Gerente de Supply Chain (Suprimentos, Estoque e Logística)",
+      "company": "O.S CONSULTORIA",
+      "url": "https://www.adzuna.com.br/details/5817717991?utm_medium=api&utm_source=f4cf42d6",
+      "score": 70
+    },
+    "397f96e14f193c1e": {
+      "status": "applied",
+      "at": "2026-09-03T00:15:21.202Z",
+      "title": "Gerente geral - Presencial - Banco de Talentos",
+      "company": "Grupo Petrópolis",
+      "url": "https://br.jooble.org/away/-9220912265101126000?p=1&pos=10&rgn=5880&cid=668&ckey=gerente+de+operacoes&jobAge=482&relb=123&brelb=100&scr=2544.206661&bscr=2068.4607&aq=-1539935987970064191&elckey=6969519996073033047",
+      "score": 58
     }
   }
 }
