@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "updated_at": "2026-09-03T00:29:54.045Z",
+  "updated_at": "2026-09-03T00:35:04.330Z",
   "decisions": {
     "87587df5845fa2ff": {
       "status": "closed",
@@ -80,6 +80,14 @@
       "title": "CONSULTOR DE NEGÓCIOS",
       "company": "Confidencial",
       "url": "https://br.jooble.org/desc/-5759716306214187222?ckey=consultor+de+negocios&rgn=5880&pos=5&elckey=-3265268795791634578&p=1&aq=456703651320291867&cid=668&jobAge=45&relb=100&brelb=100&bscr=4875.797&scr=4875.797",
+      "score": 53
+    },
+    "844243ccd420bc42": {
+      "status": "rejected",
+      "at": "2026-09-03T00:35:02.829Z",
+      "title": "Consultor técnico",
+      "company": "Grapho rh",
+      "url": "https://br.jooble.org/away/-5702616063743606452?p=1&pos=14&rgn=5880&cid=668&ckey=consultor+de+negocios&jobAge=69&relb=135&brelb=115&scr=3046.761234782609&bscr=2595.3892&aq=456703651320291867&elckey=-3265268795791634578",
       "score": 53
     }
   }
