@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "updated_at": "2026-09-03T00:38:06.780Z",
+  "updated_at": "2026-09-03T00:39:11.799Z",
   "decisions": {
     "87587df5845fa2ff": {
       "status": "closed",
@@ -160,6 +160,22 @@
       "title": "Consultor de Operações",
       "company": "MOVEEDU INOVACAO E EDUCACAO LTDA",
       "url": "https://br.jooble.org/away/-1293231379890524229?p=2&pos=25&rgn=5880&cid=668&ckey=gerente+de+operacoes&jobAge=69&relb=126&brelb=115&scr=2292.935947826087&bscr=2092.759&aq=-9033716158067045450&elckey=6969519996073033047",
+      "score": 59
+    },
+    "31ceab5842ad1f47": {
+      "status": "applied",
+      "at": "2026-09-03T00:38:58.297Z",
+      "title": "Coordenador Admintrativo",
+      "company": "MAIS DE CASA",
+      "url": "https://br.jooble.org/desc/6107450105421961665?ckey=coordenador+de+operacoes&rgn=5880&pos=7&elckey=1584890300040419752&p=1&aq=8541050014168220176&cid=668&jobAge=69&relb=110&brelb=110&bscr=3063.101&scr=3063.1009999999997",
+      "score": 59
+    },
+    "85526256e7550224": {
+      "status": "rejected",
+      "at": "2026-09-03T00:39:10.290Z",
+      "title": "Especialista de Logística",
+      "company": "MOVEEDU INOVACAO E EDUCACAO LTDA",
+      "url": "https://br.jooble.org/desc/-646510641962983110?ckey=coordenador+de+projetos&rgn=5880&pos=30&elckey=-2894429821161794578&p=2&aq=-5190788665750873279&cid=668&jobAge=141&relb=100&brelb=100&bscr=670.9431&scr=670.9431",
       "score": 59
     }
   }
