@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "updated_at": "2026-09-03T00:39:11.799Z",
+  "updated_at": "2026-09-03T00:40:19.116Z",
   "decisions": {
     "87587df5845fa2ff": {
       "status": "closed",
@@ -177,6 +177,30 @@
       "company": "MOVEEDU INOVACAO E EDUCACAO LTDA",
       "url": "https://br.jooble.org/desc/-646510641962983110?ckey=coordenador+de+projetos&rgn=5880&pos=30&elckey=-2894429821161794578&p=2&aq=-5190788665750873279&cid=668&jobAge=141&relb=100&brelb=100&bscr=670.9431&scr=670.9431",
       "score": 59
+    },
+    "27afcae1f04b34f5": {
+      "status": "rejected",
+      "at": "2026-09-03T00:39:37.639Z",
+      "title": "Gerente De Controladoria",
+      "company": "Caderno Nacional",
+      "url": "https://br.jooble.org/desc/-2475571590766232935?ckey=coordenador+de+processos&rgn=5880&pos=27&elckey=4005466811602702749&p=2&aq=1547849538729421611&cid=668&jobAge=45&relb=110&brelb=110&bscr=635.31726&scr=635.31726",
+      "score": 59
+    },
+    "e650511f45d85f17": {
+      "status": "rejected",
+      "at": "2026-09-03T00:39:56.381Z",
+      "title": "Consultor de Negócios",
+      "company": "Associação Comercial e Empresarial de São José do Rio Preto",
+      "url": "https://www.adzuna.com.br/details/5865431255?utm_medium=api&utm_source=f4cf42d6",
+      "score": 56
+    },
+    "6231504efbaa3b52": {
+      "status": "rejected",
+      "at": "2026-09-03T00:40:17.612Z",
+      "title": "Gerente Contábil Fiscal",
+      "company": "Plugarh",
+      "url": "https://br.jooble.org/desc/-8299376303427022675?ckey=gerente+de+operacoes&rgn=5880&pos=14&elckey=6969519996073033047&p=1&aq=-1539935987970064191&cid=668&jobAge=141&relb=100&brelb=100&bscr=2451.8196&scr=2451.8196",
+      "score": 56
     }
   }
 }
