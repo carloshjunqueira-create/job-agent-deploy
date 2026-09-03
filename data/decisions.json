@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "updated_at": "2026-09-03T00:20:08.029Z",
+  "updated_at": "2026-09-03T00:22:27.220Z",
   "decisions": {
     "87587df5845fa2ff": {
       "status": "closed",
@@ -33,6 +33,30 @@
       "company": "Revolut",
       "url": "https://br.jooble.org/away/6140830525533921207?p=2&pos=37&rgn=5880&cid=668&ckey=gerente+de+operacoes&jobAge=162&relb=123&brelb=100&scr=2108.955171&bscr=1714.5977&aq=-9033716158067045450&elckey=6969519996073033047",
       "score": 55
+    },
+    "6f737a20386c9282": {
+      "status": "rejected",
+      "at": "2026-09-03T00:20:24.527Z",
+      "title": "Gerente Unidade - Nutricionista",
+      "company": "Sapore",
+      "url": "https://www.adzuna.com.br/details/5834750402?utm_medium=api&utm_source=f4cf42d6",
+      "score": 54
+    },
+    "64c707283a329120": {
+      "status": "closed",
+      "at": "2026-09-03T00:20:42.255Z",
+      "title": "PMO SÊNIOR | INGLÊS FLUENTE",
+      "company": "Stefanini Brasil",
+      "url": "https://br.jooble.org/away/2697195198366405789?p=1&pos=1&rgn=5880&cid=668&ckey=pmo&jobAge=234&relb=100&brelb=100&scr=3076.5527&bscr=3076.5527&aq=-4225527961596105&elckey=-6110834471291060120",
+      "score": 54
+    },
+    "bdeb11531605d4e0": {
+      "status": "rejected",
+      "at": "2026-09-03T00:22:25.718Z",
+      "title": "Process and Automation Consultant (3 months)",
+      "company": "Stefanini LATAM",
+      "url": "https://br.jooble.org/away/-6063093727308565606?p=1&pos=9&rgn=5880&cid=668&ckey=coordenador+de+processos&jobAge=242&relb=123&brelb=100&scr=2718.460638&bscr=2210.1306&aq=4614669854312497272&elckey=4005466811602702749",
+      "score": 54
     }
   }
 }
