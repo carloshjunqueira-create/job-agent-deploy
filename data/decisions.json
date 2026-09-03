@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "updated_at": "2026-09-03T00:35:04.330Z",
+  "updated_at": "2026-09-03T00:36:41.468Z",
   "decisions": {
     "87587df5845fa2ff": {
       "status": "closed",
@@ -89,6 +89,38 @@
       "company": "Grapho rh",
       "url": "https://br.jooble.org/away/-5702616063743606452?p=1&pos=14&rgn=5880&cid=668&ckey=consultor+de+negocios&jobAge=69&relb=135&brelb=115&scr=3046.761234782609&bscr=2595.3892&aq=456703651320291867&elckey=-3265268795791634578",
       "score": 53
+    },
+    "2d71ed5e07069324": {
+      "status": "rejected",
+      "at": "2026-09-03T00:35:25.626Z",
+      "title": "Controller - Fiscal",
+      "company": "Confidencial",
+      "url": "https://www.adzuna.com.br/details/5852244087?utm_medium=api&utm_source=f4cf42d6",
+      "score": 52
+    },
+    "ada37e800bf25807": {
+      "status": "rejected",
+      "at": "2026-09-03T00:35:27.600Z",
+      "title": "Controller",
+      "company": "MAVI",
+      "url": "https://br.jooble.org/away/-8762719892945547330?p=1&pos=1&rgn=5880&cid=668&ckey=controller&jobAge=98&relb=141&brelb=100&scr=4114.554135&bscr=2918.1235&aq=1190341085577116618&elckey=3424919959016213881",
+      "score": 53
+    },
+    "dde804e5801250a7": {
+      "status": "invalid_link",
+      "at": "2026-09-03T00:35:42.699Z",
+      "title": "COORDENADOR DE CONTROLE DE QUALIDADE",
+      "company": "Fibra rh soluções empresariais",
+      "url": "https://br.jooble.org/away/-4887094505332161050?p=1&pos=6&rgn=5880&cid=668&ckey=coordenador+de+operacoes&jobAge=69&relb=138&brelb=115&scr=3348.38256&bscr=2790.3188&aq=8541050014168220176&elckey=1584890300040419752",
+      "score": 52
+    },
+    "f14254984e2c158f": {
+      "status": "applied",
+      "at": "2026-09-03T00:36:39.959Z",
+      "title": "Coordenador de Comissões/Remuneração Variável",
+      "company": "Acelera RH",
+      "url": "https://br.jooble.org/away/-8814807976467614459?p=1&pos=5&rgn=5880&cid=668&ckey=coordenador+de+operacoes&jobAge=69&relb=138&brelb=115&scr=3424.93128&bscr=2854.1094&aq=8541050014168220176&elckey=1584890300040419752",
+      "score": 67
     }
   }
 }
