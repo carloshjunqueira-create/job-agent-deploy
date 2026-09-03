@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "updated_at": "2026-09-03T00:36:41.468Z",
+  "updated_at": "2026-09-03T00:38:06.780Z",
   "decisions": {
     "87587df5845fa2ff": {
       "status": "closed",
@@ -121,6 +121,46 @@
       "company": "Acelera RH",
       "url": "https://br.jooble.org/away/-8814807976467614459?p=1&pos=5&rgn=5880&cid=668&ckey=coordenador+de+operacoes&jobAge=69&relb=138&brelb=115&scr=3424.93128&bscr=2854.1094&aq=8541050014168220176&elckey=1584890300040419752",
       "score": 67
+    },
+    "f68a15cad6dfdbe5": {
+      "status": "applied",
+      "at": "2026-09-03T00:36:55.257Z",
+      "title": "Gerente De Controladoria",
+      "company": "Grupo FAJ",
+      "url": "https://br.jooble.org/away/5352454248262857734?p=1&pos=2&rgn=5880&cid=668&ckey=gerente+de+operacoes&jobAge=282&relb=128&brelb=100&scr=3248.99776&bscr=2538.2795&aq=-1539935987970064191&elckey=6969519996073033047",
+      "score": 65
+    },
+    "422504d0925fe391": {
+      "status": "rejected",
+      "at": "2026-09-03T00:37:13.786Z",
+      "title": "Controller |São José do Rio Preto, SP",
+      "company": "Heads",
+      "url": "https://www.adzuna.com.br/details/5843160117?utm_medium=api&utm_source=f4cf42d6",
+      "score": 63
+    },
+    "e5c3817ef015a94e": {
+      "status": "rejected",
+      "at": "2026-09-03T00:37:17.880Z",
+      "title": "Consultor(a) SAP FI - Pleno",
+      "company": "NTT DATA Business Solutions",
+      "url": "https://br.jooble.org/away/-3014289069078908158?p=1&pos=18&rgn=5880&cid=668&ckey=consultor+de+negocios&jobAge=98&relb=141&brelb=100&scr=2857.3375049999995&bscr=2026.4805&aq=456703651320291867&elckey=-3265268795791634578",
+      "score": 60
+    },
+    "730b52668ecdf925": {
+      "status": "rejected",
+      "at": "2026-09-03T00:37:35.149Z",
+      "title": "Consultor Negócios Pleno 6H l Loja São José do Rio Preto/SP",
+      "company": "Vem Pra Vivo!",
+      "url": "https://lojasvivo.gupy.io/job/eyJqb2JJZCI6MTIzNzk2MjksInNvdXJjZSI6Imd1cHlfcG9ydGFsIn0=?jobBoardSource=gupy_portal",
+      "score": 60
+    },
+    "bc33ea9ce7402e77": {
+      "status": "applied",
+      "at": "2026-09-03T00:38:05.265Z",
+      "title": "Consultor de Operações",
+      "company": "MOVEEDU INOVACAO E EDUCACAO LTDA",
+      "url": "https://br.jooble.org/away/-1293231379890524229?p=2&pos=25&rgn=5880&cid=668&ckey=gerente+de+operacoes&jobAge=69&relb=126&brelb=115&scr=2292.935947826087&bscr=2092.759&aq=-9033716158067045450&elckey=6969519996073033047",
+      "score": 59
     }
   }
 }
