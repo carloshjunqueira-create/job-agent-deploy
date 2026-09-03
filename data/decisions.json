@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "updated_at": "2026-09-03T00:41:31.828Z",
+  "updated_at": "2026-09-03T00:43:07.613Z",
   "decisions": {
     "87587df5845fa2ff": {
       "status": "closed",
@@ -225,6 +225,54 @@
       "company": "#sejaveriter",
       "url": "https://www.adzuna.com.br/details/5819850112?utm_medium=api&utm_source=f4cf42d6",
       "score": 82
+    },
+    "d45f4b99e1883ad2": {
+      "status": "rejected",
+      "at": "2026-09-03T00:41:44.485Z",
+      "title": "GERENTE DE PROJETOS - MATRIZ - SÃO PAULO/SP",
+      "company": "Roldão Atacadista",
+      "url": "https://roldao.gupy.io/job/eyJqb2JJZCI6MTE3MDczNTEsInNvdXJjZSI6Imd1cHlfcG9ydGFsIn0=?jobBoardSource=gupy_portal",
+      "score": 82
+    },
+    "b8578e403e066ca1": {
+      "status": "rejected",
+      "at": "2026-09-03T00:42:07.649Z",
+      "title": "Especialista em Processos e Projetos (Sucesso do Contador)",
+      "company": "Omie",
+      "url": "https://carreirasomie.gupy.io/job/eyJqb2JJZCI6MTIyNzk2MDUsInNvdXJjZSI6Imd1cHlfcG9ydGFsIn0=?jobBoardSource=gupy_portal",
+      "score": 82
+    },
+    "7c52e545e04ae715": {
+      "status": "saved",
+      "at": "2026-09-03T00:42:14.287Z",
+      "title": "Gerente de Gestão Projetos",
+      "company": "KFC Brasil",
+      "url": "https://br.jooble.org/desc/-2743847024803150861?ckey=gerente+de+projetos&rgn=5900&pos=28&elckey=-6807819882188245998&p=2&aq=5139538618864128326&cid=668&jobAge=69&relb=100&brelb=100&bscr=4772.5767&scr=4772.5767",
+      "score": 81
+    },
+    "9cd8e710f2967e32": {
+      "status": "rejected",
+      "at": "2026-09-03T00:42:17.533Z",
+      "title": "Sr Controller Analyst (FP&A)",
+      "company": "Topaz Brasil",
+      "url": "https://www.adzuna.com.br/details/5842030883?utm_medium=api&utm_source=f4cf42d6",
+      "score": 80
+    },
+    "e14217cb596ac1f9": {
+      "status": "saved",
+      "at": "2026-09-03T00:42:25.552Z",
+      "title": "119039 - Coordenador(a) Planejamento e Controle Financeiro II",
+      "company": "Claro",
+      "url": "https://www.adzuna.com.br/details/5867225737?utm_medium=api&utm_source=f4cf42d6",
+      "score": 80
+    },
+    "cdf0495ceee08339": {
+      "status": "saved",
+      "at": "2026-09-03T00:43:06.110Z",
+      "title": "Gerente de Operações e Serviços / Manufatura",
+      "company": "Numen",
+      "url": "https://numen.gupy.io/job/eyJqb2JJZCI6MTE2NTEwNjEsInNvdXJjZSI6Imd1cHlfcG9ydGFsIn0=?jobBoardSource=gupy_portal",
+      "score": 80
     }
   }
 }
