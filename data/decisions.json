@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "updated_at": "2026-09-03T00:15:22.716Z",
+  "updated_at": "2026-09-03T00:20:08.029Z",
   "decisions": {
     "87587df5845fa2ff": {
       "status": "closed",
@@ -25,6 +25,14 @@
       "company": "Grupo Petrópolis",
       "url": "https://br.jooble.org/away/-9220912265101126000?p=1&pos=10&rgn=5880&cid=668&ckey=gerente+de+operacoes&jobAge=482&relb=123&brelb=100&scr=2544.206661&bscr=2068.4607&aq=-1539935987970064191&elckey=6969519996073033047",
       "score": 58
+    },
+    "fbbf8a147338cd15": {
+      "status": "applied",
+      "at": "2026-09-03T00:20:06.513Z",
+      "title": "Strategy & Operations Manager",
+      "company": "Revolut",
+      "url": "https://br.jooble.org/away/6140830525533921207?p=2&pos=37&rgn=5880&cid=668&ckey=gerente+de+operacoes&jobAge=162&relb=123&brelb=100&scr=2108.955171&bscr=1714.5977&aq=-9033716158067045450&elckey=6969519996073033047",
+      "score": 55
     }
   }
 }
